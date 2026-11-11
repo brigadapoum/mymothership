@@ -1,0 +1,8 @@
+{
+  "name": "mymothership",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/lang.test.mjs"
+  }
+}

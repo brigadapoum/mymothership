@@ -1,0 +1,968 @@
+// Русский перевод интерфейса системы mothership-fr 1.8.21. Сгенерировано из lang/fr.json системы.
+export default {
+  "Mosh": {
+    "table": {},
+    "bankruptcy_save": {
+      "roll": {
+        "human": "Вы пытаетесь спасти свою компанию от банкротства. Бросьте по таблице, чтобы узнать результат.",
+        "android": "Вы пытаетесь спасти свою компанию от банкротства. Бросьте по таблице, чтобы узнать результат. (андроид)"
+      },
+      "morale_check": {
+        "roll": {
+          "human": "После каждого корабельного раунда, в котором враг получил мегаурон, он проходит проверку морали. Для этого бросьте 1d10. Если результат меньше текущего мегаурона, враг может выйти на связь, предложить прекращение огня и вернуться к переговорам.",
+          "android": "После каждого корабельного раунда, в котором враг получил мегаурон, он проходит проверку морали. (андроид)"
+        }
+      },
+      "death_save": {
+        "roll": {
+          "android": "Вы стучитесь в дверь смерти.",
+          "human": "Вы стучитесь в дверь смерти."
+        }
+      },
+      "Mosh.SkillsFixed": "Обязательные навыки",
+      "Mosh.SkillsOptionalAnd": "Выбранные навыки (И)",
+      "Mosh.SkillsOptionalOr": "Навыки на выбор (ИЛИ)",
+      "blunt_force_wound": {
+        "roll": {
+          "android": "Вы готовитесь к худшему.",
+          "human": "Вы готовитесь к худшему."
+        }
+      },
+      "bleeding_wound": {
+        "roll": {
+          "android": "Вы готовитесь к худшему.",
+          "human": "Вы готовитесь к худшему."
+        }
+      },
+      "gunshot_wound": {
+        "roll": {
+          "android": "Вы готовитесь к худшему.",
+          "human": "Вы готовитесь к худшему."
+        }
+      },
+      "fire_explosives_wound": {
+        "roll": {
+          "android": "Вы готовитесь к худшему.",
+          "human": "Вы готовитесь к худшему."
+        }
+      },
+      "gore_massive_wound": {
+        "roll": {
+          "android": "Вы готовитесь к худшему.",
+          "human": "Вы готовитесь к худшему."
+        }
+      },
+      "panic_check": {
+        "roll": {
+          "android": "На мгновение вы теряете контроль над моторикой, датчики мигают.",
+          "human": "Сердце колотится, начинает кружиться голова."
+        },
+        "success": {
+          "android": "Системные ресурсы стабилизируются, вы снова в норме.",
+          "human": "Вы глубоко вдыхаете и берёте себя в руки."
+        }
+      },
+      "distress_signal": {
+        "roll": {
+          "human": "Вы переводите корабль в аварийный режим, запираетесь в криокапсулах, подаёте сигнал бедствия и ждёте помощи. Это рискованная ставка, но иногда другого выхода нет. Вас найдут?"
+        }
+      },
+      "maintenance_issues": {
+        "roll": {
+          "human": "Вы проводите полный осмотр корабля на износ и повреждения."
+        },
+        "success": {
+          "human": "С кораблём всё в порядке."
+        }
+      }
+    },
+    "item": {
+      "condition": {
+        "add": {
+          "android": "Теперь у вас это состояние.",
+          "human": "Теперь у вас это состояние."
+        },
+        "increase": {
+          "android": "Ваше состояние ухудшается.",
+          "human": "Ваше состояние ухудшается."
+        },
+        "bleed": {
+          "android": "Датчики фиксируют значительную потерю нанофлюида.",
+          "human": "От кровопотери кружится голова."
+        },
+        "radiation": {
+          "android": "Обнаружена катастрофическая потеря данных",
+          "human": "Вы смотрите во тьму и чувствуете, что вам из неё не выбраться."
+        },
+        "cryo": {
+          "android": "Системы отказывают из-за конденсата.",
+          "human": "Вы просыпаетесь замёрзшим и окоченевшим и едва можете пошевелиться."
+        }
+      }
+    },
+    "attribute": {
+      "stress": {
+        "increase": {
+          "android": "Через ядро проходит скачок напряжения, вы начинаете перегреваться.",
+          "human": "Грудь сдавливает, выступает пот."
+        },
+        "increaseHeader": {
+          "android": "Стресс получен",
+          "human": "Стресс получен"
+        },
+        "increaseImg": {
+          "android": "systems/mothership-fr/images/icons/ui/macros/gain_stress.png",
+          "human": "systems/mothership-fr/images/icons/ui/macros/gain_stress.png"
+        },
+        "hitCeiling": {
+          "android": "Производительность систем на грани отказа.",
+          "human": "Вы на самом дне."
+        },
+        "pastCeiling": {
+          "android": "Вы чувствуете невосполнимую потерю данных.",
+          "human": "Вы чувствуете, как часть вас уходит."
+        },
+        "decrease": {
+          "android": "Вы делаете мягкую перезагрузку и закрываете лишние фоновые процессы.",
+          "human": "Вас наполняет спокойствие."
+        },
+        "decreaseHeader": {
+          "android": "Стресс снят",
+          "human": "Стресс снят"
+        },
+        "decreaseImg": {
+          "android": "systems/mothership-fr/images/icons/ui/macros/relieve_stress.png",
+          "human": "systems/mothership-fr/images/icons/ui/macros/relieve_stress.png"
+        },
+        "hitFloor": {
+          "android": "Вы достигаете полной сосредоточенности и ясности.",
+          "human": "Вы обретаете полный душевный покой."
+        },
+        "pastFloor": {
+          "android": "Вы и так сосредоточены до предела.",
+          "human": "Вы и так спокойны до предела."
+        }
+      },
+      "calm": {
+        "increase": {
+          "android": "Вы делаете мягкую перезагрузку и закрываете лишние фоновые процессы.",
+          "human": "Вас наполняет спокойствие."
+        },
+        "increaseHeader": {
+          "android": "Спокойствие получено",
+          "human": "Спокойствие получено"
+        },
+        "increaseImg": {
+          "android": "systems/mothership-fr/images/icons/ui/macros/relieve_stress.png",
+          "human": "systems/mothership-fr/images/icons/ui/macros/relieve_stress.png"
+        },
+        "hitCeiling": {
+          "android": "Вы достигаете полной сосредоточенности и ясности.",
+          "human": "Вы обретаете полный душевный покой."
+        },
+        "pastCeiling": {
+          "android": "Вы и так сосредоточены до предела.",
+          "human": "Вы и так спокойны до предела."
+        },
+        "decrease": {
+          "android": "Через ядро проходит скачок напряжения, вы начинаете перегреваться.",
+          "human": "Грудь сдавливает, выступает пот."
+        },
+        "decreaseHeader": {
+          "android": "Спокойствие потеряно",
+          "human": "Спокойствие потеряно"
+        },
+        "decreaseImg": {
+          "android": "systems/mothership-fr/images/icons/ui/macros/gain_stress.png",
+          "human": "systems/mothership-fr/images/icons/ui/macros/gain_stress.png"
+        },
+        "hitFloor": {
+          "android": "Производительность систем на грани отказа.",
+          "human": "Вы на самом дне."
+        },
+        "pastFloor": {
+          "android": "Вы чувствуете невосполнимую потерю данных.",
+          "human": "Вы чувствуете, как часть вас уходит."
+        }
+      },
+      "health": {
+        "increase": {
+          "android": "Системные ресурсы стабилизируются, вы чувствуете прилив энергии.",
+          "human": "Вы чувствуете прилив сил."
+        },
+        "increaseHeader": {
+          "android": "Здоровье восстановлено",
+          "human": "Здоровье восстановлено"
+        },
+        "increaseImg": {
+          "android": "systems/mothership-fr/images/icons/ui/attributes/health.png",
+          "human": "systems/mothership-fr/images/icons/ui/attributes/health.png"
+        },
+        "hitCeiling": {
+          "android": "Теперь вы полностью здоровы.",
+          "human": "Теперь вы полностью здоровы."
+        },
+        "pastCeiling": {
+          "android": "Вы и так полностью здоровы.",
+          "human": "Вы и так полностью здоровы."
+        },
+        "decrease": {
+          "android": "Болевые рецепторы сообщают о повреждении ядра.",
+          "human": "Вы морщитесь от боли."
+        },
+        "decreaseHeader": {
+          "android": "Здоровье потеряно",
+          "human": "Здоровье потеряно"
+        },
+        "decreaseImg": {
+          "android": "systems/mothership-fr/images/icons/ui/attributes/health.png",
+          "human": "systems/mothership-fr/images/icons/ui/attributes/health.png"
+        },
+        "hitFloor": {
+          "android": "Болевые рецепторы сообщают о повреждении ядра.",
+          "human": "Болевые рецепторы сообщают о повреждении ядра."
+        },
+        "pastFloor": {
+          "android": "Болевые рецепторы сообщают о повреждении ядра.",
+          "human": "Болевые рецепторы сообщают о повреждении ядра."
+        }
+      },
+      "hits": {
+        "increase": {
+          "android": "@UUID[Compendium.mothership-fr.macros_hotbar_1e.ZzKgfEmRdvDfyBMS]{Бросок по таблице ран}",
+          "human": "@UUID[Compendium.mothership-fr.macros_hotbar_1e.ZzKgfEmRdvDfyBMS]{Бросок по таблице ран}"
+        },
+        "increaseHeader": {
+          "android": "Повреждён",
+          "human": "Ранен"
+        },
+        "increaseImg": {
+          "android": "systems/mothership-fr/images/icons/ui/attributes/health.png",
+          "human": "systems/mothership-fr/images/icons/ui/attributes/health.png"
+        },
+        "hitCeiling": {
+          "android": "Конец близок...<br><br>@UUID[Compendium.mothership-fr.macros_hotbar_1e.NsRHfRuuNGPfkYVf]{Пройти испытание смерти}",
+          "human": "Конец близок...<br><br>@UUID[Compendium.mothership-fr.macros_hotbar_1e.NsRHfRuuNGPfkYVf]{Пройти испытание смерти}"
+        },
+        "pastCeiling": {
+          "android": "Конец близок...<br><br>@UUID[Compendium.mothership-fr.macros_hotbar_1e.NsRHfRuuNGPfkYVf]{Пройти испытание смерти}",
+          "human": "Конец близок...<br><br>@UUID[Compendium.mothership-fr.macros_hotbar_1e.NsRHfRuuNGPfkYVf]{Пройти испытание смерти}"
+        },
+        "decrease": {
+          "android": "Системные ресурсы стабилизируются, вы чувствуете прилив энергии.",
+          "human": "Вы чувствуете прилив сил."
+        },
+        "decreaseHeader": {
+          "android": "Отремонтирован",
+          "human": "Вылечен"
+        },
+        "decreaseImg": {
+          "android": "systems/mothership-fr/images/icons/ui/attributes/health.png",
+          "human": "systems/mothership-fr/images/icons/ui/attributes/health.png"
+        },
+        "hitFloor": {
+          "android": "Теперь вы полностью здоровы.",
+          "human": "Теперь вы полностью здоровы."
+        },
+        "pastFloor": {
+          "android": "Вы и так полностью здоровы.",
+          "human": "Вы и так полностью здоровы."
+        }
+      },
+      "strength": {
+        "check": {
+          "android": "Вы чуть больше верите в свои силы.",
+          "human": "Вы чуть больше верите в свои силы."
+        },
+        "increase": {
+          "android": "Данные восстановлены. Центральный раздел данных восстановлен.",
+          "human": "Вы снова начинаете чувствовать себя собой."
+        },
+        "increaseHeader": {
+          "android": "Сила повышена",
+          "human": "Сила получена"
+        },
+        "increaseImg": {
+          "android": "systems/mothership-fr/images/icons/ui/attributes/strength.png",
+          "human": "systems/mothership-fr/images/icons/ui/attributes/strength.png"
+        },
+        "hitCeiling": {
+          "android": "Ваша сила теперь максимальна.",
+          "human": "Ваша сила теперь максимальна."
+        },
+        "pastCeiling": {
+          "android": "Ваша сила и так максимальна.",
+          "human": "Ваша сила и так максимальна."
+        },
+        "decrease": {
+          "android": "Обнаружено повреждение центрального раздела. Найдены невосстановимые секторы.",
+          "human": "Вы чувствуете, как часть вас уходит."
+        },
+        "decreaseHeader": {
+          "android": "Сила ослаблена",
+          "human": "Сила потеряна"
+        },
+        "decreaseImg": {
+          "android": "systems/mothership-fr/images/icons/ui/attributes/strength.png",
+          "human": "systems/mothership-fr/images/icons/ui/attributes/strength.png"
+        },
+        "hitFloor": {
+          "android": "У вас не осталось сил.",
+          "human": "У вас не осталось сил."
+        },
+        "pastFloor": {
+          "android": "Ваша сила не может быть ниже.",
+          "human": "Ваша сила не может быть ниже."
+        }
+      },
+      "speed": {
+        "check": {
+          "android": "Вы чуть больше верите в свои силы.",
+          "human": "Вы чуть больше верите в свои силы."
+        },
+        "increase": {
+          "android": "Данные восстановлены. Центральный раздел данных восстановлен.",
+          "human": "Вы снова начинаете чувствовать себя собой."
+        },
+        "increaseHeader": {
+          "android": "Скорость повышена",
+          "human": "Скорость получена"
+        },
+        "increaseImg": {
+          "android": "systems/mothership-fr/images/icons/ui/attributes/speed.png",
+          "human": "systems/mothership-fr/images/icons/ui/attributes/speed.png"
+        },
+        "hitCeiling": {
+          "android": "Ваша скорость теперь максимальна.",
+          "human": "Ваша скорость теперь максимальна."
+        },
+        "pastCeiling": {
+          "android": "Ваша скорость и так максимальна.",
+          "human": "Ваша скорость и так максимальна."
+        },
+        "decrease": {
+          "android": "Обнаружено повреждение центрального раздела. Найдены невосстановимые секторы.",
+          "human": "Вы чувствуете, как часть вас уходит."
+        },
+        "decreaseHeader": {
+          "android": "Скорость ослаблена",
+          "human": "Скорость потеряна"
+        },
+        "decreaseImg": {
+          "android": "systems/mothership-fr/images/icons/ui/attributes/speed.png",
+          "human": "systems/mothership-fr/images/icons/ui/attributes/speed.png"
+        },
+        "hitFloor": {
+          "android": "Вас охватывает полная апатия.",
+          "human": "Вас охватывает полная апатия."
+        },
+        "pastFloor": {
+          "android": "Ваша скорость не может быть ниже.",
+          "human": "Ваша скорость не может быть ниже."
+        }
+      },
+      "intellect": {
+        "check": {
+          "android": "Вы чуть больше верите в свои силы.",
+          "human": "Вы чуть больше верите в свои силы."
+        },
+        "increase": {
+          "android": "Данные восстановлены. Центральный раздел данных восстановлен.",
+          "human": "Вы снова начинаете чувствовать себя собой."
+        },
+        "increaseHeader": {
+          "android": "Интеллект повышен",
+          "human": "Интеллект получен"
+        },
+        "increaseImg": {
+          "android": "systems/mothership-fr/images/icons/ui/attributes/intellect.png",
+          "human": "systems/mothership-fr/images/icons/ui/attributes/intellect.png"
+        },
+        "hitCeiling": {
+          "android": "Ваш интеллект теперь максимален.",
+          "human": "Ваш интеллект теперь максимален."
+        },
+        "pastCeiling": {
+          "android": "Ваш интеллект и так максимален.",
+          "human": "Ваш интеллект и так максимален."
+        },
+        "decrease": {
+          "android": "Обнаружено повреждение центрального раздела. Найдены невосстановимые секторы.",
+          "human": "Вы чувствуете, как часть вас уходит."
+        },
+        "decreaseHeader": {
+          "android": "Интеллект ослаблен",
+          "human": "Интеллект потерян"
+        },
+        "decreaseImg": {
+          "android": "systems/mothership-fr/images/icons/ui/attributes/intellect.png",
+          "human": "systems/mothership-fr/images/icons/ui/attributes/intellect.png"
+        },
+        "hitFloor": {
+          "android": "Вы совершенно сбиты с толку.",
+          "human": "Вы совершенно сбиты с толку."
+        },
+        "pastFloor": {
+          "android": "Ваш интеллект не может быть ниже.",
+          "human": "Ваш интеллект не может быть ниже."
+        }
+      },
+      "combat": {
+        "check": {
+          "android": "Вы чуть больше верите в свои силы.",
+          "human": "Вы чуть больше верите в свои силы."
+        },
+        "increase": {
+          "android": "Данные восстановлены. Центральный раздел данных восстановлен.",
+          "human": "Вы снова начинаете чувствовать себя собой."
+        },
+        "increaseHeader": {
+          "android": "Бой повышен",
+          "human": "Бой получен"
+        },
+        "increaseImg": {
+          "android": "systems/mothership-fr/images/icons/ui/attributes/combat.png",
+          "human": "systems/mothership-fr/images/icons/ui/attributes/combat.png"
+        },
+        "hitCeiling": {
+          "android": "Ваш бой теперь максимален.",
+          "human": "Ваш бой теперь максимален."
+        },
+        "pastCeiling": {
+          "android": "Ваш бой и так максимален.",
+          "human": "Ваш бой и так максимален."
+        },
+        "decrease": {
+          "android": "Обнаружено повреждение центрального раздела. Найдены невосстановимые секторы.",
+          "human": "Вы чувствуете, как часть вас уходит."
+        },
+        "decreaseHeader": {
+          "android": "Бой ослаблен",
+          "human": "Бой потерян"
+        },
+        "decreaseImg": {
+          "android": "systems/mothership-fr/images/icons/ui/attributes/combat.png",
+          "human": "systems/mothership-fr/images/icons/ui/attributes/combat.png"
+        },
+        "hitFloor": {
+          "android": "Вы больше не можете представить себя в драке.",
+          "human": "Вы больше не можете представить себя в драке."
+        },
+        "pastFloor": {
+          "android": "Ваш бой не может быть ниже.",
+          "human": "Ваш бой не может быть ниже."
+        }
+      },
+      "instinct": {
+        "check": {
+          "android": "Вы чуть больше верите в свои силы.",
+          "human": "Вы чуть больше верите в свои силы."
+        },
+        "increase": {
+          "android": "Данные восстановлены. Центральный раздел данных восстановлен.",
+          "human": "Вы снова начинаете чувствовать себя собой."
+        },
+        "increaseHeader": {
+          "android": "Инстинкты повышены",
+          "human": "Инстинкты получены"
+        },
+        "increaseImg": {
+          "android": "systems/mothership-fr/images/icons/ui/attributes/instinct.png",
+          "human": "systems/mothership-fr/images/icons/ui/attributes/instinct.png"
+        },
+        "hitCeiling": {
+          "android": "Ваши инстинкты теперь максимальны.",
+          "human": "Ваши инстинкты теперь максимальны."
+        },
+        "pastCeiling": {
+          "android": "Ваши инстинкты и так максимальны.",
+          "human": "Ваши инстинкты и так максимальны."
+        },
+        "decrease": {
+          "android": "Обнаружено повреждение центрального раздела. Найдены невосстановимые секторы.",
+          "human": "Вы чувствуете, как часть вас уходит."
+        },
+        "decreaseHeader": {
+          "android": "Инстинкты ослаблены",
+          "human": "Инстинкты потеряны"
+        },
+        "decreaseImg": {
+          "android": "systems/mothership-fr/images/icons/ui/attributes/instinct.png",
+          "human": "systems/mothership-fr/images/icons/ui/attributes/instinct.png"
+        },
+        "hitFloor": {
+          "android": "Вы потеряли чутьё.",
+          "human": "Вы потеряли чутьё."
+        },
+        "pastFloor": {
+          "android": "Ваши инстинкты не могут быть ниже.",
+          "human": "Ваши инстинкты не могут быть ниже."
+        }
+      },
+      "loyalty": {
+        "check": {
+          "android": "Вы чуть больше верите в свои силы.",
+          "human": "Вы чуть больше верите в свои силы."
+        },
+        "increase": {
+          "android": "Данные восстановлены. Центральный раздел данных восстановлен.",
+          "human": "Вы снова начинаете чувствовать себя собой."
+        },
+        "increaseHeader": {
+          "android": "Лояльность повышена",
+          "human": "Лояльность получена"
+        },
+        "increaseImg": {
+          "android": "systems/mothership-fr/images/icons/ui/attributes/loyalty.png",
+          "human": "systems/mothership-fr/images/icons/ui/attributes/loyalty.png"
+        },
+        "hitCeiling": {
+          "android": "Ваша лояльность теперь максимальна.",
+          "human": "Ваша лояльность теперь максимальна."
+        },
+        "pastCeiling": {
+          "android": "Ваша лояльность и так максимальна.",
+          "human": "Ваша лояльность и так максимальна."
+        },
+        "decrease": {
+          "android": "Обнаружено повреждение центрального раздела. Найдены невосстановимые секторы.",
+          "human": "Вы чувствуете, как часть вас уходит."
+        },
+        "decreaseHeader": {
+          "android": "Лояльность ослаблена",
+          "human": "Лояльность потеряна"
+        },
+        "decreaseImg": {
+          "android": "systems/mothership-fr/images/icons/ui/attributes/loyalty.png",
+          "human": "systems/mothership-fr/images/icons/ui/attributes/loyalty.png"
+        },
+        "hitFloor": {
+          "android": "Вам есть дело только до себя.",
+          "human": "Вам есть дело только до себя."
+        },
+        "pastFloor": {
+          "android": "Ваша лояльность не может быть ниже.",
+          "human": "Ваша лояльность не может быть ниже."
+        }
+      }
+    },
+    "macro": {
+      "wound": {
+        "bleeding": {
+          "android": "@UUID[Compendium.mothership-fr.macros_triggered_1e.1DD8i6eCS6nx2Ip0]{Кровотечение}",
+          "human": "@UUID[Compendium.mothership-fr.macros_triggered_1e.1DD8i6eCS6nx2Ip0]{Кровотечение}"
+        },
+        "bleeding_dis": {
+          "android": "@UUID[Compendium.mothership-fr.macros_triggered_1e.xr2o2PU5vdrR6fxQ]{Кровотечение [−]}",
+          "human": "@UUID[Compendium.mothership-fr.macros_triggered_1e.xr2o2PU5vdrR6fxQ]{Кровотечение [−]}"
+        },
+        "bleeding_adv": {
+          "android": "@UUID[Compendium.mothership-fr.macros_triggered_1e.tFcWNddtZvlv7tsg]{Кровотечение [+]}",
+          "human": "@UUID[Compendium.mothership-fr.macros_triggered_1e.tFcWNddtZvlv7tsg]{Кровотечение [+]}"
+        },
+        "blunt_force": {
+          "android": "@UUID[Compendium.mothership-fr.macros_triggered_1e.TAjlQjA5AAy3qYL3]{Тупая травма}",
+          "human": "@UUID[Compendium.mothership-fr.macros_triggered_1e.TAjlQjA5AAy3qYL3]{Тупая травма}"
+        },
+        "blunt_force_dis": {
+          "android": "@UUID[Compendium.mothership-fr.macros_triggered_1e.k0zf8ZGivRguc0wb]{Тупая травма [−]}",
+          "human": "@UUID[Compendium.mothership-fr.macros_triggered_1e.k0zf8ZGivRguc0wb]{Тупая травма [−]}"
+        },
+        "blunt_force_adv": {
+          "android": "@UUID[Compendium.mothership-fr.macros_triggered_1e.oL3GH0HoEPlP8vzG]{Тупая травма [+]}",
+          "human": "@UUID[Compendium.mothership-fr.macros_triggered_1e.oL3GH0HoEPlP8vzG]{Тупая травма [+]}"
+        },
+        "fire_explosives": {
+          "android": "@UUID[Compendium.mothership-fr.macros_triggered_1e.bZi1qKmcKLFvnhZ2]{Огонь и взрыв}",
+          "human": "@UUID[Compendium.mothership-fr.macros_triggered_1e.bZi1qKmcKLFvnhZ2]{Огонь и взрыв}"
+        },
+        "fire_explosives_dis": {
+          "android": "@UUID[Compendium.mothership-fr.macros_triggered_1e.7rYhbDAaFeok1Daq]{Огонь и взрыв [−]}",
+          "human": "@UUID[Compendium.mothership-fr.macros_triggered_1e.7rYhbDAaFeok1Daq]{Огонь и взрыв [−]}"
+        },
+        "fire_explosives_adv": {
+          "android": "@UUID[Compendium.mothership-fr.macros_triggered_1e.dJnQKDf0AlwK27QD]{Огонь и взрыв [+]}",
+          "human": "@UUID[Compendium.mothership-fr.macros_triggered_1e.dJnQKDf0AlwK27QD]{Огонь и взрыв [+]}"
+        },
+        "gore_massive": {
+          "android": "@UUID[Compendium.mothership-fr.macros_triggered_1e.S9nnHKWYGSQmjQdp]{Обширные раны и увечья}",
+          "human": "@UUID[Compendium.mothership-fr.macros_triggered_1e.S9nnHKWYGSQmjQdp]{Обширные раны и увечья}"
+        },
+        "gore_massive_dis": {
+          "android": "@UUID[Compendium.mothership-fr.macros_triggered_1e.eQPuDgwv8evetFIk]{Обширные раны и увечья [−]}",
+          "human": "@UUID[Compendium.mothership-fr.macros_triggered_1e.eQPuDgwv8evetFIk]{Обширные раны и увечья [−]}"
+        },
+        "gore_massive_adv": {
+          "android": "@UUID[Compendium.mothership-fr.macros_triggered_1e.DuVjNlE4lsnR7Emc]{Обширные раны и увечья [+]}",
+          "human": "@UUID[Compendium.mothership-fr.macros_triggered_1e.DuVjNlE4lsnR7Emc]{Обширные раны и увечья [+]}"
+        },
+        "gunshot": {
+          "android": "@UUID[Compendium.mothership-fr.macros_triggered_1e.XgCOLv9UunBddUyW]{Огнестрельное ранение}",
+          "human": "@UUID[Compendium.mothership-fr.macros_triggered_1e.XgCOLv9UunBddUyW]{Огнестрельное ранение}"
+        },
+        "gunshot_dis": {
+          "android": "@UUID[Compendium.mothership-fr.macros_triggered_1e.LTpa1ZYVZl4m9k6z]{Огнестрельное ранение [−]}",
+          "human": "@UUID[Compendium.mothership-fr.macros_triggered_1e.LTpa1ZYVZl4m9k6z]{Огнестрельное ранение [−]}"
+        },
+        "gunshot_adv": {
+          "android": "@UUID[Compendium.mothership-fr.macros_triggered_1e.fnVATRHYJEUlS3pR]{Огнестрельное ранение [+]}",
+          "human": "@UUID[Compendium.mothership-fr.macros_triggered_1e.fnVATRHYJEUlS3pR]{Огнестрельное ранение [+]}"
+        }
+      }
+    },
+    "CharacterGenerator": {
+      "name": "Генератор персонажа",
+      "CommonSkills": "Обычные навыки",
+      "CommonSkillExplanation": "Список типичных навыков класса для случайной генерации персонажей.",
+      "StatOption": "Характеристики и испытания",
+      "StatOptionPopupTitle": "Классовый выбор характеристик и испытаний",
+      "StatOptionPopupText": "Выберите, куда применить бонус:",
+      "SkillOption.Classerror": "Сначала выберите класс.",
+      "SkillOption.PopupTitle": "Выберите навыки",
+      "SkillOption.PopupTrainedDescription": "Выберите 1 навык знатока",
+      "SkillOption.PopupExpertDescription": "Выберите 1 навык эксперта",
+      "SkillOption.PopupMasterDescription": "Выберите 1 навык мастера",
+      "SkillOption.PopupFullMasterName": "Набор мастера",
+      "SkillOption.PopupFullMasterDescription": "Выберите 1 навык мастера и нужные для него навыки эксперта и знатока.",
+      "SkillOption.PopupFullExpertName": "Набор эксперта",
+      "SkillOption.PopupFullExperDescription": "Выберите 1 навык эксперта и нужный для него навык знатока.",
+      "SkillOption.ChoiceWord": "Вариант",
+      "SkillOption.ChoiceText": "Выберите 1 из этих бонусных навыков",
+      "Tables": "Таблицы",
+      "Table.Loadout": "Таблица снаряжения",
+      "Table.Patch": "Таблица нашивок",
+      "Table.Trinket": "Таблица безделушек",
+      "Error.NoClass": "Сначала выберите класс."
+    },
+    "Add": "Добавить",
+    "AddOr": "Добавить или",
+    "AddOption": "Добавить вариант",
+    "AddGroup": "Добавить группу",
+    "AddASkill": "Добавить навык?",
+    "AddASkillTitle": "Добавить навык",
+    "Advantage": "Преимущество",
+    "AllStatsAndSavesDecreasedBy": "Все характеристики и испытания уменьшены на",
+    "Ammo": "Боеприпасы",
+    "Ammunition": "Боеприпасы",
+    "AmmoType": "Тип боеприпасов",
+    "AntiArmorAcronym": "ББ",
+    "AntiArmor": "Бронебойное",
+    "AP": "ПБ",
+    "Armor": "Броня",
+    "ArmorName": "Название брони",
+    "ArmorPoints": "Пункты брони",
+    "Background": "Предыстория",
+    "Bankruptcy": "Банкротство",
+    "BankruptcyCheck": "Проверка на банкротство",
+    "BankruptcySave": "Испытание банкротства",
+    "Base": "База",
+    "Battle": "Бой",
+    "Bio": "Биография",
+    "Body": "Тело",
+    "BodySave": "Испытание тела",
+    "Bonus": "Бонус",
+    "Calm": "Спокойствие",
+    "Cargo": "Груз",
+    "CarryingCapacity": "Грузоподъёмность",
+    "CLASS": "КЛАСС",
+    "Combat": "Бой",
+    "Condition": "Состояние",
+    "Cost": "Цена",
+    "CreateCondition": "Создать состояние",
+    "CreateItem": "Создать предмет",
+    "CreateSkill": "Создать навык",
+    "CreateWeapon": "Создать оружие",
+    "CreatureSettings": "Настройки существа",
+    "Credits": "Кредиты",
+    "Crew": "Экипаж",
+    "CriticalDamage": "Критический урон",
+    "Cryopods": "Криокапсулы",
+    "CryofreezeDamage": "Урон от криоболезни",
+    "Current": "Текущее",
+    "CurrentShots": "Выстрелов осталось",
+    "CurrentWeight": "Текущий вес",
+    "Damage": "Урон",
+    "DeleteArmor": "Удалить броню",
+    "DeleteCondition": "Удалить состояние",
+    "DeleteItem": "Удалить предмет",
+    "DeleteSkill": "Удалить навык",
+    "DeleteWeapon": "Удалить оружие",
+    "DeleteGroup": "Удалить группу",
+    "DeleteOption": "Удалить вариант",
+    "Description": "Описание",
+    "Disabled": "Выключено",
+    "Disadvantage": "Помеха",
+    "DistressSignal": "Сигнал бедствия",
+    "DistressSignalTableExplanation": "Бросьте по этой таблице, чтобы узнать, кто ответит на сигнал бедствия экипажа.",
+    "DoNotAddASkillToThisRoll": "Не добавлять навык к этому броску.",
+    "DMGReduction": "Снижение урона",
+    "DR": "СУ",
+    "Fuel": "Топливо",
+    "Feature": "Характеристика",
+    "Features": "Характеристики",
+    "EditArmor": "Изменить броню",
+    "EditCondition": "Изменить состояние",
+    "EditItem": "Изменить предмет",
+    "EditSkill": "Изменить навык",
+    "EditWeapon": "Изменить оружие",
+    "Equipped": "Экипировано",
+    "Emergency": "Аварийная ситуация",
+    "Enabled": "Включено",
+    "EnemyShips": "Вражеские корабли",
+    "EscapePods": "Спасательные капсулы",
+    "Fear": "Страх",
+    "Finish": "Завершить",
+    "Finances": "Финансы",
+    "Health": "Здоровье",
+    "HighScore": "Лучший результат",
+    "Hits": "Раны",
+    "HullPoints": "Очки корпуса",
+    "Installed": "Установлено",
+    "Instinct": "Инстинкты",
+    "Intellect": "Интеллект",
+    "ItemName": "Название предмета",
+    "Item": "Предмет",
+    "Items": "Предметы",
+    "Level": "Уровень",
+    "Loyalty": "Лояльность",
+    "Macros": "Макросы",
+    "MaintenanceAndRepairs": "Обслуживание и ремонт",
+    "MaintenanceCheck": "Проверка обслуживания",
+    "Maximum": "Максимум",
+    "MaxShots": "Выстрелов максимум",
+    "MaxO2": "O2 максимум",
+    "Megadamage": "Мегаурон",
+    "MegadamageEffects": "Эффекты мегаурона",
+    "Minimum": "Минимум",
+    "ModuleName": "Название модуля",
+    "MoraleCheck": "Проверка морали",
+    "MoraleCheckDescription": "После каждого корабельного раунда, в котором враг получил мегаурон, он проходит проверку морали. Для этого бросьте 1d10. Если результат меньше текущего мегаурона, враг может выйти на связь, предложить прекращение огня и вернуться к переговорам.",
+    "NA": "Н/Д",
+    "Name": "Имя",
+    "NewSkill": "Новый навык",
+    "Next": "Далее",
+    "Normal": "Обычный",
+    "Notes": "Заметки",
+    "O2Remaining": "O2 осталось",
+    "OK": "ОК",
+    "OpenDeckplan": "Открыть план палуб",
+    "Other": "Другое",
+    "Oxygen": "Кислород",
+    "PanicCheck": "Проверка паники",
+    "Pronouns": "Обращение",
+    "Quantity": "Количество",
+    "RadiationDamage": "Урон от радиации",
+    "Range": "Дистанция",
+    "RANK": "ЗВАНИЕ",
+    "Repairs": "Ремонт",
+    "Resolve": "Решимость",
+    "Robotic": "Робототехника",
+    "RollCharacter": "Создание персонажа",
+    "RollingForGeneric": "Бросок для {name}",
+    "RollingForPanicEffect": "Бросок эффекта паники...",
+    "RollingForMaintenanceIssue": "Бросок неисправности...",
+    "Sanity": "Рассудок",
+    "SaveBonus": "Бонус испытания",
+    "Severity": "Тяжесть",
+    "ShipIdentifier": "Позывной корабля",
+    "ShipWeaponBonus": "Бонус корабельного оружия",
+    "ShoreLeave": "Отпуск",
+    "Shots": "Выстрелы",
+    "ShotsPerFiring": "Выстрелов за атаку",
+    "SkillBonus": "Бонус навыка",
+    "SkillName": "Название навыка",
+    "SkillRank": "Уровень навыка",
+    "SkillRankTrained": "Знаток",
+    "SkillRankExpert": "Эксперт",
+    "SkillRankMaster": "Мастер",
+    "Skills": "Навыки",
+    "SkillTraining": "Подготовка",
+    "SpecialAbilities": "Особые способности",
+    "Speed": "Скорость",
+    "StatsAndSaves": "Характеристики и испытания",
+    "Strength": "Сила",
+    "Stress": "Стресс",
+    "StressResponse": "Реакция на стресс",
+    "Systems": "Системы",
+    "Thrusters": "Двигатели",
+    "Total": "Всего",
+    "TraumaResponse": "Реакция на травму",
+    "Transponder": "Транспондер",
+    "Treatment": "Лечение",
+    "Upgrades": "Улучшения",
+    "UsesAmmo": "Тратит боеприпасы",
+    "Value": "Значение",
+    "WarpCores": "Варп-ядра",
+    "WeaponName": "Название оружия",
+    "Weapons": "Оружие",
+    "Weight": "Вес",
+    "Wounds": "Раны",
+    "WoundEffect": "Эффект раны",
+    "XP": "Опыт",
+    "YouRolled90OrHigher": "Выпало 90 или больше — это всегда провал.",
+    "HEARTATTACKSHORTCIRCUITANDROIDS": "СЕРДЕЧНЫЙ ПРИСТУП / КОРОТКОЕ ЗАМЫКАНИЕ (АНДРОИДЫ).",
+    "SHORTCIRCUIT": "КОРОТКОЕ ЗАМЫКАНИЕ.",
+    "HEARTATTACK": "СЕРДЕЧНЫЙ ПРИСТУП.",
+    "SelectAStat": "Выбрать характеристику",
+    "ChooseTheStatForSkillCheck": "Выберите характеристику, которая лучше всего подходит к этой проверке навыка. Бонус навыка прибавится к значению характеристики для этого броска",
+    "GivingYouAHigherNumber": "(то есть выбросить нужно меньше большего числа).",
+    "StrengthSkillExample": "Удержать двери шлюза, нести павших товарищей, карабкаться, толкать, прыгать.",
+    "SpeedSkillExample": "Выпрыгнуть из трюма, пока не закрылись бронедвери, опередить кого-то (или что-то), убежать.",
+    "IntellectSkillExample": "Вспомнить навыки и опыт под давлением, решить сложную задачу, изобрести или починить что-то.",
+    "CombatSkillExample": "Сражаться за свою жизнь.",
+    "SelectYourRollType": "Выберите тип броска",
+    "ChooseAStat": "Выбрать характеристику",
+    "SwarmWoundShort": "Б*",
+    "IfYouHaveARelevantSkill": "Если у вас есть навык, подходящий к задаче, перед броском можно прибавить его бонус к характеристике или испытанию",
+    "HeavyCover": "Надёжное укрытие",
+    "Cover": "Укрытие",
+    "NoCover": "Без укрытия",
+    "LightCover": "Лёгкое укрытие",
+    "InsignificantCover": "Незначительное укрытие",
+    "SelectYourCurrentCoverSituation": "Выберите своё укрытие",
+    "TheEnvironmentCanProvideProtectionCalled": "Окружение может давать защиту, которая называется",
+    "IfYouShotWhileInCover": "Если вы стреляете из укрытия, до своего следующего хода вы считаетесь без укрытия.",
+    "ItCanBeDestroyedLikeArmor": "Как и броня, оно разрушается, если получает урон, равный его ПБ или больше. Обычно укрытие защищает только от дистанционных атак, но иногда помогает и против ближнего боя.",
+    "YourCoverValuesAreDisplayedIn": "Значения укрытия показаны",
+    "Orange": "оранжевым",
+    "UnprotectedOutInTheOpen": "Без защиты, на открытом месте и т. д.",
+    "WoodFurnitureDoorsShields": "Деревянная мебель и двери, щиты и т. д.",
+    "TreesBulkheadWallMetalFurniture": "Деревья, переборки, металлическая мебель и т. д.",
+    "AirlockDoorsCementBeamsShips": "Двери шлюзов, бетонные колонны, корабли и т. д.",
+    "WeaponReloaded": "Оружие перезаряжено",
+    "Reload": "Перезарядить",
+    "OutOfAmmo": "Нет боеприпасов",
+    "OutOfAmmoNeedReload": "Боеприпасы кончились, нужно перезарядить",
+    "WeaponIssue": "Неисправность оружия",
+    "YouAddThisToYourInventory": "Вы добавляете это в инвентарь.",
+    "YouLearnThisSkill": "Вы осваиваете этот навык",
+    "YouAddAnotherOfThisToYourInventory": "Вы добавляете в инвентарь ещё один такой предмет.",
+    "HealthZeroMessage": "Здоровье упало до нуля, вы получаете рану.",
+    "HealthZeroMessage2": "Здоровье упало до нуля, вы получаете рану. Здоровье восстановлено до",
+    "YouSenseTheWeightOfYourSetbacks": "Вы чувствуете груз своих неудач.",
+    "Bankrupcy": "Банкротство",
+    "BankrupcySave": "Испытание банкротства",
+    "RestSave": "Испытание отдыха",
+    "Job": "Профессия",
+    "MaintenanceCheckDescription": "Проведите полную проверку корабля на износ и повреждения.",
+    "BankrupcySaveDescription": "Вы пытаетесь спасти свою компанию от банкротства. Бросьте по таблице, чтобы узнать результат.",
+    "SelectSkill": "Выбрать навык",
+    "SelectSkillForRoll": "Выберите навык, который добавится к броску",
+    "NoSkill": "Без навыка"
+  },
+  "MoshQoL": {
+    "GenericContractor": "Обычный наёмник",
+    "UniqueContractor": "Уникальный наёмник",
+    "ContractorRole": "Профессия",
+    "BaseSalary": "Базовая зарплата",
+    "Motivation": "Мотивация",
+    "EnterMotivation": "Что движет наёмником.",
+    "HiddenMotivation": "Тайная мотивация (только смотритель)",
+    "EnterHiddenMotivation": "Видно только смотрителю",
+    "LoyaltyRolled": "Бросок лояльности",
+    "CharacterCreation": {
+      "NoActorProvided": "Не указан актёр.",
+      "AlreadyCompleted": "Персонаж уже создан",
+      "AlreadyCompletedContent": "<p><strong>{name}</strong> уже завершил создание персонажа.<br>Сбросить и начать заново?</p>",
+      "ResetComplete": "Создание персонажа {name} сброшено.",
+      "Cancelled": "Создание персонажа отменено.",
+      "AlreadyCompletedWarning": "Создание персонажа уже завершено.",
+      "Warning": "Создание персонажа: предупреждение",
+      "WarningContent": "<p>Для <strong>{name}</strong> не найдено данных создания персонажа!</p><p>Если продолжить, существующий персонаж может быть <strong><span style=\"color: #f55;\">перезаписан</span></strong>.</p><p>Выберите действие:</p>",
+      "Overwrite": "Перезаписать",
+      "MarkCompleted": "Отметить завершённым",
+      "Cancel": "Отмена",
+      "MarkedCompleted": "{name} вручную отмечен завершённым.",
+      "StatsRolled": "Характеристики брошены",
+      "Stats": "Характеристики",
+      "Saves": "Испытания",
+      "ClassSelected": "Класс выбран",
+      "ClassSelectedContent": "{name} выбирает класс: <label class=\"counter\">{className}</label>",
+      "ClassInvalid": "Неверный UUID класса. Выберите класс заново.",
+      "NoClassUUID": "UUID класса не найден. Выберите класс.",
+      "ClassSelectionCancelled": "Выбор класса отменён.",
+      "AttributeSelectionCancelled": "Выбор характеристик отменён.",
+      "HealthRolled": "Здоровье брошено",
+      "SkillsSelected": "Навыки выбраны",
+      "SkillSelectionCancelled": "Выбор навыков отменён.",
+      "LoadoutRolled": "Снаряжение брошено",
+      "Complete": "{name} завершает создание персонажа."
+    },
+    "ShoreLeave": {
+      "Title": "Выбрать уровень отпуска",
+      "NoActorProvided": "Не указан актёр.",
+      "StressConversion": "Перевод стресса",
+      "Price": "Цена",
+      "RollPrice": "Бросить цену",
+      "RerollFlavor": "Перебросить описание",
+      "Confirm": "Подтвердить",
+      "ParticipateNow": "Участвовать сейчас",
+      "InvalidTier": "Выбран неверный уровень.",
+      "Default": "Отпуск"
+    },
+    "ShipCrits": {
+      "NoCrit": "Критический эффект не найден для: {value}",
+      "CriticalHit": "{name}: критическое попадание",
+      "CriticalHitGeneric": "Критическое попадание по кораблю",
+      "EscalateCrit": "Усилить критический эффект"
+    },
+    "StashSheet": {
+      "Title": "Запас"
+    },
+    "EditShoreLeaveTiers": {
+      "Title": "Изменить уровни отпуска",
+      "Reset": "Уровни отпуска сброшены к значениям по умолчанию.",
+      "Updated": "Уровни отпуска обновлены."
+    },
+    "ConvertStress": {
+      "Title": "Перевести стресс",
+      "InvalidRatio": "Неверный или нулевой коэффициент перевода.",
+      "NoStress": "Нет стресса для перевода.",
+      "DistributionTitle": "Распределение стресса",
+      "TotalStress": "Всего стресса",
+      "RemainingPoints": "Осталось очков",
+      "Apply": "Применить",
+      "Cancel": "Отмена",
+      "Updated": "Стресс {name} обновлён.",
+      "ConvertedContent": "Стресс переведён: <label class=\"counter\">{points}</label>"
+    },
+    "UI": {
+      "NoActorAvailable": "Нет актёра для вывода в чат.",
+      "Untitled": "Без названия",
+      "SelectAttributes": "Выбрать характеристики",
+      "SelectClass": "Выбрать класс",
+      "SelectSkills": "Выбрать навыки",
+      "SelectSkill": "Выбрать навык",
+      "SelectSkillForRoll": "Выберите навык, который добавится к броску",
+      "NoSkill": "Без навыка",
+      "Confirm": "Подтвердить",
+      "Cancel": "Отмена",
+      "Apply": "Применить",
+      "Save": "Сохранить",
+      "Reset": "Сбросить",
+      "Close": "Закрыть"
+    },
+    "Skills": {
+      "Trained": "Знаток",
+      "Expert": "Эксперт",
+      "Master": "Мастер"
+    },
+    "Attributes": {
+      "Strength": "Сила",
+      "Speed": "Скорость",
+      "Intellect": "Интеллект",
+      "Combat": "Бой",
+      "Sanity": "Рассудок",
+      "Fear": "Страх",
+      "Body": "Тело"
+    },
+    "Settings": {
+      "ThemeColor": "Цвет темы",
+      "ThemeColorHint": "Основной цвет интерфейса модуля",
+      "RandomFlavor": "Случайное описание",
+      "RandomFlavorHint": "Включить случайные описания для отпуска",
+      "DisableFlavor": "Выключить описания",
+      "DisableFlavorHint": "Полностью выключить описательные элементы"
+    }
+  }
+};

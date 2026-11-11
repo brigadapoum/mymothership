@@ -1,0 +1,32 @@
+{
+  "id": "mymothership",
+  "title": "MyMothership — Mothership 1e по-русски",
+  "description": "Модуль Мастерской для Mothership 1e (система mothership-fr). Версия 0.1: русский перевод интерфейса системы с выбором языка в настройках модуля. Дальше — материалы ваншота «Восходящий поток».",
+  "version": "0.1.0",
+  "authors": [
+    {
+      "name": "Мастерская"
+    }
+  ],
+  "url": "https://github.com/brigadapoum/mymothership",
+  "manifest": "https://raw.githubusercontent.com/brigadapoum/mymothership/main/module.json",
+  "download": "https://raw.githubusercontent.com/brigadapoum/mymothership/main/dist/mymothership.zip",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13.351"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "mothership-fr",
+        "type": "system",
+        "compatibility": {
+          "verified": "1.8.21"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/main.js"
+  ]
+}
