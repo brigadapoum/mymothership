@@ -1,5 +1,5 @@
 // MyMothership — модуль Мастерской для Mothership 1e (система mothership-fr).
-// Версия 0.1: русский перевод интерфейса системы с выбором языка в настройках модуля.
+// Русский перевод интерфейса системы с выбором языка в настройках модуля.
 
 import RU from "../lang/ru-mothership-fr.js";
 
@@ -87,11 +87,19 @@ Hooks.once("init", () => {
   });
 });
 
-// Перевод подмешивается сразу после того, как Foundry загрузил языковые файлы.
-Hooks.once("i18nInit", () => {
-  if (!isOurSystem() || !useRussian()) return;
+// Если язык Foundry — русский, перевод подхватывается сам (раздел languages в module.json).
+// При любом другом языке Foundry модуль подмешивает перевод сам, если в настройке выбран русский.
+// Повторяем на нескольких этапах загрузки: подмешивание безвредно, а этапы в разных версиях Foundry идут по-разному.
+let merged = false;
+function applyTranslation(stage) {
+  if (!isOurSystem() || !useRussian() || !game.i18n?.translations) return;
   foundry.utils.mergeObject(game.i18n.translations, RU);
-});
+  if (!merged) console.log(`MyMothership | русский перевод подключён (${stage})`);
+  merged = true;
+}
+Hooks.once("i18nInit", () => applyTranslation("i18nInit"));
+Hooks.once("setup", () => applyTranslation("setup"));
+Hooks.once("ready", () => applyTranslation("ready"));
 
 // Новые персонажи и существа сразу получают подписи на выбранном языке.
 Hooks.on("preCreateActor", (actor) => {
