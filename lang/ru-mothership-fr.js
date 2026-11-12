@@ -1,4 +1,4 @@
-// Русский перевод интерфейса системы mothership-fr 1.8.21. Сгенерировано из lang/fr.json системы.
+// Русский перевод интерфейса системы mothership-fr 1.8.21. Сгенерировано из lang/fr.json системы и ключей, которых в нём нет.
 export default {
   "Mosh": {
     "table": {},
@@ -632,7 +632,10 @@ export default {
       "Table.Loadout": "Таблица снаряжения",
       "Table.Patch": "Таблица нашивок",
       "Table.Trinket": "Таблица безделушек",
-      "Error.NoClass": "Сначала выберите класс."
+      "Error.NoClass": "Сначала выберите класс.",
+      "SkillOption": {
+        "PopupFullExpertDescription": "Выберите 1 навык эксперта и нужный для него навык знатока."
+      }
     },
     "Add": "Добавить",
     "AddOr": "Добавить или",
@@ -848,7 +851,54 @@ export default {
     "BankrupcySaveDescription": "Вы пытаетесь спасти свою компанию от банкротства. Бросьте по таблице, чтобы узнать результат.",
     "SelectSkill": "Выбрать навык",
     "SelectSkillForRoll": "Выберите навык, который добавится к броску",
-    "NoSkill": "Без навыка"
+    "NoSkill": "Без навыка",
+    "AntyArmorAcronym": "ББ",
+    "BankrupcyCheckExplanation": "Немногие корабли принадлежат небольшим банковским фирмам: они делят собственность с экипажем, берут на себя все расходы на судно и забирают большую часть прибыли. Взамен вы получаете корабль и довольно свободные руки в делах на Окраине. Каждый год",
+    "OrQuarterAsDetermineByWarden": "или квартал — как решит смотритель",
+    "MakeA": "пройдите",
+    "BankrupcySaveExplanationEnd": "чтобы узнать, как идут дела у компании",
+    "CURRENT": "Текущее",
+    "MAX": "Макс.",
+    "Captain": "Капитан",
+    "Cass": "Класс",
+    "Class": "Класс",
+    "CloseMenu": "Закрыть меню",
+    "CreateAbility": "Создать способность",
+    "CreateArmor": "Создать броню",
+    "CreateCrewMember": "Добавить члена экипажа",
+    "CreateModule": "Создать модуль",
+    "DamageReduction": "Снижение урона",
+    "DeckPlan": "План палуб",
+    "DeleteAbility": "Удалить способность",
+    "DeleteCrewMember": "Удалить члена экипажа",
+    "DeleteModule": "Удалить модуль",
+    "Distress": "Сигнал бедствия",
+    "EditAbility": "Изменить способность",
+    "EditCrewMember": "Изменить члена экипажа",
+    "EditModule": "Изменить модуль",
+    "Gain1d10Calmk2TtLFOG9mGaWVx31d10Calm": " Получите 1d10 спокойствия.<br><br>@UUID[Compendium.mothership-fr.macros_triggered_1e.k2TtLFOG9mGaWVx3]{+1d10 спокойствия}",
+    "Relieve1Stressqbq694JMbXeZrHj": " Снимите 1 стресс.<br><br>@UUID[Compendium.mothership-fr.macros_triggered_1e.qbq694JMbXeZrHjj]{−1 стресс}",
+    "Hull": "Корпус",
+    "MaintenanceCheckExplanation1": "Рано или поздно кораблю нужна настройка, а иногда и капитальный ремонт. Тогда его придётся чинить.",
+    "Major": "Крупный",
+    "MajorRepair": "Капитальный ремонт",
+    "MajorRepairs": "Капитальный ремонт",
+    "MinorRepair": "Мелкий ремонт",
+    "MinorRepairs": "Мелкий ремонт",
+    "MinorRepairsExplanation": "— косметические повреждения, уборка и прочая мелкая работа, которую можно сделать в полёте, обычно за 2d10 дней",
+    "Modules": "Модули",
+    "Owed": "Долг",
+    "RollStartingCondition": "Бросить начальное состояние",
+    "ShipSetup": "Настройка корабля",
+    "SkillsPrerequisite": "Нужные навыки",
+    "Stock": "Запас",
+    "TreesBulkheadWallsMetalFurniture": "Деревья, переборки, металлическая мебель и т. д.",
+    "Type": "Тип",
+    "classNewSkillOptionSkillTip": "Сначала сохраните.",
+    "classNewStatOptionEmptyError": "Выберите хотя бы две характеристики или испытания",
+    "warning": {
+      "noBleedingItem": "У персонажа нет состояния «Кровотечение»."
+    }
   },
   "MoshQoL": {
     "GenericContractor": "Обычный наёмник",
@@ -886,7 +936,9 @@ export default {
       "SkillsSelected": "Навыки выбраны",
       "SkillSelectionCancelled": "Выбор навыков отменён.",
       "LoadoutRolled": "Снаряжение брошено",
-      "Complete": "{name} завершает создание персонажа."
+      "Complete": "{name} завершает создание персонажа.",
+      "EquipmentGenerated": "Снаряжение создано.",
+      "StartingCredits": "Стартовые кредиты"
     },
     "ShoreLeave": {
       "Title": "Выбрать уровень отпуска",
@@ -964,5 +1016,10 @@ export default {
       "DisableFlavor": "Выключить описания",
       "DisableFlavorHint": "Полностью выключить описательные элементы"
     }
-  }
+  },
+  "Advantage": "Преимущество",
+  "Disadvantage": "Помеха",
+  "Normal": "Обычный",
+  "OK": "ОК",
+  "SelectYourRollType": "Выберите тип броска"
 };

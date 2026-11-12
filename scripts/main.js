@@ -2,6 +2,7 @@
 // Русский перевод интерфейса системы с выбором языка в настройках модуля.
 
 import RU from "../lang/ru-mothership-fr.js";
+import { translateElement } from "./text-ru.js";
 
 const MODULE_ID = "mymothership";
 const SYSTEM_ID = "mothership-fr";
@@ -120,4 +121,24 @@ Hooks.once("ready", async () => {
   if (!updates.length) return;
   await Actor.implementation.updateDocuments(updates);
   ui.notifications.info(`MyMothership: подписи обновлены у ${updates.length} актёров.`);
+});
+
+// Текст, который система вписывает в чат и окна прямо в коде, подменяем при показе.
+function toElement(html) {
+  if (!html) return null;
+  if (html instanceof HTMLElement) return html;
+  return html[0] ?? null; // jQuery в старых хуках
+}
+function translateRendered(html) {
+  if (!isOurSystem() || !useRussian()) return;
+  translateElement(toElement(html));
+}
+Hooks.once("init", () => {
+  if ((game.release?.generation ?? 0) >= 13) {
+    Hooks.on("renderChatMessageHTML", (message, html) => translateRendered(html));
+  } else {
+    Hooks.on("renderChatMessage", (message, html) => translateRendered(html));
+  }
+  Hooks.on("renderApplicationV2", (app, html) => translateRendered(html));
+  Hooks.on("renderApplication", (app, html) => translateRendered(html));
 });

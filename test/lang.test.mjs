@@ -26,3 +26,24 @@ test("подписи в данных персонажа переводятся �
     "system.health.label": "Здоровье"
   });
 });
+
+test("фразы из кода системы в чате переводятся", async () => {
+  const { translateText } = await import("../scripts/text-ru.js");
+  assert.equal(translateText("FAILURE!"), "ПРОВАЛ!");
+  assert.equal(translateText(" CRITICAL SUCCESS! "), " КРИТИЧЕСКИЙ УСПЕХ! ");
+  assert.equal(translateText("\n   Vous n'avez pas obtenu moins que votre "), "\n   Не выпало меньше, чем ");
+  assert.equal(translateText("Vous obtenu moins que ou égal à votre "), "Выпало не больше, чем ");
+  assert.equal(translateText(" plus "), " плюс навык ");
+  assert.equal(translateText(" bonus de compétence."), ".");
+  assert.equal(translateText("Стресс augmente from "), "Стресс растёт с ");
+  assert.equal(translateText(" to "), " до ");
+  assert.equal(translateText(" points de Dégâts."), " урона.");
+  assert.equal(translateText("Make a Panic Check"), "Пройти проверку паники");
+  assert.equal(translateText("Plus de chance"), "Plus de chance");
+});
+
+test("в переводе есть кнопки окна броска", () => {
+  assert.equal(RU.Advantage, "Преимущество");
+  assert.equal(RU.Normal, "Обычный");
+  assert.equal(RU.Disadvantage, "Помеха");
+});
