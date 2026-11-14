@@ -72,3 +72,62 @@ export function translateElement(root) {
     if (after !== before) node.nodeValue = after;
   }
 }
+
+// ---------- Фраза под броском в чате ----------
+// Система пишет: «Vous obtenu moins que votre <strong>Сила</strong>[ plus <strong>Навык</strong> bonus de compétence].»
+// Собираем по-русски целиком: «Выпало меньше Силы.» / «Выпало не меньше Силы с навыком Геология.»
+
+// Родительный падеж характеристик и испытаний (подписи из листа персонажа).
+const GENITIVE = {
+  "Сила": "Силы", "Скорость": "Скорости", "Интеллект": "Интеллекта", "Бой": "Боя",
+  "Рассудок": "Рассудка", "Страх": "Страха", "Тело": "Тела", "Броня": "Брони",
+  "Инстинкты": "Инстинктов", "Лояльность": "Лояльности", "Здоровье": "Здоровья",
+  "Двигатели": "Двигателей", "Сражение": "Сражения", "Системы": "Систем", "Банкротство": "Банкротства",
+  "Force": "Силы", "Vitesse": "Скорости", "Intellect": "Интеллекта", "Combat": "Боя",
+  "Sanité": "Рассудка", "Peur": "Страха", "Corps": "Тела", "Blindage": "Брони",
+  "Instinct": "Инстинктов", "Loyauté": "Лояльности"
+};
+
+// Успех: как сравнивали. Провал — то же с отрицанием.
+const COMPARE_RU = {
+  "moins que": ["меньше", "не меньше"],
+  "moins que ou égal à": ["не больше", "больше"],
+  "plus que": ["больше", "не больше"],
+  "plus que ou égal à": ["не меньше", "меньше"]
+};
+
+const ROLL_SENTENCE = /^\s*Vous\s+(n'avez pas obtenu|obtenu)\s+(moins que ou égal à|moins que|plus que ou égal à|plus que)\s+votre\s*<strong>([\s\S]*?)<\/strong>(?:\s*plus\s*<strong>([\s\S]*?)<\/strong>\s*bonus de compétence)?\s*\.\s*$/;
+
+export function rollSentenceRu(html) {
+  const m = ROLL_SENTENCE.exec(html ?? "");
+  if (!m) return null;
+  const [, verb, cmp, attrRaw, skillRaw] = m;
+  const success = verb === "obtenu";
+  const word = COMPARE_RU[cmp][success ? 0 : 1];
+  const attr = attrRaw.trim();
+  const gen = GENITIVE[attr];
+  let out = gen ? `Выпало ${word} <strong>${gen}</strong>` : `Выпало ${word}, чем <strong>${attr}</strong>`;
+  if (skillRaw && skillRaw.trim()) out += ` с навыком <strong>${skillRaw.trim()}</strong>`;
+  return out + ".";
+}
+
+// Формула броска: 1d100 → к100, 2d10 → 2к10 (только надпись, сам бросок не трогаем).
+export function diceRu(text) {
+  return text.replace(/\b(\d*)d(\d+)\b/g, (m, n, sides) => `${n === "1" ? "" : n}к${sides}`);
+}
+
+export function translateRollCard(root) {
+  if (!root?.querySelectorAll) return;
+  for (const body of root.querySelectorAll(".rollcontainer .description .body")) {
+    const ru = rollSentenceRu(body.innerHTML);
+    if (ru) body.innerHTML = ru;
+  }
+  for (const el of root.querySelectorAll(".dice-formula, .part-formula")) {
+    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    while (walker.nextNode()) {
+      const n = walker.currentNode;
+      const after = diceRu(n.nodeValue);
+      if (after !== n.nodeValue) n.nodeValue = after;
+    }
+  }
+}

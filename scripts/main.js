@@ -2,7 +2,7 @@
 // Русский перевод интерфейса системы с выбором языка в настройках модуля.
 
 import RU from "../lang/ru-mothership-fr.js";
-import { translateElement } from "./text-ru.js";
+import { translateElement, translateRollCard } from "./text-ru.js";
 
 const MODULE_ID = "mymothership";
 const SYSTEM_ID = "mothership-fr";
@@ -131,7 +131,9 @@ function toElement(html) {
 }
 function translateRendered(html) {
   if (!isOurSystem() || !useRussian()) return;
-  translateElement(toElement(html));
+  const el = toElement(html);
+  translateRollCard(el);
+  translateElement(el);
 }
 Hooks.once("init", () => {
   if ((game.release?.generation ?? 0) >= 13) {

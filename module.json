@@ -2,7 +2,7 @@
   "id": "mymothership",
   "title": "MyMothership — Mothership 1e по-русски",
   "description": "Модуль Мастерской для Mothership 1e (система mothership-fr). Версия 0.1: русский перевод интерфейса системы с выбором языка в настройках модуля. Дальше — материалы ваншота «Восходящий поток».",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "authors": [
     {
       "name": "Мастерская"

@@ -56,3 +56,15 @@ test("подписи кнопок окна броска переводятся �
   assert.equal(translateText("Désavantage"), "Помеха");
   assert.equal(translateText("Normal roll"), "Normal roll");
 });
+
+test("фраза под броском собирается по-русски", async () => {
+  const { rollSentenceRu, diceRu } = await import("../scripts/text-ru.js");
+  assert.equal(rollSentenceRu("\n Vous n'avez pas obtenu moins que votre <strong>Сила</strong>.\n"), "Выпало не меньше <strong>Силы</strong>.");
+  assert.equal(rollSentenceRu("Vous obtenu moins que votre <strong>Страх</strong>."), "Выпало меньше <strong>Страха</strong>.");
+  assert.equal(rollSentenceRu("Vous obtenu moins que ou égal à votre <strong>Сила</strong> plus <strong>Géologie</strong> bonus de compétence."),
+    "Выпало не больше <strong>Силы</strong> с навыком <strong>Géologie</strong>.");
+  assert.equal(rollSentenceRu("Vous obtenu plus que votre <strong>Что-то</strong>."), "Выпало больше, чем <strong>Что-то</strong>.");
+  assert.equal(rollSentenceRu("Другой текст"), null);
+  assert.equal(diceRu("1d100 [+] < 10"), "к100 [+] < 10");
+  assert.equal(diceRu("2d10 + 1d5"), "2к10 + к5");
+});
