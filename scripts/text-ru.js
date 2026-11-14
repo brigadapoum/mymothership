@@ -42,6 +42,10 @@ export const TEXT_RULES = [
   [/You must roll for another maintenance issue because you critically failed\./, "Из-за критического провала бросьте ещё одну неисправность."],
   // Ссылка-кнопка под броском
   [/^(\s*)Make a Panic Check(\s*)$/, "$1Пройти проверку паники$2"],
+  // Кнопки окна броска — запасной путь, если ключ перевода не сработал
+  [/^(\s*)(Advantage|Avantage)(\s*)$/, "$1Преимущество$3"],
+  [/^(\s*)Normal(\s*)$/, "$1Обычный$2"],
+  [/^(\s*)(Disadvantage|Désavantage)(\s*)$/, "$1Помеха$3"],
   // Ошибки поиска таблиц
   [/Table non trouvée pour l'ID: /, "Таблица не найдена, ID: "],
   [/Table non trouvée\. Vérifiez que les compendiums sont correctement chargés\./, "Таблица не найдена. Проверьте, что компендиумы системы загружены."]

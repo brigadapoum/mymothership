@@ -142,3 +142,18 @@ Hooks.once("init", () => {
   Hooks.on("renderApplicationV2", (app, html) => translateRendered(html));
   Hooks.on("renderApplication", (app, html) => translateRendered(html));
 });
+
+// Окна выбора броска (Преимущество / Обычный / Помеха): система задаёт им жёсткую высоту
+// (125–160 px), и подпись «Выберите тип броска» налезает на кнопки. Подгоняем высоту под содержимое.
+function fitRollDialog(app, html) {
+  if (!isOurSystem()) return;
+  const el = toElement(html) ?? app?.element;
+  if (!el?.querySelector?.('button[data-action="advantage"], button[data-action="disadvantage"]')) return;
+  el.classList.add("mymothership-roll-dialog");
+  try {
+    app.setPosition({ height: "auto" });
+  } catch (err) {
+    console.warn("MyMothership | не удалось подогнать высоту окна броска", err);
+  }
+}
+Hooks.on("renderDialogV2", (app, html) => fitRollDialog(app, html));

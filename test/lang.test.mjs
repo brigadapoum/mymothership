@@ -47,3 +47,12 @@ test("в переводе есть кнопки окна броска", () => {
   assert.equal(RU.Normal, "Обычный");
   assert.equal(RU.Disadvantage, "Помеха");
 });
+
+test("подписи кнопок окна броска переводятся и по тексту", async () => {
+  const { translateText } = await import("../scripts/text-ru.js");
+  assert.equal(translateText("Advantage"), "Преимущество");
+  assert.equal(translateText(" Normal "), " Обычный ");
+  assert.equal(translateText("Disadvantage"), "Помеха");
+  assert.equal(translateText("Désavantage"), "Помеха");
+  assert.equal(translateText("Normal roll"), "Normal roll");
+});

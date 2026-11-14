@@ -1,0 +1,17 @@
+/* MyMothership: окна выбора броска (Преимущество / Обычный / Помеха).
+   Система mothership-fr задаёт им жёсткую высоту, подпись налезает на кнопки. */
+.application.dialog.mymothership-roll-dialog {
+  height: auto !important;
+  min-height: 0 !important;
+}
+.application.dialog.mymothership-roll-dialog .window-content {
+  overflow: visible !important;
+}
+.application.dialog.mymothership-roll-dialog .dialog-content h4 {
+  margin: 0 0 10px 0 !important;
+  line-height: 1.3 !important;
+}
+.application.dialog.mymothership-roll-dialog .form-footer {
+  position: static !important;
+  margin-top: 6px !important;
+}
