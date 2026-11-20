@@ -3,6 +3,7 @@
 
 import RU from "../lang/ru-mothership-fr.js";
 import { translateElement, translateRollCard } from "./text-ru.js";
+import { registerPlaylistFolder } from "./playlist-folder.js";
 
 const MODULE_ID = "mymothership";
 const SYSTEM_ID = "mothership-fr";
@@ -86,6 +87,16 @@ Hooks.once("init", () => {
     default: "ru",
     requiresReload: true
   });
+  game.settings.register(MODULE_ID, "playlistFolder", {
+    name: "Загрузка папки в плейлист",
+    hint: "Добавляет пункт «Загрузить папку…» в меню плейлиста и кнопку в его настройках: все аудиофайлы выбранной папки попадают в плейлист разом. Только для смотрителя.",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: true,
+    requiresReload: true
+  });
+  registerPlaylistFolder(() => game.settings.get(MODULE_ID, "playlistFolder"));
 });
 
 // Если язык Foundry — русский, перевод подхватывается сам (раздел languages в module.json).

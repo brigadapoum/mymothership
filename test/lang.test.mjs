@@ -68,3 +68,14 @@ test("фраза под броском собирается по-русски", 
   assert.equal(diceRu("1d100 [+] < 10"), "к100 [+] < 10");
   assert.equal(diceRu("2d10 + 1d5"), "2к10 + к5");
 });
+
+test("загрузка папки: берём только новые аудиофайлы и даём им имена", async () => {
+  const { planNewSounds, soundNameFromPath } = await import("../scripts/playlist-folder.js");
+  assert.equal(soundNameFromPath("music/potok/01_Gas%20Giant.mp3"), "01 Gas Giant");
+  const plan = planNewSounds(
+    ["m/10_b.ogg", "m/2_a.mp3", "m/cover.jpg", "m/old.mp3"],
+    ["m/old.mp3"]
+  );
+  assert.deepEqual(plan.map((s) => s.path), ["m/2_a.mp3", "m/10_b.ogg"]);
+  assert.equal(plan[0].name, "2 a");
+});
