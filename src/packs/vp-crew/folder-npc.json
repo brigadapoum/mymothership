@@ -1,0 +1,17 @@
+{
+  "_id": "hCeS1ka2FKlJqQFb",
+  "_key": "!folders!hCeS1ka2FKlJqQFb",
+  "name": "Капитан (NPC)",
+  "type": "Actor",
+  "folder": null,
+  "sorting": "m",
+  "sort": 300000,
+  "color": null,
+  "description": "",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "mothership-fr",
+    "systemVersion": "1.8.21"
+  }
+}

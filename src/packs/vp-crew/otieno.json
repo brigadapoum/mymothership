@@ -1,0 +1,496 @@
+{
+  "_id": "hwckqpxPgiXrNa8M",
+  "_key": "!actors!hwckqpxPgiXrNa8M",
+  "name": "Ханна Отиено",
+  "type": "character",
+  "img": "modules/mymothership/assets/vp/portraits/otieno.webp",
+  "folder": "YNiGIgtnA7hGSgot",
+  "sort": 800000,
+  "system": {
+    "health": {
+      "value": 14,
+      "min": 0,
+      "max": 14,
+      "label": "Здоровье"
+    },
+    "hits": {
+      "value": 0,
+      "min": 0,
+      "max": 2,
+      "label": "Раны"
+    },
+    "netHP": {
+      "value": 42,
+      "min": 0,
+      "max": 42,
+      "label": "Здоровье всего"
+    },
+    "bleeding": {
+      "value": 0,
+      "min": 0,
+      "label": "Кровотечение"
+    },
+    "biography": "<p><em>Врач, 45 лет. Режет и шьёт.</em></p><p><strong>Вид:</strong> кудри, шрамы на щеке, закатанные рукава, следы старых ожогов на руках, в кармане фляжка.</p><p><strong>Манера:</strong> чёрный юмор, ни во что не верит.</p><p><strong>Чем думает:</strong> скальпель.</p><p><strong>Желание:</strong> образец твари — частная биолаборатория заплатит больше, чем Компания платит за весь рейс.</p><p><strong>Польза:</strong> медицина; вскрытие покажет, как тварь управляет мёртвым телом.</p><p><strong>Где в момент удара:</strong> медотсек.</p>",
+    "notes": "<h3>Тайна</h3><p>Работает под чужим именем: лицензию отобрали после смерти пациента.</p><h3>Как держится</h3><p><strong>Голосует:</strong> сохранить тварь живой. Тайно может договориться с ней.</p><p><strong>Где ломается:</strong> если её разоблачат или если тварь предложит ей знание, которого нет ни у кого.</p><h3>Связи</h3><p><strong>Тед</strong> хочет, чтобы не осталось ни твари, ни свидетелей; ты у него первая в списке нелояльных.</p><h3>Смотрителю</h3><p><strong>Если играет игрок:</strong> лечит, но у неё своя игра.</p><p><strong>Если NPC:</strong> джокер — опасна непредсказуемостью.</p>",
+    "weight": {
+      "current": 0,
+      "capacity": 0
+    },
+    "class": {
+      "value": "Учёный"
+    },
+    "rank": {
+      "value": "Врач"
+    },
+    "pronouns": {
+      "value": "она"
+    },
+    "credits": {
+      "value": "110"
+    },
+    "stressdesc": {
+      "value": ""
+    },
+    "xp": {
+      "value": 0,
+      "html": 0,
+      "selectedSkill": ""
+    },
+    "attributes": {
+      "level": {
+        "value": 0
+      }
+    },
+    "stats": {
+      "strength": {
+        "value": 33,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Сила",
+        "rollLabel": "Проверка силы"
+      },
+      "speed": {
+        "value": 30,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Скорость",
+        "rollLabel": "Проверка скорости"
+      },
+      "intellect": {
+        "value": 52,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Интеллект",
+        "rollLabel": "Проверка интеллекта"
+      },
+      "combat": {
+        "value": 39,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Бой",
+        "rollLabel": "Проверка боя"
+      },
+      "sanity": {
+        "value": 53,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Рассудок",
+        "rollLabel": "Испытание рассудка"
+      },
+      "fear": {
+        "value": 26,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Страх",
+        "rollLabel": "Испытание страха"
+      },
+      "body": {
+        "value": 20,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Тело",
+        "rollLabel": "Испытание тела"
+      },
+      "armor": {
+        "value": 0,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Броня",
+        "rollLabel": "Испытание брони",
+        "damageReduction": 0,
+        "cover": "none"
+      }
+    },
+    "other": {
+      "stress": {
+        "value": 2,
+        "min": 2,
+        "max": 20,
+        "label": "Стресс"
+      },
+      "resolve": {
+        "value": 0,
+        "min": 0,
+        "max": 15,
+        "label": "Решимость"
+      },
+      "stressdesc": {
+        "value": "Если ты не проходишь испытание рассудка, игроки рядом с тобой получают 1 стресс."
+      }
+    }
+  },
+  "prototypeToken": {
+    "name": "Ханна",
+    "displayName": 30,
+    "actorLink": true,
+    "disposition": 1,
+    "width": 1,
+    "height": 1,
+    "lockRotation": true,
+    "texture": {
+      "src": "modules/mymothership/assets/vp/tokens/otieno.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "fit": "contain"
+    },
+    "ring": {
+      "enabled": false
+    },
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "other.stress"
+    },
+    "displayBars": 30,
+    "sight": {
+      "enabled": true
+    }
+  },
+  "items": [
+    {
+      "name": "Зоология",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/zoology.png",
+      "system": {
+        "description": "<p>Животная жизнь.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "zaZgLNCXpS0i2YqN",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!hwckqpxPgiXrNa8M.zaZgLNCXpS0i2YqN"
+    },
+    {
+      "name": "Химия",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/chemistry.png",
+      "system": {
+        "description": "<p>Вещество, химические элементы и соединения.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "RBkhv5ks7hQTgciW",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!hwckqpxPgiXrNa8M.RBkhv5ks7hQTgciW"
+    },
+    {
+      "name": "Полевая медицина",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/field_medicine.png",
+      "system": {
+        "description": "<p>Неотложная помощь и лечение.</p>",
+        "rank": "Expert",
+        "bonus": 15,
+        "prerequisite_ids": []
+      },
+      "_id": "QPbkbDk0parB0tVV",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!hwckqpxPgiXrNa8M.QPbkbDk0parB0tVV"
+    },
+    {
+      "name": "Хирургия",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/surgery.png",
+      "system": {
+        "description": "<p>Операции на живых и мёртвых биологических объектах.</p>",
+        "rank": "Master",
+        "bonus": 20,
+        "prerequisite_ids": []
+      },
+      "_id": "VdBPiIb51L0nl5CJ",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!hwckqpxPgiXrNa8M.VdBPiIb51L0nl5CJ"
+    },
+    {
+      "name": "Медицинский костюм",
+      "type": "armor",
+      "img": "systems/mothership-fr/images/icons/armor/scrubs.png",
+      "system": {
+        "description": "<p>ПБ 1.</p>",
+        "armorPoints": 1,
+        "damageReduction": 0,
+        "speed": "Normal",
+        "oxygenMax": 0,
+        "oxygenCurrent": 0,
+        "weight": 0,
+        "cost": 90,
+        "features": "",
+        "equipped": true
+      },
+      "_id": "npptrQxNHcvPViaY",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 500000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!hwckqpxPgiXrNa8M.npptrQxNHcvPViaY"
+    },
+    {
+      "name": "Скальпель",
+      "type": "weapon",
+      "img": "systems/mothership-fr/images/icons/weapons/scalpel.png",
+      "system": {
+        "description": "<p>Хирургический инструмент. Вплотную. Рана: кровотечение [−].</p>",
+        "antiArmor": false,
+        "damage": "1d5",
+        "ammo": 0,
+        "shots": 0,
+        "curShots": 0,
+        "shotsPerFire": "0",
+        "useAmmo": false,
+        "ammoType": "",
+        "wound": "",
+        "critDmg": "",
+        "woundEffect": "Bleeding [-]",
+        "bonus": 0,
+        "weight": 0,
+        "cost": 50,
+        "ranges": {
+          "short": 0,
+          "medium": 0,
+          "long": 0,
+          "value": "Adjacent"
+        },
+        "settings": {
+          "firstEdition": false
+        }
+      },
+      "_id": "wxKBzvpIGN2qolBb",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 600000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!hwckqpxPgiXrNa8M.wxKBzvpIGN2qolBb"
+    },
+    {
+      "name": "АвтоМед",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/automed.png",
+      "system": {
+        "description": "<p>Автоматическая аптечка-инъектор.</p>",
+        "quantity": 5,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "oWtDjeJeKUKJOH7L",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 700000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!hwckqpxPgiXrNa8M.oWtDjeJeKUKJOH7L"
+    },
+    {
+      "name": "Кислородный баллон с фильтрующей маской",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/oxygen_tank.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "BwNucXbCOkSwSXri",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 800000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!hwckqpxPgiXrNa8M.BwNucXbCOkSwSXri"
+    },
+    {
+      "name": "Фляжка",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/six_pack_of_beer.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "cYenWqbIG1sppTq2",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 900000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!hwckqpxPgiXrNa8M.cYenWqbIG1sppTq2"
+    },
+    {
+      "name": "Безделушка: кулон «Не реанимировать»",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Безделушка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "FLVfUkOYM7f4UuO4",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 1000000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!hwckqpxPgiXrNa8M.FLVfUkOYM7f4UuO4"
+    },
+    {
+      "name": "Нашивка: «Глупость не лечится»",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Нашивка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "649k5aLL4LcizFsF",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 1100000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!hwckqpxPgiXrNa8M.649k5aLL4LcizFsF"
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "mymothership": {
+      "pregen": true,
+      "recommended": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "mothership-fr",
+    "systemVersion": "1.8.21"
+  }
+}

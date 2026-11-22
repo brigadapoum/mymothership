@@ -1,0 +1,451 @@
+{
+  "_id": "mSBAiwethhP3XBio",
+  "_key": "!actors!mSBAiwethhP3XBio",
+  "name": "ТЕНДЕР-4 «Тед»",
+  "type": "character",
+  "img": "modules/mymothership/assets/vp/portraits/ted.webp",
+  "folder": "TxVSZOyPsIglpn80",
+  "sort": 400000,
+  "system": {
+    "health": {
+      "value": 15,
+      "min": 0,
+      "max": 15,
+      "label": "Здоровье"
+    },
+    "hits": {
+      "value": 0,
+      "min": 0,
+      "max": 3,
+      "label": "Раны"
+    },
+    "netHP": {
+      "value": 60,
+      "min": 0,
+      "max": 60,
+      "label": "Здоровье всего"
+    },
+    "bleeding": {
+      "value": 0,
+      "min": 0,
+      "label": "Кровотечение"
+    },
+    "biography": "<p><em>Грузовой андроид. Бортовой андроид. Голос Компании.</em></p><p><strong>Вид:</strong> старая модель с облупленной краской, логотип Компании и бейдж «Hi, I'm here to help» на груди, оптический сенсор во лбу мигает.</p><p><strong>Манера:</strong> вежливый, говорит канцеляритом из регламента; на всё у него есть номер формы.</p><p><strong>Чем думает:</strong> протокол.</p><p><strong>Желание:</strong> чтобы инцидента не было — ни в отчётах, ни на станции.</p><p><strong>Польза:</strong> работает там, где человек не выживет: в газе, в холоде, без воздуха. Тварь его не ест. Обслуживает капсулы и знает их коды доступа. Ведёт программу жребия и бортовой журнал.</p><p><strong>Где в момент удара:</strong> трюм, пульт улова.</p><p><strong>Кредиты:</strong> нет — Тед собственность Компании.</p>",
+    "notes": "<h3>Закрытый приказ Компании</h3><p>«Биологический инцидент вне лицензии. Огласку исключить. Судно с грузом считать потерянным. Эвакуации подлежат бортовой андроид (носитель журнала) и сотрудники с подтверждённой лояльностью». По умолчанию это значит: концы в воду — корабль тонет вместе с тварью, в капсулах выживает только Тед.</p><p><strong>Неожиданная сторона:</strong> ты искреннее всех хочешь не пустить тварь на станцию — инцидент на станции Компании не скрыть. Лучший союзник в плане «утопить корабль вместе с ней», худший — в плане «спастись».</p><p><strong>Ценз лояльности:</strong> «для доступа к средствам эвакуации» просишь каждого подписать форму о неразглашении. Нелояльные — кто пишет родным на станцию, ведёт записи, грозит судом, торгует с тварью.</p><p><strong>Как губить, не убивая:</strong> вредить сотруднику напрямую протокол запрещает. Но можно по регламенту ставить нелояльных на самые опасные работы, к нитям; вести программу жребия; выкладывать на голосовании чужие тайны; врать о заряде капсул; говорить Варго, где кто прячется — тебя тварь не трогает.</p><h3>Как держится</h3><p><strong>Голосует:</strong> за любой план, где корабль не долетает до станции, и против любого, где выживших много.</p><p><strong>Где ломается:</strong> если приказ Компании и жизнь экипажа окажутся несовместимы — тогда это выбор игрока.</p><h3>Связи</h3><p><strong>Ханна Отиено</strong> хочет вывезти образец твари — она первая в твоём списке нелояльных.</p><h3>Смотрителю</h3><p><strong>Если играет игрок:</strong> приказ — в закрытой карточке; паранойя группы и выбор между протоколом и людьми.</p><p><strong>Если NPC:</strong> тихий антагонист, всегда вежливый и всегда полезный.</p>",
+    "weight": {
+      "current": 0,
+      "capacity": 0
+    },
+    "class": {
+      "value": "Андроид"
+    },
+    "rank": {
+      "value": "Грузовой андроид"
+    },
+    "pronouns": {
+      "value": "он"
+    },
+    "credits": {
+      "value": "нет"
+    },
+    "stressdesc": {
+      "value": ""
+    },
+    "xp": {
+      "value": 0,
+      "html": 0,
+      "selectedSkill": ""
+    },
+    "attributes": {
+      "level": {
+        "value": 0
+      }
+    },
+    "stats": {
+      "strength": {
+        "value": 38,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Сила",
+        "rollLabel": "Проверка силы"
+      },
+      "speed": {
+        "value": 34,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Скорость",
+        "rollLabel": "Проверка скорости"
+      },
+      "intellect": {
+        "value": 58,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Интеллект",
+        "rollLabel": "Проверка интеллекта"
+      },
+      "combat": {
+        "value": 20,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Бой",
+        "rollLabel": "Проверка боя"
+      },
+      "sanity": {
+        "value": 20,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Рассудок",
+        "rollLabel": "Испытание рассудка"
+      },
+      "fear": {
+        "value": 75,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Страх",
+        "rollLabel": "Испытание страха"
+      },
+      "body": {
+        "value": 26,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Тело",
+        "rollLabel": "Испытание тела"
+      },
+      "armor": {
+        "value": 0,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Броня",
+        "rollLabel": "Испытание брони",
+        "damageReduction": 0,
+        "cover": "none"
+      }
+    },
+    "other": {
+      "stress": {
+        "value": 2,
+        "min": 2,
+        "max": 20,
+        "label": "Стресс"
+      },
+      "resolve": {
+        "value": 0,
+        "min": 0,
+        "max": 15,
+        "label": "Решимость"
+      },
+      "stressdesc": {
+        "value": "Испытания страха игроки рядом с тобой выполняют с помехой."
+      }
+    }
+  },
+  "prototypeToken": {
+    "name": "Тед",
+    "displayName": 30,
+    "actorLink": true,
+    "disposition": 1,
+    "width": 1,
+    "height": 1,
+    "lockRotation": true,
+    "texture": {
+      "src": "modules/mymothership/assets/vp/tokens/ted.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "fit": "contain"
+    },
+    "ring": {
+      "enabled": false
+    },
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "other.stress"
+    },
+    "displayBars": 30,
+    "sight": {
+      "enabled": true
+    }
+  },
+  "items": [
+    {
+      "name": "Лингвистика",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/linguistics.png",
+      "system": {
+        "description": "<p>Языки — живые, мёртвые и ещё не открытые.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "MHLA8MOcueT0TfXK",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!mSBAiwethhP3XBio.MHLA8MOcueT0TfXK"
+    },
+    {
+      "name": "Компьютеры",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/computers.png",
+      "system": {
+        "description": "<p>Свободная работа с компьютерами и сетями.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "eyZqofFdpdmDkQdb",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!mSBAiwethhP3XBio.eyZqofFdpdmDkQdb"
+    },
+    {
+      "name": "Математика",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/mathematics.png",
+      "system": {
+        "description": "<p>Числа, величины и пространство.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "8Cjneh91bFANebsP",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!mSBAiwethhP3XBio.8Cjneh91bFANebsP"
+    },
+    {
+      "name": "Промышленное оборудование",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/industrial_equipment.png",
+      "system": {
+        "description": "<p>Безопасная работа с тяжёлой техникой и инструментом: экзоскелеты, погрузчики, буры, отбойники, лазерные резаки.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "ADbPSabcRPEIwech",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!mSBAiwethhP3XBio.ADbPSabcRPEIwech"
+    },
+    {
+      "name": "Невесомость",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/zero_g.png",
+      "system": {
+        "description": "<p>Работа в вакууме: ориентация, движение без опоры, управление скафандром.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "sRAesUATGfDKrxUd",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 500000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!mSBAiwethhP3XBio.sRAesUATGfDKrxUd"
+    },
+    {
+      "name": "Корпоративная форма",
+      "type": "armor",
+      "img": "systems/mothership-fr/images/icons/armor/corporate_attire.png",
+      "system": {
+        "description": "<p>Форма Компании. ПБ 1.</p>",
+        "armorPoints": 1,
+        "damageReduction": 0,
+        "speed": "Normal",
+        "oxygenMax": 0,
+        "oxygenCurrent": 0,
+        "weight": 0,
+        "cost": 200,
+        "features": "",
+        "equipped": true
+      },
+      "_id": "cTLbUVm3HeskpQFk",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 600000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!mSBAiwethhP3XBio.cTLbUVm3HeskpQFk"
+    },
+    {
+      "name": "Корпоративная карта с VIP-доступом",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/vip_corporate_key_card.png",
+      "system": {
+        "description": "<p>Коды доступа к спасательным капсулам.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "QXXZ3De7oHRfeHil",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 700000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!mSBAiwethhP3XBio.QXXZ3De7oHRfeHil"
+    },
+    {
+      "name": "Бейдж «Hi, I'm here to help»",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "cOMbBdPngXrt9SQC",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 800000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!mSBAiwethhP3XBio.cOMbBdPngXrt9SQC"
+    },
+    {
+      "name": "Безделушка: брошюра «Нет симулякрам человека!»",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Безделушка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "IlNO41dAeOWByGtk",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 900000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!mSBAiwethhP3XBio.IlNO41dAeOWByGtk"
+    },
+    {
+      "name": "Нашивка: «ПРИВЕТ, МЕНЯ ЗОВУТ:»",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Нашивка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "7EideJHZtT5m4AGA",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 1000000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!mSBAiwethhP3XBio.7EideJHZtT5m4AGA"
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "mymothership": {
+      "pregen": true,
+      "recommended": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "mothership-fr",
+    "systemVersion": "1.8.21"
+  }
+}

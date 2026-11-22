@@ -1,0 +1,451 @@
+{
+  "_id": "VGXLOl1Ue4AAl2YE",
+  "_key": "!actors!VGXLOl1Ue4AAl2YE",
+  "name": "Йоко Танабэ",
+  "type": "character",
+  "img": "modules/mymothership/assets/vp/portraits/tanabe.webp",
+  "folder": "TxVSZOyPsIglpn80",
+  "sort": 200000,
+  "system": {
+    "health": {
+      "value": 12,
+      "min": 0,
+      "max": 12,
+      "label": "Здоровье"
+    },
+    "hits": {
+      "value": 0,
+      "min": 0,
+      "max": 2,
+      "label": "Раны"
+    },
+    "netHP": {
+      "value": 36,
+      "min": 0,
+      "max": 36,
+      "label": "Здоровье всего"
+    },
+    "bleeding": {
+      "value": 0,
+      "min": 0,
+      "label": "Кровотечение"
+    },
+    "biography": "<p><em>Химик-аналитик, 37 лет. Меряет чистоту газа.</em></p><p><strong>Вид:</strong> очки, аккуратная коса, безупречно чистый лабораторный халат поверх скафандра, сменные перчатки, флаконы проб на поясе.</p><p><strong>Манера:</strong> точные формулировки, не терпит «примерно».</p><p><strong>Чем думает:</strong> приборы; верит только цифрам.</p><p><strong>Желание:</strong> идеальный анализ улова — от него зависит её премия.</p><p><strong>Польза:</strong> знает, что в цистернах; может определить, чем дышит тварь, что ей вредно и как поведёт себя газ при пожаре.</p><p><strong>Где в момент удара:</strong> лаборатория проб.</p>",
+    "notes": "<h3>Тайна</h3><p>Это она сказала капитану, что в колонне газ гуще и квоту можно закрыть за один заход. Перед заходом видела в пробах органику — и промолчала, чтобы не потерять премию.</p><h3>Как держится</h3><p><strong>Голосует:</strong> довезти улов до станции.</p><p><strong>Где ломается:</strong> когда её пробы покажут, что органика — это кладка.</p><h3>Связи</h3><p><strong>Капитан Ферро</strong> — вы оба виноваты в заходе в колонну.</p><h3>Смотрителю</h3><p><strong>Если играет игрок:</strong> главный инструмент «Разгадать».</p><p><strong>Если NPC:</strong> прячет пробы и данные; их надо найти в лаборатории.</p>",
+    "weight": {
+      "current": 0,
+      "capacity": 0
+    },
+    "class": {
+      "value": "Учёный"
+    },
+    "rank": {
+      "value": "Химик-аналитик"
+    },
+    "pronouns": {
+      "value": "она"
+    },
+    "credits": {
+      "value": "140"
+    },
+    "stressdesc": {
+      "value": ""
+    },
+    "xp": {
+      "value": 0,
+      "html": 0,
+      "selectedSkill": ""
+    },
+    "attributes": {
+      "level": {
+        "value": 0
+      }
+    },
+    "stats": {
+      "strength": {
+        "value": 28,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Сила",
+        "rollLabel": "Проверка силы"
+      },
+      "speed": {
+        "value": 36,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Скорость",
+        "rollLabel": "Проверка скорости"
+      },
+      "intellect": {
+        "value": 54,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Интеллект",
+        "rollLabel": "Проверка интеллекта"
+      },
+      "combat": {
+        "value": 27,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Бой",
+        "rollLabel": "Проверка боя"
+      },
+      "sanity": {
+        "value": 55,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Рассудок",
+        "rollLabel": "Испытание рассудка"
+      },
+      "fear": {
+        "value": 21,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Страх",
+        "rollLabel": "Испытание страха"
+      },
+      "body": {
+        "value": 18,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Тело",
+        "rollLabel": "Испытание тела"
+      },
+      "armor": {
+        "value": 0,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Броня",
+        "rollLabel": "Испытание брони",
+        "damageReduction": 0,
+        "cover": "none"
+      }
+    },
+    "other": {
+      "stress": {
+        "value": 2,
+        "min": 2,
+        "max": 20,
+        "label": "Стресс"
+      },
+      "resolve": {
+        "value": 0,
+        "min": 0,
+        "max": 15,
+        "label": "Решимость"
+      },
+      "stressdesc": {
+        "value": "Если ты не проходишь испытание рассудка, игроки рядом с тобой получают 1 стресс."
+      }
+    }
+  },
+  "prototypeToken": {
+    "name": "Йоко",
+    "displayName": 30,
+    "actorLink": true,
+    "disposition": 1,
+    "width": 1,
+    "height": 1,
+    "lockRotation": true,
+    "texture": {
+      "src": "modules/mymothership/assets/vp/tokens/tanabe.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "fit": "contain"
+    },
+    "ring": {
+      "enabled": false
+    },
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "other.stress"
+    },
+    "displayBars": 30,
+    "sight": {
+      "enabled": true
+    }
+  },
+  "items": [
+    {
+      "name": "Зоология",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/zoology.png",
+      "system": {
+        "description": "<p>Животная жизнь.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "NVHs0MvLaCVJQfHF",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!VGXLOl1Ue4AAl2YE.NVHs0MvLaCVJQfHF"
+    },
+    {
+      "name": "Химия",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/chemistry.png",
+      "system": {
+        "description": "<p>Вещество, химические элементы и соединения.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "xgrfnZwx4IIsq6jd",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!VGXLOl1Ue4AAl2YE.xgrfnZwx4IIsq6jd"
+    },
+    {
+      "name": "Патология",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/pathology.png",
+      "system": {
+        "description": "<p>Причины и последствия болезней.</p>",
+        "rank": "Expert",
+        "bonus": 15,
+        "prerequisite_ids": []
+      },
+      "_id": "TfslgBzQFbPmalmV",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!VGXLOl1Ue4AAl2YE.TfslgBzQFbPmalmV"
+    },
+    {
+      "name": "Экзобиология",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/exobiology.png",
+      "system": {
+        "description": "<p>Изучение и поиск внеземной жизни.</p>",
+        "rank": "Master",
+        "bonus": 20,
+        "prerequisite_ids": []
+      },
+      "_id": "JD9ni01PAbMK0jIo",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!VGXLOl1Ue4AAl2YE.JD9ni01PAbMK0jIo"
+    },
+    {
+      "name": "Скафандр под лабораторным халатом",
+      "type": "armor",
+      "img": "systems/mothership-fr/images/icons/armor/vaccsuit.png",
+      "system": {
+        "description": "<p>Скафандр (12 часов кислорода, скорость [−]), сверху — безупречный халат. ПБ 3.</p>",
+        "armorPoints": 3,
+        "damageReduction": 0,
+        "speed": "[-]",
+        "oxygenMax": 12,
+        "oxygenCurrent": 12,
+        "weight": 0,
+        "cost": 10000,
+        "features": "",
+        "equipped": true
+      },
+      "_id": "Fxy2atVmimFIwFsM",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 500000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!VGXLOl1Ue4AAl2YE.Fxy2atVmimFIwFsM"
+    },
+    {
+      "name": "Комплект для сбора образцов",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/sample_collection_kit.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "BxdunNGM5ZanMdBi",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 600000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!VGXLOl1Ue4AAl2YE.BxdunNGM5ZanMdBi"
+    },
+    {
+      "name": "Флаконы проб на поясе",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/vial_of_acid.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "ZcD3XhfsQ1xYXfwM",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 700000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!VGXLOl1Ue4AAl2YE.ZcD3XhfsQ1xYXfwM"
+    },
+    {
+      "name": "Фонарик",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/flashlight.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "v9SAdhShXwVG8M6u",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 800000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!VGXLOl1Ue4AAl2YE.v9SAdhShXwVG8M6u"
+    },
+    {
+      "name": "Безделушка: брошюра «Симптомы паразитарной инфекции»",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Безделушка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "hkXbFdGef2zRlZe2",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 900000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!VGXLOl1Ue4AAl2YE.hkXbFdGef2zRlZe2"
+    },
+    {
+      "name": "Нашивка: «Вообще-то, я тут учёный»",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Нашивка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "FOzYHHWTaBfcnrto",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 1000000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!VGXLOl1Ue4AAl2YE.FOzYHHWTaBfcnrto"
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "mymothership": {
+      "pregen": true,
+      "recommended": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "mothership-fr",
+    "systemVersion": "1.8.21"
+  }
+}

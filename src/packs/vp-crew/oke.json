@@ -1,0 +1,451 @@
+{
+  "_id": "m66awdtv4P2HrzNa",
+  "_key": "!actors!m66awdtv4P2HrzNa",
+  "name": "Бернард Оке",
+  "type": "character",
+  "img": "modules/mymothership/assets/vp/portraits/oke.webp",
+  "folder": "YNiGIgtnA7hGSgot",
+  "sort": 900000,
+  "system": {
+    "health": {
+      "value": 11,
+      "min": 0,
+      "max": 11,
+      "label": "Здоровье"
+    },
+    "hits": {
+      "value": 0,
+      "min": 0,
+      "max": 2,
+      "label": "Раны"
+    },
+    "netHP": {
+      "value": 33,
+      "min": 0,
+      "max": 33,
+      "label": "Здоровье всего"
+    },
+    "bleeding": {
+      "value": 0,
+      "min": 0,
+      "label": "Кровотечение"
+    },
+    "biography": "<p><em>Атмосферный штурман, 66 лет. Читает облака.</em></p><p><strong>Вид:</strong> седые волосы зачёсаны назад, усы, тёплый воротник; бумажные карты в тубусе — электронике не доверяет; трубка без табака.</p><p><strong>Манера:</strong> рассказывает байки к месту и не к месту.</p><p><strong>Чем думает:</strong> старые карты с пометками.</p><p><strong>Желание:</strong> чтобы его наконец послушали.</p><p><strong>Польза:</strong> по радару и пробам находит восходящие и нисходящие потоки, грозы и чистые слои. С одним двигателем танкер не выберется наверх сам — только Бернард найдёт восходящий поток. Знает байки ловцов про колонны. Говорил капитану не ходить в колонну.</p><p><strong>Где в момент удара:</strong> радарная.</p>",
+    "notes": "<h3>Тайна</h3><p>Двадцать лет назад твой танкер ушёл в такую колонну. Бортовой андроид не дал зарядить ни одной капсулы, кроме твоей: ты выжил, потому что подписал. С тех пор молчишь по договору о неразглашении и рассказываешь правду только как байку. Ты слышал эти щелчки раньше и знаешь, что тварь не одна. С первой сцены: «Не верьте железке».</p><h3>Как держится</h3><p><strong>Голосует:</strong> уйти вниз, сбросить улов, только не к людям.</p><p><strong>Где ломается:</strong> если всё повторяется, как двадцать лет назад: тогда может пожертвовать собой.</p><h3>Связи</h3><p>Ты единственный, кто знает, что это уже было.</p><h3>Смотрителю</h3><p><strong>Если играет игрок:</strong> «Разгадать» и навигация по потокам.</p><p><strong>Если NPC:</strong> собутыльник, источник знамений — его байки игрокам выдаются за выпивку и уважение.</p>",
+    "weight": {
+      "current": 0,
+      "capacity": 0
+    },
+    "class": {
+      "value": "Учёный"
+    },
+    "rank": {
+      "value": "Атмосферный штурман"
+    },
+    "pronouns": {
+      "value": "он"
+    },
+    "credits": {
+      "value": "70"
+    },
+    "stressdesc": {
+      "value": ""
+    },
+    "xp": {
+      "value": 0,
+      "html": 0,
+      "selectedSkill": ""
+    },
+    "attributes": {
+      "level": {
+        "value": 0
+      }
+    },
+    "stats": {
+      "strength": {
+        "value": 32,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Сила",
+        "rollLabel": "Проверка силы"
+      },
+      "speed": {
+        "value": 28,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Скорость",
+        "rollLabel": "Проверка скорости"
+      },
+      "intellect": {
+        "value": 55,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Интеллект",
+        "rollLabel": "Проверка интеллекта"
+      },
+      "combat": {
+        "value": 29,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Бой",
+        "rollLabel": "Проверка боя"
+      },
+      "sanity": {
+        "value": 58,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Рассудок",
+        "rollLabel": "Испытание рассудка"
+      },
+      "fear": {
+        "value": 24,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Страх",
+        "rollLabel": "Испытание страха"
+      },
+      "body": {
+        "value": 14,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Тело",
+        "rollLabel": "Испытание тела"
+      },
+      "armor": {
+        "value": 0,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Броня",
+        "rollLabel": "Испытание брони",
+        "damageReduction": 0,
+        "cover": "none"
+      }
+    },
+    "other": {
+      "stress": {
+        "value": 2,
+        "min": 2,
+        "max": 20,
+        "label": "Стресс"
+      },
+      "resolve": {
+        "value": 0,
+        "min": 0,
+        "max": 15,
+        "label": "Решимость"
+      },
+      "stressdesc": {
+        "value": "Если ты не проходишь испытание рассудка, игроки рядом с тобой получают 1 стресс."
+      }
+    }
+  },
+  "prototypeToken": {
+    "name": "Бернард",
+    "displayName": 30,
+    "actorLink": true,
+    "disposition": 1,
+    "width": 1,
+    "height": 1,
+    "lockRotation": true,
+    "texture": {
+      "src": "modules/mymothership/assets/vp/tokens/oke.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "fit": "contain"
+    },
+    "ring": {
+      "enabled": false
+    },
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "other.stress"
+    },
+    "displayBars": 30,
+    "sight": {
+      "enabled": true
+    }
+  },
+  "items": [
+    {
+      "name": "Ботаника",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/botany.png",
+      "system": {
+        "description": "<p>Растительная жизнь.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "bPGBkeauw8tNaYUh",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!m66awdtv4P2HrzNa.bPGBkeauw8tNaYUh"
+    },
+    {
+      "name": "Знание окраин",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/rimwise.png",
+      "system": {
+        "description": "<p>Колонии внешних окраин, их обычаи и самые тёмные углы галактики.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "k99XfxZXPE4nSrmh",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!m66awdtv4P2HrzNa.k99XfxZXPE4nSrmh"
+    },
+    {
+      "name": "Экология",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/ecology.png",
+      "system": {
+        "description": "<p>Организмы и их связь со средой.</p>",
+        "rank": "Expert",
+        "bonus": 15,
+        "prerequisite_ids": []
+      },
+      "_id": "dcfLiGcaQl8YiBAy",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!m66awdtv4P2HrzNa.dcfLiGcaQl8YiBAy"
+    },
+    {
+      "name": "Планетология",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/planetology.png",
+      "system": {
+        "description": "<p>Планеты и другие небесные тела.</p>",
+        "rank": "Master",
+        "bonus": 20,
+        "prerequisite_ids": []
+      },
+      "_id": "Ikg4qmtZ7efxsgaz",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!m66awdtv4P2HrzNa.Ikg4qmtZ7efxsgaz"
+    },
+    {
+      "name": "Униформа экипажа с тёплым воротником",
+      "type": "armor",
+      "img": "systems/mothership-fr/images/icons/armor/standard_crew_attire.png",
+      "system": {
+        "description": "<p>ПБ 1.</p>",
+        "armorPoints": 1,
+        "damageReduction": 0,
+        "speed": "Normal",
+        "oxygenMax": 0,
+        "oxygenCurrent": 0,
+        "weight": 0,
+        "cost": 100,
+        "features": "",
+        "equipped": true
+      },
+      "_id": "iJvsc100SNdjatEg",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 500000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!m66awdtv4P2HrzNa.iJvsc100SNdjatEg"
+    },
+    {
+      "name": "Тубус с бумажными картами",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/satchel.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "a5c1QS4Cbic3y5Xh",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 600000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!m66awdtv4P2HrzNa.a5c1QS4Cbic3y5Xh"
+    },
+    {
+      "name": "Бинокль",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/binoculars.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "i5gdkFgBg65oByqV",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 700000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!m66awdtv4P2HrzNa.i5gdkFgBg65oByqV"
+    },
+    {
+      "name": "Трубка без табака",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/cigarettes.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "lU2cW1waywL0ynw9",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 800000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!m66awdtv4P2HrzNa.lU2cW1waywL0ynw9"
+    },
+    {
+      "name": "Безделушка: виски со змеёй",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Безделушка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "R21arYpnnwjCVwYg",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 900000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!m66awdtv4P2HrzNa.R21arYpnnwjCVwYg"
+    },
+    {
+      "name": "Нашивка: Икар",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Нашивка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "HZhhe7Fl5DE25Unt",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 1000000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!m66awdtv4P2HrzNa.HZhhe7Fl5DE25Unt"
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "mymothership": {
+      "pregen": true,
+      "recommended": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "mothership-fr",
+    "systemVersion": "1.8.21"
+  }
+}

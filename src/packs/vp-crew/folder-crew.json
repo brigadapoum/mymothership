@@ -1,0 +1,17 @@
+{
+  "_id": "YNiGIgtnA7hGSgot",
+  "_key": "!folders!YNiGIgtnA7hGSgot",
+  "name": "Остальной экипаж",
+  "type": "Actor",
+  "folder": null,
+  "sorting": "m",
+  "sort": 200000,
+  "color": null,
+  "description": "",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "mothership-fr",
+    "systemVersion": "1.8.21"
+  }
+}

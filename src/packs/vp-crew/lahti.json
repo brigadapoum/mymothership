@@ -1,0 +1,451 @@
+{
+  "_id": "uCJxbrRMmpKBSmyg",
+  "_key": "!actors!uCJxbrRMmpKBSmyg",
+  "name": "Микко Лахти",
+  "type": "character",
+  "img": "modules/mymothership/assets/vp/portraits/lahti.webp",
+  "folder": "YNiGIgtnA7hGSgot",
+  "sort": 600000,
+  "system": {
+    "health": {
+      "value": 15,
+      "min": 0,
+      "max": 15,
+      "label": "Здоровье"
+    },
+    "hits": {
+      "value": 0,
+      "min": 0,
+      "max": 2,
+      "label": "Раны"
+    },
+    "netHP": {
+      "value": 45,
+      "min": 0,
+      "max": 45,
+      "label": "Здоровье всего"
+    },
+    "bleeding": {
+      "value": 0,
+      "min": 0,
+      "label": "Кровотечение"
+    },
+    "biography": "<p><em>Пилот, 34 года. Руки, которые держат корабль.</em></p><p><strong>Вид:</strong> лётные очки на лбу, вечно в перчатках без пальцев, на приборной панели фото дочери.</p><p><strong>Манера:</strong> барабанит пальцами по всему, шутит в стрессе.</p><p><strong>Чем думает:</strong> руки.</p><p><strong>Желание:</strong> быть дома через девять дней — у дочери день рождения, обещал.</p><p><strong>Польза:</strong> только он удержит танкер на одном двигателе в нисходящем потоке.</p><p><strong>Близкие на станции:</strong> жена и дочь живут на той самой станции, куда тварь требует лететь. Лететь к станции — значит лететь домой и привезти туда тварь.</p><p><strong>Где в момент удара:</strong> мостик, за штурвалом.</p>",
+    "notes": "<h3>Тайна</h3><p>Предупреждал капитана не входить в колонну и промолчал, когда его не послушали. В бортовом журнале этого нет.</p><h3>Как держится</h3><p><strong>Голосует:</strong> сначала за самый быстрый путь домой — к станции. Как только поймёт, зачем тварь туда стремится, — против, любой ценой.</p><p><strong>Где ломается:</strong> если придётся выбирать между собой и остальными. Одноместная капсула — его соблазн: дома ждут.</p><h3>Смотрителю</h3><p><strong>Если играет игрок:</strong> ключевые броски катастрофы на нём.</p><p><strong>Если NPC:</strong> незаменим, поэтому тварь и капитан его берегут, а игроки должны его уговаривать.</p>",
+    "weight": {
+      "current": 0,
+      "capacity": 0
+    },
+    "class": {
+      "value": "Специалист"
+    },
+    "rank": {
+      "value": "Пилот"
+    },
+    "pronouns": {
+      "value": "он"
+    },
+    "credits": {
+      "value": "90"
+    },
+    "stressdesc": {
+      "value": ""
+    },
+    "xp": {
+      "value": 0,
+      "html": 0,
+      "selectedSkill": ""
+    },
+    "attributes": {
+      "level": {
+        "value": 0
+      }
+    },
+    "stats": {
+      "strength": {
+        "value": 36,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Сила",
+        "rollLabel": "Проверка силы"
+      },
+      "speed": {
+        "value": 47,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Скорость",
+        "rollLabel": "Проверка скорости"
+      },
+      "intellect": {
+        "value": 38,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Интеллект",
+        "rollLabel": "Проверка интеллекта"
+      },
+      "combat": {
+        "value": 40,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Бой",
+        "rollLabel": "Проверка боя"
+      },
+      "sanity": {
+        "value": 30,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Рассудок",
+        "rollLabel": "Испытание рассудка"
+      },
+      "fear": {
+        "value": 35,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Страх",
+        "rollLabel": "Испытание страха"
+      },
+      "body": {
+        "value": 32,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Тело",
+        "rollLabel": "Испытание тела"
+      },
+      "armor": {
+        "value": 0,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Броня",
+        "rollLabel": "Испытание брони",
+        "damageReduction": 0,
+        "cover": "none"
+      }
+    },
+    "other": {
+      "stress": {
+        "value": 2,
+        "min": 2,
+        "max": 20,
+        "label": "Стресс"
+      },
+      "resolve": {
+        "value": 0,
+        "min": 0,
+        "max": 15,
+        "label": "Решимость"
+      },
+      "stressdesc": {
+        "value": "Один раз за игровую встречу ты можешь получить преимущество к проверке паники."
+      }
+    }
+  },
+  "prototypeToken": {
+    "name": "Микко",
+    "displayName": 30,
+    "actorLink": true,
+    "disposition": 1,
+    "width": 1,
+    "height": 1,
+    "lockRotation": true,
+    "texture": {
+      "src": "modules/mymothership/assets/vp/tokens/lahti.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "fit": "contain"
+    },
+    "ring": {
+      "enabled": false
+    },
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "other.stress"
+    },
+    "displayBars": 30,
+    "sight": {
+      "enabled": true
+    }
+  },
+  "items": [
+    {
+      "name": "Промышленное оборудование",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/industrial_equipment.png",
+      "system": {
+        "description": "<p>Безопасная работа с тяжёлой техникой и инструментом: экзоскелеты, погрузчики, буры, отбойники, лазерные резаки.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "6sY7nanfaqG0L6fi",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!uCJxbrRMmpKBSmyg.6sY7nanfaqG0L6fi"
+    },
+    {
+      "name": "Невесомость",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/zero_g.png",
+      "system": {
+        "description": "<p>Работа в вакууме: ориентация, движение без опоры, управление скафандром.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "AKJzemSuVORt8xxi",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!uCJxbrRMmpKBSmyg.AKJzemSuVORt8xxi"
+    },
+    {
+      "name": "Компьютеры",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/computers.png",
+      "system": {
+        "description": "<p>Свободная работа с компьютерами и сетями.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "aTGDkvSbr9lIr76C",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!uCJxbrRMmpKBSmyg.aTGDkvSbr9lIr76C"
+    },
+    {
+      "name": "Пилотирование",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/piloting.png",
+      "system": {
+        "description": "<p>Управление летательными аппаратами, кораблями и другим транспортом.</p>",
+        "rank": "Expert",
+        "bonus": 15,
+        "prerequisite_ids": []
+      },
+      "_id": "KpEBsf5EcK1W7hSB",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!uCJxbrRMmpKBSmyg.KpEBsf5EcK1W7hSB"
+    },
+    {
+      "name": "Униформа экипажа",
+      "type": "armor",
+      "img": "systems/mothership-fr/images/icons/armor/standard_crew_attire.png",
+      "system": {
+        "description": "<p>Стандартная униформа экипажа. ПБ 1.</p>",
+        "armorPoints": 1,
+        "damageReduction": 0,
+        "speed": "Normal",
+        "oxygenMax": 0,
+        "oxygenCurrent": 0,
+        "weight": 0,
+        "cost": 100,
+        "features": "",
+        "equipped": true
+      },
+      "_id": "Eln3YkVeZBQLsfGc",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 500000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!uCJxbrRMmpKBSmyg.Eln3YkVeZBQLsfGc"
+    },
+    {
+      "name": "Лётные очки",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/infrared_goggles.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "EdLP6DqsuQ9BWbq6",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 600000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!uCJxbrRMmpKBSmyg.EdLP6DqsuQ9BWbq6"
+    },
+    {
+      "name": "Перчатки без пальцев",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/assorted_tools.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "faVGGBkwr6YnBda5",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 700000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!uCJxbrRMmpKBSmyg.faVGGBkwr6YnBda5"
+    },
+    {
+      "name": "Персональный маячок",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/personal_locator.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "6R8krV5290aSLLKn",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 800000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!uCJxbrRMmpKBSmyg.6R8krV5290aSLLKn"
+    },
+    {
+      "name": "Безделушка: фото дочери на приборной панели",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "PnIxz5EUWUvb1Y7J",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 900000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!uCJxbrRMmpKBSmyg.PnIxz5EUWUvb1Y7J"
+    },
+    {
+      "name": "Нашивка: «ЕСЛИ Я БЕГУ — НЕ ОТСТАВАЙ»",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Нашивка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "qFi4vTst4blhRPLS",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 1000000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!uCJxbrRMmpKBSmyg.qFi4vTst4blhRPLS"
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "mymothership": {
+      "pregen": true,
+      "recommended": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "mothership-fr",
+    "systemVersion": "1.8.21"
+  }
+}

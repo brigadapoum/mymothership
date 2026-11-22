@@ -1,0 +1,471 @@
+{
+  "_id": "FT7bi3B2Jcg7OgFd",
+  "_key": "!actors!FT7bi3B2Jcg7OgFd",
+  "name": "Дана Крюгер",
+  "type": "character",
+  "img": "modules/mymothership/assets/vp/portraits/kruger.webp",
+  "folder": "TxVSZOyPsIglpn80",
+  "sort": 300000,
+  "system": {
+    "health": {
+      "value": 17,
+      "min": 0,
+      "max": 17,
+      "label": "Здоровье"
+    },
+    "hits": {
+      "value": 0,
+      "min": 0,
+      "max": 3,
+      "label": "Раны"
+    },
+    "netHP": {
+      "value": 68,
+      "min": 0,
+      "max": 68,
+      "label": "Здоровье всего"
+    },
+    "bleeding": {
+      "value": 0,
+      "min": 0,
+      "label": "Кровотечение"
+    },
+    "biography": "<p><em>Охрана рейса, 30 лет. У неё пистолет.</em></p><p><strong>Вид:</strong> волосы зачёсаны назад, нарисованные звёзды на скулах, гарнитура, бронежилет поверх формы Компании, жвачка.</p><p><strong>Манера:</strong> односложно, смотрит на руки собеседника.</p><p><strong>Чем думает:</strong> пистолет в кобуре.</p><p><strong>Желание:</strong> получить деньги по контракту и не геройствовать.</p><p><strong>Польза:</strong> единственный обученный боец; носит пистолет; второй ключ от кейса с винтовкой.</p><p><strong>Близкие на станции:</strong> младший брат, докер на станции. Ради него она и подписала контракт: деньги идут ему на лечение лёгких.</p><p><strong>Где в момент удара:</strong> каюта.</p>",
+    "notes": "<h3>Тайна</h3><p>Нанята Компанией охранять груз, а не людей. В контракте пункт: «потери экипажа — допустимый риск».</p><h3>Как держится</h3><p><strong>Голосует:</strong> за того, кто платит. Кто держит пистолет — тот правит кораблём.</p><p><strong>Где ломается:</strong> когда выяснится, что пули тварь не берут.</p><h3>Связи</h3><p>Кейс с импульсной винтовкой F20 «Арбитр» открывается двумя ключами — твоим и капитана Ферро.</p><h3>Смотрителю</h3><p><strong>Если играет игрок:</strong> вопрос, кому служит пистолет.</p><p><strong>Если NPC:</strong> сила, которую надо перетянуть на свою сторону.</p>",
+    "weight": {
+      "current": 0,
+      "capacity": 0
+    },
+    "class": {
+      "value": "Морпех"
+    },
+    "rank": {
+      "value": "Охрана рейса"
+    },
+    "pronouns": {
+      "value": "она"
+    },
+    "credits": {
+      "value": "100"
+    },
+    "stressdesc": {
+      "value": ""
+    },
+    "xp": {
+      "value": 0,
+      "html": 0,
+      "selectedSkill": ""
+    },
+    "attributes": {
+      "level": {
+        "value": 0
+      }
+    },
+    "stats": {
+      "strength": {
+        "value": 35,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Сила",
+        "rollLabel": "Проверка силы"
+      },
+      "speed": {
+        "value": 37,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Скорость",
+        "rollLabel": "Проверка скорости"
+      },
+      "intellect": {
+        "value": 30,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Интеллект",
+        "rollLabel": "Проверка интеллекта"
+      },
+      "combat": {
+        "value": 50,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Бой",
+        "rollLabel": "Проверка боя"
+      },
+      "sanity": {
+        "value": 17,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Рассудок",
+        "rollLabel": "Испытание рассудка"
+      },
+      "fear": {
+        "value": 42,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Страх",
+        "rollLabel": "Испытание страха"
+      },
+      "body": {
+        "value": 34,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Тело",
+        "rollLabel": "Испытание тела"
+      },
+      "armor": {
+        "value": 0,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Броня",
+        "rollLabel": "Испытание брони",
+        "damageReduction": 0,
+        "cover": "none"
+      }
+    },
+    "other": {
+      "stress": {
+        "value": 2,
+        "min": 2,
+        "max": 20,
+        "label": "Стресс"
+      },
+      "resolve": {
+        "value": 0,
+        "min": 0,
+        "max": 15,
+        "label": "Решимость"
+      },
+      "stressdesc": {
+        "value": "Когда ты паникуешь, каждый игрок рядом с тобой проходит испытание страха."
+      }
+    }
+  },
+  "prototypeToken": {
+    "name": "Дана",
+    "displayName": 30,
+    "actorLink": true,
+    "disposition": 1,
+    "width": 1,
+    "height": 1,
+    "lockRotation": true,
+    "texture": {
+      "src": "modules/mymothership/assets/vp/tokens/kruger.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "fit": "contain"
+    },
+    "ring": {
+      "enabled": false
+    },
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "other.stress"
+    },
+    "displayBars": 30,
+    "sight": {
+      "enabled": true
+    }
+  },
+  "items": [
+    {
+      "name": "Военная подготовка",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/military_training.png",
+      "system": {
+        "description": "<p>Базовая подготовка, которую проходят все военные.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "LPCa6GdvW4Xwdv4m",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!FT7bi3B2Jcg7OgFd.LPCa6GdvW4Xwdv4m"
+    },
+    {
+      "name": "Атлетика",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/athletics.png",
+      "system": {
+        "description": "<p>Физическая форма, спорт и игры.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "zU1rvbH0lfNZoj4s",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!FT7bi3B2Jcg7OgFd.zU1rvbH0lfNZoj4s"
+    },
+    {
+      "name": "Огнестрельное оружие",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/firearms.png",
+      "system": {
+        "description": "<p>Безопасное и точное обращение с огнестрельным оружием.</p>",
+        "rank": "Expert",
+        "bonus": 15,
+        "prerequisite_ids": []
+      },
+      "_id": "kr5QqRhWIBqgPAE8",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!FT7bi3B2Jcg7OgFd.kr5QqRhWIBqgPAE8"
+    },
+    {
+      "name": "Стандартный бронекостюм",
+      "type": "armor",
+      "img": "systems/mothership-fr/images/icons/armor/standard_battle_dress.png",
+      "system": {
+        "description": "<p>Бронежилет поверх формы Компании. ПБ 7.</p>",
+        "armorPoints": 7,
+        "damageReduction": 0,
+        "speed": "Normal",
+        "oxygenMax": 0,
+        "oxygenCurrent": 0,
+        "weight": 0,
+        "cost": 2000,
+        "features": "",
+        "equipped": true
+      },
+      "_id": "4YQjQ73TqEPnxKUB",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!FT7bi3B2Jcg7OgFd.4YQjQ73TqEPnxKUB"
+    },
+    {
+      "name": "«Пистолет» — револьвер FN Slug",
+      "type": "weapon",
+      "img": "systems/mothership-fr/images/icons/weapons/revolver.png",
+      "system": {
+        "description": "<p>Многозарядный револьвер. Вблизи. Рана: огнестрельная. Один из двух стволов на борту.</p>",
+        "antiArmor": false,
+        "damage": "1d10+1",
+        "ammo": 6,
+        "shots": 6,
+        "curShots": 6,
+        "shotsPerFire": "1",
+        "useAmmo": true,
+        "ammoType": "",
+        "wound": "",
+        "critDmg": "",
+        "woundEffect": "Gunshot",
+        "bonus": 0,
+        "weight": 0,
+        "cost": 750,
+        "ranges": {
+          "short": 0,
+          "medium": 0,
+          "long": 0,
+          "value": "Close"
+        },
+        "settings": {
+          "firstEdition": false
+        }
+      },
+      "_id": "0iEOjIBAmdyWoDKW",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 500000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!FT7bi3B2Jcg7OgFd.0iEOjIBAmdyWoDKW"
+    },
+    {
+      "name": "Ключ № 2 от кейса с винтовкой",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/vip_corporate_key_card.png",
+      "system": {
+        "description": "<p>Кейс с импульсной винтовкой F20 «Арбитр» (дальняя, 3к10, 5 выстрелов, рана огнестрельная) открывается двумя ключами — этим и ключом капитана.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "FkGk3w3bEDuRLLQF",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 600000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!FT7bi3B2Jcg7OgFd.FkGk3w3bEDuRLLQF"
+    },
+    {
+      "name": "Гарнитура",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/short_range_comms.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "DqxuQ6VVtzk2FJXb",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 700000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!FT7bi3B2Jcg7OgFd.DqxuQ6VVtzk2FJXb"
+    },
+    {
+      "name": "Жвачка",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/lunch_box.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "bQ6ecm3u5v0bDMMx",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 800000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!FT7bi3B2Jcg7OgFd.bQ6ecm3u5v0bDMMx"
+    },
+    {
+      "name": "Безделушка: ключ от дома детства",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Безделушка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "URkKtBik94LDyvey",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 900000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!FT7bi3B2Jcg7OgFd.URkKtBik94LDyvey"
+    },
+    {
+      "name": "Нашивка: «Я сторож брату своему»",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Нашивка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "FFycBN7u0E1Yqzuc",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 1000000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!FT7bi3B2Jcg7OgFd.FFycBN7u0E1Yqzuc"
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "mymothership": {
+      "pregen": true,
+      "recommended": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "mothership-fr",
+    "systemVersion": "1.8.21"
+  }
+}

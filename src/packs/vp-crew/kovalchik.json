@@ -1,0 +1,496 @@
+{
+  "_id": "fSsuMhYO00kQVZL2",
+  "_key": "!actors!fSsuMhYO00kQVZL2",
+  "name": "Долорес «Лола» Ковальчик",
+  "type": "character",
+  "img": "modules/mymothership/assets/vp/portraits/kovalchik.webp",
+  "folder": "TxVSZOyPsIglpn80",
+  "sort": 100000,
+  "system": {
+    "health": {
+      "value": 16,
+      "min": 0,
+      "max": 16,
+      "label": "Здоровье"
+    },
+    "hits": {
+      "value": 0,
+      "min": 0,
+      "max": 2,
+      "label": "Раны"
+    },
+    "netHP": {
+      "value": 48,
+      "min": 0,
+      "max": 48,
+      "label": "Здоровье всего"
+    },
+    "bleeding": {
+      "value": 0,
+      "min": 0,
+      "label": "Кровотечение"
+    },
+    "biography": "<p><em>Старший механик, 32 года. Слышит корабль.</em></p><p><strong>Вид:</strong> каска с фонарём и камерой, пластырь на носу — вечно обо что-то бьётся, татуировки старых кораблей на предплечьях, пояс с инструментами.</p><p><strong>Манера:</strong> с кораблём говорит ласково, с людьми грубо — особенно со старшими: доказывает, что не зря на этом месте.</p><p><strong>Чем думает:</strong> уши — по звуку определяет, что сломалось; этому её научил прежний старший механик.</p><p><strong>Желание:</strong> удержаться в должности — она самый молодой старший механик во флоте, и после этого рейса кончается её испытательный срок.</p><p><strong>Польза:</strong> двигатель, раструб, клапаны, зарядка капсул — всё железо. Первая понимает, что звуки в отсеке улова — не железо.</p><p><strong>Где в момент удара:</strong> машинное отделение.</p>",
+    "notes": "<h3>Тайна</h3><p>Под нажимом капитана подписала ложный акт обслуживания капсул: Ферро дал понять, что без подписи её в должности не утвердят. Если узнают — места не будет, а экипаж её не простит.</p><h3>Как держится</h3><p><strong>Голосует:</strong> сбросить улов и подняться. Это единственный план, где корабль цел.</p><p><strong>Где ломается:</strong> если из-за её подписи кто-то погибнет у капсулы.</p><h3>Связи</h3><p><strong>Карим</strong> — почти ровесник, она его прямой начальник: гоняет жёстко, но прикрывает.</p><p><strong>Капитан Ферро</strong> держит её на крючке испытательного срока: акт о капсулах подписан под его нажимом.</p><h3>Смотрителю</h3><p><strong>Если играет игрок:</strong> центральная фигура плана «зарядить капсулу».</p><p><strong>Если NPC:</strong> ведёт ремонт, к ней приходят за советом, а её тайна может всплыть в самый неподходящий момент.</p>",
+    "weight": {
+      "current": 0,
+      "capacity": 0
+    },
+    "class": {
+      "value": "Специалист"
+    },
+    "rank": {
+      "value": "Старший механик"
+    },
+    "pronouns": {
+      "value": "она"
+    },
+    "credits": {
+      "value": "80"
+    },
+    "stressdesc": {
+      "value": ""
+    },
+    "xp": {
+      "value": 0,
+      "html": 0,
+      "selectedSkill": ""
+    },
+    "attributes": {
+      "level": {
+        "value": 0
+      }
+    },
+    "stats": {
+      "strength": {
+        "value": 43,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Сила",
+        "rollLabel": "Проверка силы"
+      },
+      "speed": {
+        "value": 39,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Скорость",
+        "rollLabel": "Проверка скорости"
+      },
+      "intellect": {
+        "value": 41,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Интеллект",
+        "rollLabel": "Проверка интеллекта"
+      },
+      "combat": {
+        "value": 35,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Бой",
+        "rollLabel": "Проверка боя"
+      },
+      "sanity": {
+        "value": 28,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Рассудок",
+        "rollLabel": "Испытание рассудка"
+      },
+      "fear": {
+        "value": 33,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Страх",
+        "rollLabel": "Испытание страха"
+      },
+      "body": {
+        "value": 36,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Тело",
+        "rollLabel": "Испытание тела"
+      },
+      "armor": {
+        "value": 0,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Броня",
+        "rollLabel": "Испытание брони",
+        "damageReduction": 0,
+        "cover": "none"
+      }
+    },
+    "other": {
+      "stress": {
+        "value": 2,
+        "min": 2,
+        "max": 20,
+        "label": "Стресс"
+      },
+      "resolve": {
+        "value": 0,
+        "min": 0,
+        "max": 15,
+        "label": "Решимость"
+      },
+      "stressdesc": {
+        "value": "Один раз за игровую встречу ты можешь получить преимущество к проверке паники."
+      }
+    }
+  },
+  "prototypeToken": {
+    "name": "Лола",
+    "displayName": 30,
+    "actorLink": true,
+    "disposition": 1,
+    "width": 1,
+    "height": 1,
+    "lockRotation": true,
+    "texture": {
+      "src": "modules/mymothership/assets/vp/tokens/kovalchik.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "fit": "contain"
+    },
+    "ring": {
+      "enabled": false
+    },
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "other.stress"
+    },
+    "displayBars": 30,
+    "sight": {
+      "enabled": true
+    }
+  },
+  "items": [
+    {
+      "name": "Промышленное оборудование",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/industrial_equipment.png",
+      "system": {
+        "description": "<p>Безопасная работа с тяжёлой техникой и инструментом: экзоскелеты, погрузчики, буры, отбойники, лазерные резаки.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "k1A6LsuBbVk1lJTx",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!fSsuMhYO00kQVZL2.k1A6LsuBbVk1lJTx"
+    },
+    {
+      "name": "Невесомость",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/zero_g.png",
+      "system": {
+        "description": "<p>Работа в вакууме: ориентация, движение без опоры, управление скафандром.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "06hmyuLymuMIiL4x",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!fSsuMhYO00kQVZL2.06hmyuLymuMIiL4x"
+    },
+    {
+      "name": "Умелые руки",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/jury_rigging.png",
+      "system": {
+        "description": "<p>Починка на скорую руку тем, что есть под рукой.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "qSxNV6m56uk1tfj1",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!fSsuMhYO00kQVZL2.qSxNV6m56uk1tfj1"
+    },
+    {
+      "name": "Ремонт",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/mechanical_repair.png",
+      "system": {
+        "description": "<p>Починка сломанных машин.</p>",
+        "rank": "Expert",
+        "bonus": 15,
+        "prerequisite_ids": []
+      },
+      "_id": "HCB5LIBoWbxE57G5",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!fSsuMhYO00kQVZL2.HCB5LIBoWbxE57G5"
+    },
+    {
+      "name": "Скафандр",
+      "type": "armor",
+      "img": "systems/mothership-fr/images/icons/armor/vaccsuit.png",
+      "system": {
+        "description": "<p>Скафандр: 12 часов кислорода, защита от вакуума и холода. Скорость [−]. ПБ 3.</p>",
+        "armorPoints": 3,
+        "damageReduction": 0,
+        "speed": "[-]",
+        "oxygenMax": 12,
+        "oxygenCurrent": 12,
+        "weight": 0,
+        "cost": 10000,
+        "features": "",
+        "equipped": true
+      },
+      "_id": "dbDlLU8MUhX82GBO",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 500000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!fSsuMhYO00kQVZL2.dbDlLU8MUhX82GBO"
+    },
+    {
+      "name": "Лазерный резак",
+      "type": "weapon",
+      "img": "systems/mothership-fr/images/icons/weapons/laser_cutter.png",
+      "system": {
+        "description": "<p>Инструмент, который режет почти любой материал. Дальняя. Двуручный, тяжёлый, раунд перезарядки между выстрелами. Самое опасное оружие на корабле — и это инструмент. Запас (6) — одна дополнительная батарея.</p>",
+        "antiArmor": false,
+        "damage": "1d100",
+        "ammo": 6,
+        "shots": 6,
+        "curShots": 6,
+        "shotsPerFire": "1",
+        "useAmmo": true,
+        "ammoType": "",
+        "wound": "",
+        "critDmg": "",
+        "woundEffect": "Bleeding [-] or Gore & Massive [-]",
+        "bonus": 0,
+        "weight": 0,
+        "cost": 1200,
+        "ranges": {
+          "short": 0,
+          "medium": 0,
+          "long": 0,
+          "value": "Long"
+        },
+        "settings": {
+          "firstEdition": false
+        }
+      },
+      "_id": "wsudqJepvBCIQ8C8",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 600000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!fSsuMhYO00kQVZL2.wsudqJepvBCIQ8C8"
+    },
+    {
+      "name": "Набор заплаток",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/patch_kit.png",
+      "system": {
+        "description": "<p>Заплатки для скафандра.</p>",
+        "quantity": 3,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "TMZZJf5S2dHxbzkT",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 700000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!fSsuMhYO00kQVZL2.TMZZJf5S2dHxbzkT"
+    },
+    {
+      "name": "Пояс с набором инструментов",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/toolbelt.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "MfW3GIIMeb4a6UMQ",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 800000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!fSsuMhYO00kQVZL2.MfW3GIIMeb4a6UMQ"
+    },
+    {
+      "name": "Каска с фонарём и камерой",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/head_lamp.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "pG8QEiYmSIwFOZHn",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 900000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!fSsuMhYO00kQVZL2.pG8QEiYmSIwFOZHn"
+    },
+    {
+      "name": "Безделушка: гаечный ключ — подарок прежнего старшего механика",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Безделушка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "FN66kwhKWXnzszai",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 1000000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!fSsuMhYO00kQVZL2.FN66kwhKWXnzszai"
+    },
+    {
+      "name": "Нашивка: череп и скрещенные гаечные ключи",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Нашивка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "4wq0WzLam7tA5MMM",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 1100000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!fSsuMhYO00kQVZL2.4wq0WzLam7tA5MMM"
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "mymothership": {
+      "pregen": true,
+      "recommended": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "mothership-fr",
+    "systemVersion": "1.8.21"
+  }
+}

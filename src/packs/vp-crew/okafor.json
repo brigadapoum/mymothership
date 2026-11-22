@@ -1,0 +1,426 @@
+{
+  "_id": "iBVjcw4L0CCU0qfD",
+  "_key": "!actors!iBVjcw4L0CCU0qfD",
+  "name": "Рут Окафор",
+  "type": "character",
+  "img": "modules/mymothership/assets/vp/portraits/okafor.webp",
+  "folder": "YNiGIgtnA7hGSgot",
+  "sort": 500000,
+  "system": {
+    "health": {
+      "value": 13,
+      "min": 0,
+      "max": 13,
+      "label": "Здоровье"
+    },
+    "hits": {
+      "value": 0,
+      "min": 0,
+      "max": 2,
+      "label": "Раны"
+    },
+    "netHP": {
+      "value": 39,
+      "min": 0,
+      "max": 39,
+      "label": "Здоровье всего"
+    },
+    "bleeding": {
+      "value": 0,
+      "min": 0,
+      "label": "Кровотечение"
+    },
+    "biography": "<p><em>Старпом, 41 год. Холодный расчёт.</em></p><p><strong>Вид:</strong> чёрное каре, серьги, тяжёлый взгляд, термокружка.</p><p><strong>Манера:</strong> считает вслух, отвечает вопросом на вопрос.</p><p><strong>Чем думает:</strong> голова-калькулятор.</p><p><strong>Желание:</strong> капитанское кресло — Компания намекнула, что место освободится, если Ферро оступится.</p><p><strong>Польза:</strong> навигация по документам, расчёт топлива и высоты, знает регламенты Компании наизусть.</p><p><strong>Где в момент удара:</strong> мостик.</p>",
+    "notes": "<h3>Тайна</h3><p>Уже докладывала Компании о прежних нарушениях капитана. Выжить и сдать его — её шанс.</p><h3>Как держится</h3><p><strong>Голосует:</strong> за тех, кто побеждает. Предлагает самые разумные и самые жестокие решения: «Кормим тем, кто ранен — они всё равно не дотянут».</p><p><strong>Где ломается:</strong> если у неё отберут контроль над ситуацией.</p><h3>Связи</h3><p><strong>Капитан Ферро</strong> — его ты готова сдать Компании.</p><h3>Смотрителю</h3><p><strong>Если играет игрок:</strong> роль манипулятора и переговорщика с тварью.</p><p><strong>Если NPC:</strong> главный кандидат в предатели — вступает в сговор с тварью или капитаном.</p>",
+    "weight": {
+      "current": 0,
+      "capacity": 0
+    },
+    "class": {
+      "value": "Специалист"
+    },
+    "rank": {
+      "value": "Старпом"
+    },
+    "pronouns": {
+      "value": "она"
+    },
+    "credits": {
+      "value": "120"
+    },
+    "stressdesc": {
+      "value": ""
+    },
+    "xp": {
+      "value": 0,
+      "html": 0,
+      "selectedSkill": ""
+    },
+    "attributes": {
+      "level": {
+        "value": 0
+      }
+    },
+    "stats": {
+      "strength": {
+        "value": 35,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Сила",
+        "rollLabel": "Проверка силы"
+      },
+      "speed": {
+        "value": 38,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Скорость",
+        "rollLabel": "Проверка скорости"
+      },
+      "intellect": {
+        "value": 48,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Интеллект",
+        "rollLabel": "Проверка интеллекта"
+      },
+      "combat": {
+        "value": 34,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Бой",
+        "rollLabel": "Проверка боя"
+      },
+      "sanity": {
+        "value": 37,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Рассудок",
+        "rollLabel": "Испытание рассудка"
+      },
+      "fear": {
+        "value": 32,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Страх",
+        "rollLabel": "Испытание страха"
+      },
+      "body": {
+        "value": 27,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Тело",
+        "rollLabel": "Испытание тела"
+      },
+      "armor": {
+        "value": 0,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Броня",
+        "rollLabel": "Испытание брони",
+        "damageReduction": 0,
+        "cover": "none"
+      }
+    },
+    "other": {
+      "stress": {
+        "value": 2,
+        "min": 2,
+        "max": 20,
+        "label": "Стресс"
+      },
+      "resolve": {
+        "value": 0,
+        "min": 0,
+        "max": 15,
+        "label": "Решимость"
+      },
+      "stressdesc": {
+        "value": "Один раз за игровую встречу ты можешь получить преимущество к проверке паники."
+      }
+    }
+  },
+  "prototypeToken": {
+    "name": "Рут",
+    "displayName": 30,
+    "actorLink": true,
+    "disposition": 1,
+    "width": 1,
+    "height": 1,
+    "lockRotation": true,
+    "texture": {
+      "src": "modules/mymothership/assets/vp/tokens/okafor.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "fit": "contain"
+    },
+    "ring": {
+      "enabled": false
+    },
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "other.stress"
+    },
+    "displayBars": 30,
+    "sight": {
+      "enabled": true
+    }
+  },
+  "items": [
+    {
+      "name": "Промышленное оборудование",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/industrial_equipment.png",
+      "system": {
+        "description": "<p>Безопасная работа с тяжёлой техникой и инструментом: экзоскелеты, погрузчики, буры, отбойники, лазерные резаки.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "wdvmkqjcHNLM6GZk",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!iBVjcw4L0CCU0qfD.wdvmkqjcHNLM6GZk"
+    },
+    {
+      "name": "Невесомость",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/zero_g.png",
+      "system": {
+        "description": "<p>Работа в вакууме: ориентация, движение без опоры, управление скафандром.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "BZuzFt146BqjaLWt",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!iBVjcw4L0CCU0qfD.BZuzFt146BqjaLWt"
+    },
+    {
+      "name": "Математика",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/mathematics.png",
+      "system": {
+        "description": "<p>Числа, величины и пространство.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "cAq8kIaidj46L6iG",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!iBVjcw4L0CCU0qfD.cAq8kIaidj46L6iG"
+    },
+    {
+      "name": "Физика",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/physics.png",
+      "system": {
+        "description": "<p>Материя, движение, энергия и их действие в пространстве и времени.</p>",
+        "rank": "Expert",
+        "bonus": 15,
+        "prerequisite_ids": []
+      },
+      "_id": "37VZvXzPI48tGqPP",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!iBVjcw4L0CCU0qfD.37VZvXzPI48tGqPP"
+    },
+    {
+      "name": "Униформа экипажа",
+      "type": "armor",
+      "img": "systems/mothership-fr/images/icons/armor/standard_crew_attire.png",
+      "system": {
+        "description": "<p>Стандартная униформа экипажа. ПБ 1.</p>",
+        "armorPoints": 1,
+        "damageReduction": 0,
+        "speed": "Normal",
+        "oxygenMax": 0,
+        "oxygenCurrent": 0,
+        "weight": 0,
+        "cost": 100,
+        "features": "",
+        "equipped": true
+      },
+      "_id": "CPji6gTu5q9xh5bW",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 500000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!iBVjcw4L0CCU0qfD.CPji6gTu5q9xh5bW"
+    },
+    {
+      "name": "Портативный терминал с регламентами Компании",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/portable_computer_terminal.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "4WpNS2vkFi0ydiyr",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 600000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!iBVjcw4L0CCU0qfD.4WpNS2vkFi0ydiyr"
+    },
+    {
+      "name": "Термокружка",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/lunch_box.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "nObvfmerfDbChVNa",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 700000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!iBVjcw4L0CCU0qfD.nObvfmerfDbChVNa"
+    },
+    {
+      "name": "Безделушка: дневник обид",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Безделушка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "SCq5Mb2uQggxCRuU",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 800000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!iBVjcw4L0CCU0qfD.SCq5Mb2uQggxCRuU"
+    },
+    {
+      "name": "Нашивка: «Образцовый гражданин»",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Нашивка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "YB49dMEKd6TTc41o",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 900000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!iBVjcw4L0CCU0qfD.YB49dMEKd6TTc41o"
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "mymothership": {
+      "pregen": true,
+      "recommended": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "mothership-fr",
+    "systemVersion": "1.8.21"
+  }
+}

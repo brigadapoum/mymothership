@@ -82,7 +82,7 @@ Hooks.once("init", () => {
     type: String,
     choices: {
       ru: "Русский",
-      system: "Язык системы (французский)"
+      system: "Французский (язык системы)"
     },
     default: "ru",
     requiresReload: true
@@ -99,19 +99,42 @@ Hooks.once("init", () => {
   registerPlaylistFolder(() => game.settings.get(MODULE_ID, "playlistFolder"));
 });
 
-// Если язык Foundry — русский, перевод подхватывается сам (раздел languages в module.json).
-// При любом другом языке Foundry модуль подмешивает перевод сам, если в настройке выбран русский.
-// Повторяем на нескольких этапах загрузки: подмешивание безвредно, а этапы в разных версиях Foundry идут по-разному.
+// Русский перевод подключается самим Foundry через раздел languages в module.json — и для английского,
+// и для русского языка Foundry. Скрипт для этого не нужен: даже если он не загрузился, листы будут по-русски.
+// У системы есть только fr.json, и Foundry грузит его лишь при французском языке Foundry — поэтому
+// выбор «Французский» в настройке модуля подмешивает fr.json системы поверх русского.
+// Русский подмешивается ещё и скриптом — на случай любого другого языка Foundry.
 let merged = false;
-function applyTranslation(stage) {
-  if (!isOurSystem() || !useRussian() || !game.i18n?.translations) return;
-  foundry.utils.mergeObject(game.i18n.translations, RU);
-  if (!merged) console.log(`MyMothership | русский перевод подключён (${stage})`);
-  merged = true;
+let frCache = null;
+async function systemFrench() {
+  if (frCache) return frCache;
+  const res = await fetch(`systems/${SYSTEM_ID}/lang/fr.json`);
+  frCache = await res.json();
+  return frCache;
+}
+async function applyTranslation(stage) {
+  if (!isOurSystem() || !game.i18n?.translations) return;
+  try {
+    const dict = useRussian() ? RU : await systemFrench();
+    foundry.utils.mergeObject(game.i18n.translations, dict);
+    if (!merged) console.log(`MyMothership ${game.modules.get(MODULE_ID)?.version} | перевод подключён: ${useRussian() ? "русский" : "французский"} (${stage})`);
+    merged = true;
+  } catch (err) {
+    console.error("MyMothership | не удалось подключить перевод", err);
+  }
 }
 Hooks.once("i18nInit", () => applyTranslation("i18nInit"));
 Hooks.once("setup", () => applyTranslation("setup"));
 Hooks.once("ready", () => applyTranslation("ready"));
+
+// Если ключи всё равно видны как «Mosh.Name», смотритель сразу узнаёт, в чём дело.
+Hooks.once("ready", () => {
+  if (!isOurSystem() || !game.user.isGM) return;
+  setTimeout(() => {
+    if (game.i18n.localize("Mosh.Name") !== "Mosh.Name") return;
+    ui.notifications.error("MyMothership: перевод Mothership не подключился — на листах видны ключи вида Mosh.Name. Обновите страницу с очисткой кэша (Ctrl+F5); если не поможет — откройте консоль (F12) и пришлите строки с MyMothership.", { permanent: true });
+  }, 2000);
+});
 
 // Новые персонажи и существа сразу получают подписи на выбранном языке.
 Hooks.on("preCreateActor", (actor) => {

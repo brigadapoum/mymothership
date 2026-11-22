@@ -1,8 +1,8 @@
 {
   "id": "mymothership",
   "title": "MyMothership — Mothership 1e по-русски",
-  "description": "Модуль Мастерской для Mothership 1e (система mothership-fr): русский перевод интерфейса с выбором языка в настройках модуля; опция загрузки целой папки в плейлист. Дальше — материалы ваншота «Восходящий поток».",
-  "version": "0.2.0",
+  "description": "Модуль Мастерской для Mothership 1e (система mothership-fr): русский перевод интерфейса с выбором языка в настройках модуля; загрузка целой папки в плейлист; прегены ваншота «Восходящий поток».",
+  "version": "0.3.0",
   "authors": [
     {
       "name": "Мастерская"
@@ -10,7 +10,7 @@
   ],
   "url": "https://github.com/brigadapoum/mymothership",
   "manifest": "https://raw.githubusercontent.com/brigadapoum/mymothership/main/module.json",
-  "download": "https://raw.githubusercontent.com/brigadapoum/mymothership/main/dist/mymothership.zip",
+  "download": "https://raw.githubusercontent.com/brigadapoum/mymothership/v0.3.0/dist/mymothership.zip",
   "compatibility": {
     "minimum": "13",
     "verified": "13.351"
@@ -31,6 +31,12 @@
   ],
   "languages": [
     {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/ru-mothership-fr.json",
+      "system": "mothership-fr"
+    },
+    {
       "lang": "ru",
       "name": "Русский",
       "path": "lang/ru-mothership-fr.json",
@@ -39,5 +45,30 @@
   ],
   "styles": [
     "styles/mymothership.css"
+  ],
+  "packs": [
+    {
+      "name": "vp-crew",
+      "label": "Восходящий поток — экипаж",
+      "path": "packs/vp-crew",
+      "type": "Actor",
+      "system": "mothership-fr",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Восходящий поток",
+      "sorting": "m",
+      "color": "#1f6f6a",
+      "packs": [
+        "vp-crew"
+      ],
+      "folders": []
+    }
   ]
 }

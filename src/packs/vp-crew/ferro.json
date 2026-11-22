@@ -1,0 +1,471 @@
+{
+  "_id": "E0c7vdbmvtcQwaXQ",
+  "_key": "!actors!E0c7vdbmvtcQwaXQ",
+  "name": "Капитан Аугусто Ферро",
+  "type": "character",
+  "img": "modules/mymothership/assets/vp/portraits/ferro.webp",
+  "folder": "hCeS1ka2FKlJqQFb",
+  "sort": 1100000,
+  "system": {
+    "health": {
+      "value": 14,
+      "min": 0,
+      "max": 14,
+      "label": "Здоровье"
+    },
+    "hits": {
+      "value": 0,
+      "min": 0,
+      "max": 2,
+      "label": "Раны"
+    },
+    "netHP": {
+      "value": 42,
+      "min": 0,
+      "max": 42,
+      "label": "Здоровье всего"
+    },
+    "bleeding": {
+      "value": 0,
+      "min": 0,
+      "label": "Кровотечение"
+    },
+    "biography": "<p><em>Капитан, 52 года. Повёл корабль в колонну. Всегда NPC.</em></p><p><strong>Вид:</strong> седая щетина, очки, китель поверх комбинезона, планшет с графиком квоты всегда в руке.</p><p><strong>Манера:</strong> говорит цифрами («минус восемь процентов к плану»), никогда не повышает голос.</p><p><strong>Чем думает:</strong> планшет.</p><p><strong>Желание:</strong> премию за объём — последний взнос, чтобы выкупить свой контракт у Компании и уйти.</p><p><strong>Польза:</strong> спасает рейс и улов. Носит пистолет и один из двух ключей от кейса с винтовкой (второй у Даны).</p><p><strong>Где в момент удара:</strong> мостик.</p>",
+    "notes": "<h3>Тайна</h3><p>Капсулы не заряжены три рейса — он сам подписал отчёт, что заряжены. Решение идти в колонну — его. Слышал от Бернарда байки про колонны и не поверил.</p><p><strong>По ходу игры:</strong> в катастрофе отдаёт чёткие правильные приказы — игроки начинают ему доверять. На Явлении первым предлагает торговаться с тварью: «Она хочет на станцию — мы и так идём на станцию». На кормлении предлагает жребий, но себя из жребия исключает: «Без капитана корабль не долетит».</p><h3>Как держится</h3><p><strong>Голосует:</strong> за станцию и за улов.</p><p><strong>Где ломается:</strong> если всплывает правда о капсулах или если улов придётся сбросить. Тогда он опасен: может запереть мостик и сам вести корабль к станции.</p><h3>Связи</h3><p><strong>Лола</strong> — на крючке ложного акта о капсулах.</p><p><strong>Йоко</strong> — вы оба виноваты в заходе в колонну.</p><p><strong>Рут</strong> готова сдать его Компании.</p><h3>Смотрителю</h3><p><strong>Если NPC:</strong> всегда.</p>",
+    "weight": {
+      "current": 0,
+      "capacity": 0
+    },
+    "class": {
+      "value": "Специалист"
+    },
+    "rank": {
+      "value": "Капитан"
+    },
+    "pronouns": {
+      "value": "он"
+    },
+    "credits": {
+      "value": "150"
+    },
+    "stressdesc": {
+      "value": ""
+    },
+    "xp": {
+      "value": 0,
+      "html": 0,
+      "selectedSkill": ""
+    },
+    "attributes": {
+      "level": {
+        "value": 0
+      }
+    },
+    "stats": {
+      "strength": {
+        "value": 37,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Сила",
+        "rollLabel": "Проверка силы"
+      },
+      "speed": {
+        "value": 35,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Скорость",
+        "rollLabel": "Проверка скорости"
+      },
+      "intellect": {
+        "value": 46,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Интеллект",
+        "rollLabel": "Проверка интеллекта"
+      },
+      "combat": {
+        "value": 38,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Бой",
+        "rollLabel": "Проверка боя"
+      },
+      "sanity": {
+        "value": 34,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Рассудок",
+        "rollLabel": "Испытание рассудка"
+      },
+      "fear": {
+        "value": 30,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Страх",
+        "rollLabel": "Испытание страха"
+      },
+      "body": {
+        "value": 28,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Тело",
+        "rollLabel": "Испытание тела"
+      },
+      "armor": {
+        "value": 0,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Броня",
+        "rollLabel": "Испытание брони",
+        "damageReduction": 0,
+        "cover": "none"
+      }
+    },
+    "other": {
+      "stress": {
+        "value": 2,
+        "min": 2,
+        "max": 20,
+        "label": "Стресс"
+      },
+      "resolve": {
+        "value": 0,
+        "min": 0,
+        "max": 15,
+        "label": "Решимость"
+      },
+      "stressdesc": {
+        "value": "Один раз за игровую встречу ты можешь получить преимущество к проверке паники."
+      }
+    }
+  },
+  "prototypeToken": {
+    "name": "Ферро",
+    "displayName": 30,
+    "actorLink": true,
+    "disposition": 1,
+    "width": 1,
+    "height": 1,
+    "lockRotation": true,
+    "texture": {
+      "src": "modules/mymothership/assets/vp/tokens/ferro.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "fit": "contain"
+    },
+    "ring": {
+      "enabled": false
+    },
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "other.stress"
+    },
+    "displayBars": 30,
+    "sight": {
+      "enabled": true
+    }
+  },
+  "items": [
+    {
+      "name": "Промышленное оборудование",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/industrial_equipment.png",
+      "system": {
+        "description": "<p>Безопасная работа с тяжёлой техникой и инструментом: экзоскелеты, погрузчики, буры, отбойники, лазерные резаки.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "a1z0BiBrCCfZkIao",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!E0c7vdbmvtcQwaXQ.a1z0BiBrCCfZkIao"
+    },
+    {
+      "name": "Невесомость",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/zero_g.png",
+      "system": {
+        "description": "<p>Работа в вакууме: ориентация, движение без опоры, управление скафандром.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "pDddlTnFKXx6Gwaa",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!E0c7vdbmvtcQwaXQ.pDddlTnFKXx6Gwaa"
+    },
+    {
+      "name": "Математика",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/mathematics.png",
+      "system": {
+        "description": "<p>Числа, величины и пространство.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "LFsg3LaMbVt72Slg",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!E0c7vdbmvtcQwaXQ.LFsg3LaMbVt72Slg"
+    },
+    {
+      "name": "Пилотирование",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/piloting.png",
+      "system": {
+        "description": "<p>Управление летательными аппаратами, кораблями и другим транспортом.</p>",
+        "rank": "Expert",
+        "bonus": 15,
+        "prerequisite_ids": []
+      },
+      "_id": "4ub7KkXtk6CNLLcP",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!E0c7vdbmvtcQwaXQ.4ub7KkXtk6CNLLcP"
+    },
+    {
+      "name": "Униформа экипажа под кителем",
+      "type": "armor",
+      "img": "systems/mothership-fr/images/icons/armor/standard_crew_attire.png",
+      "system": {
+        "description": "<p>ПБ 1.</p>",
+        "armorPoints": 1,
+        "damageReduction": 0,
+        "speed": "Normal",
+        "oxygenMax": 0,
+        "oxygenCurrent": 0,
+        "weight": 0,
+        "cost": 100,
+        "features": "",
+        "equipped": true
+      },
+      "_id": "dhaINThSzx9CQ3Nd",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 500000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!E0c7vdbmvtcQwaXQ.dhaINThSzx9CQ3Nd"
+    },
+    {
+      "name": "«Пистолет» — револьвер FN Slug",
+      "type": "weapon",
+      "img": "systems/mothership-fr/images/icons/weapons/revolver.png",
+      "system": {
+        "description": "<p>Многозарядный револьвер. Вблизи. Рана: огнестрельная. Один из двух стволов на борту.</p>",
+        "antiArmor": false,
+        "damage": "1d10+1",
+        "ammo": 0,
+        "shots": 6,
+        "curShots": 6,
+        "shotsPerFire": "1",
+        "useAmmo": true,
+        "ammoType": "",
+        "wound": "",
+        "critDmg": "",
+        "woundEffect": "Gunshot",
+        "bonus": 0,
+        "weight": 0,
+        "cost": 750,
+        "ranges": {
+          "short": 0,
+          "medium": 0,
+          "long": 0,
+          "value": "Close"
+        },
+        "settings": {
+          "firstEdition": false
+        }
+      },
+      "_id": "UlmtT1f9fyOEigor",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 600000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!E0c7vdbmvtcQwaXQ.UlmtT1f9fyOEigor"
+    },
+    {
+      "name": "Ключ № 1 от кейса с винтовкой",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/vip_corporate_key_card.png",
+      "system": {
+        "description": "<p>Кейс с импульсной винтовкой F20 «Арбитр» (дальняя, 3к10, 5 выстрелов, рана огнестрельная) открывается двумя ключами — этим и ключом Даны.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "DLF5Vd1ZQzkHJe90",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 700000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!E0c7vdbmvtcQwaXQ.DLF5Vd1ZQzkHJe90"
+    },
+    {
+      "name": "Планшет с графиком квоты",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/portable_computer_terminal.png",
+      "system": {
+        "description": "<p>Портативный терминал.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "SIFYZhREIiwfkOGi",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 800000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!E0c7vdbmvtcQwaXQ.SIFYZhREIiwfkOGi"
+    },
+    {
+      "name": "Безделушка: руководство «Богатый капитан, бедный капитан»",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Безделушка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "V2ZDgFgsgibYKs2b",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 900000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!E0c7vdbmvtcQwaXQ.V2ZDgFgsgibYKs2b"
+    },
+    {
+      "name": "Нашивка: «ДЕЛАЙ СВОЮ РАБОТУ»",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Нашивка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "503VidoqLCNF0KiR",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 1000000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!E0c7vdbmvtcQwaXQ.503VidoqLCNF0KiR"
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "mymothership": {
+      "pregen": false,
+      "recommended": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "mothership-fr",
+    "systemVersion": "1.8.21"
+  }
+}

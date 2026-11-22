@@ -1,0 +1,471 @@
+{
+  "_id": "RqVlZgTWOhmbgIfB",
+  "_key": "!actors!RqVlZgTWOhmbgIfB",
+  "name": "Карим Хаддад",
+  "type": "character",
+  "img": "modules/mymothership/assets/vp/portraits/haddad.webp",
+  "folder": "YNiGIgtnA7hGSgot",
+  "sort": 700000,
+  "system": {
+    "health": {
+      "value": 12,
+      "min": 0,
+      "max": 12,
+      "label": "Здоровье"
+    },
+    "hits": {
+      "value": 0,
+      "min": 0,
+      "max": 2,
+      "label": "Раны"
+    },
+    "netHP": {
+      "value": 36,
+      "min": 0,
+      "max": 36,
+      "label": "Здоровье всего"
+    },
+    "bleeding": {
+      "value": 0,
+      "min": 0,
+      "label": "Кровотечение"
+    },
+    "biography": "<p><em>Ремонтник, 24 года. Младший.</em></p><p><strong>Вид:</strong> худой, в слишком большом скафандре, на плече камера.</p><p><strong>Манера:</strong> говорит быстро, всё принимает близко к сердцу.</p><p><strong>Чем думает:</strong> сердце.</p><p><strong>Желание:</strong> перевестись на пассажирский лайнер — заявка уже подана.</p><p><strong>Польза:</strong> пролезает туда, куда другие не пролезут; лучший оператор ремонтных дронов.</p><p><strong>Где в момент удара:</strong> у раструба, снаружи отсека улова.</p>",
+    "notes": "<h3>Тайна</h3><p>Боится тесных пространств и соврал об этом на медкомиссии. Сэм Варго был его лучшим другом — а голосом Сэма теперь говорит тварь.</p><h3>Как держится</h3><p><strong>Голосует:</strong> как Лола.</p><p><strong>Где ломается:</strong> когда тварь говорит с ним голосом Сэма.</p><h3>Связи</h3><p><strong>Лола</strong> — твоя начальница, почти ровесница.</p><p><strong>Сэм Варго</strong> — лучший друг. <strong>Тео</strong> — тоже знал Сэма.</p><h3>Смотрителю</h3><p><strong>Если играет игрок:</strong> клаустрофобия даёт помеху и честный повод бояться.</p><p><strong>Если NPC:</strong> именно его посылают в отсек улова к клапанам, и игроки могут пойти с ним или вместо него.</p>",
+    "weight": {
+      "current": 0,
+      "capacity": 0
+    },
+    "class": {
+      "value": "Специалист"
+    },
+    "rank": {
+      "value": "Ремонтник"
+    },
+    "pronouns": {
+      "value": "он"
+    },
+    "credits": {
+      "value": "60"
+    },
+    "stressdesc": {
+      "value": ""
+    },
+    "xp": {
+      "value": 0,
+      "html": 0,
+      "selectedSkill": ""
+    },
+    "attributes": {
+      "level": {
+        "value": 0
+      }
+    },
+    "stats": {
+      "strength": {
+        "value": 34,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Сила",
+        "rollLabel": "Проверка силы"
+      },
+      "speed": {
+        "value": 45,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Скорость",
+        "rollLabel": "Проверка скорости"
+      },
+      "intellect": {
+        "value": 40,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Интеллект",
+        "rollLabel": "Проверка интеллекта"
+      },
+      "combat": {
+        "value": 33,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Бой",
+        "rollLabel": "Проверка боя"
+      },
+      "sanity": {
+        "value": 32,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Рассудок",
+        "rollLabel": "Испытание рассудка"
+      },
+      "fear": {
+        "value": 25,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Страх",
+        "rollLabel": "Испытание страха"
+      },
+      "body": {
+        "value": 29,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Тело",
+        "rollLabel": "Испытание тела"
+      },
+      "armor": {
+        "value": 0,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Броня",
+        "rollLabel": "Испытание брони",
+        "damageReduction": 0,
+        "cover": "none"
+      }
+    },
+    "other": {
+      "stress": {
+        "value": 2,
+        "min": 2,
+        "max": 20,
+        "label": "Стресс"
+      },
+      "resolve": {
+        "value": 0,
+        "min": 0,
+        "max": 15,
+        "label": "Решимость"
+      },
+      "stressdesc": {
+        "value": "Один раз за игровую встречу ты можешь получить преимущество к проверке паники."
+      }
+    }
+  },
+  "prototypeToken": {
+    "name": "Карим",
+    "displayName": 30,
+    "actorLink": true,
+    "disposition": 1,
+    "width": 1,
+    "height": 1,
+    "lockRotation": true,
+    "texture": {
+      "src": "modules/mymothership/assets/vp/tokens/haddad.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "fit": "contain"
+    },
+    "ring": {
+      "enabled": false
+    },
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "other.stress"
+    },
+    "displayBars": 30,
+    "sight": {
+      "enabled": true
+    }
+  },
+  "items": [
+    {
+      "name": "Промышленное оборудование",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/industrial_equipment.png",
+      "system": {
+        "description": "<p>Безопасная работа с тяжёлой техникой и инструментом: экзоскелеты, погрузчики, буры, отбойники, лазерные резаки.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "Ks2WpuSp2AtYa77A",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!RqVlZgTWOhmbgIfB.Ks2WpuSp2AtYa77A"
+    },
+    {
+      "name": "Невесомость",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/zero_g.png",
+      "system": {
+        "description": "<p>Работа в вакууме: ориентация, движение без опоры, управление скафандром.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "xSwbtm9FWC2BXuhW",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!RqVlZgTWOhmbgIfB.xSwbtm9FWC2BXuhW"
+    },
+    {
+      "name": "Компьютеры",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/computers.png",
+      "system": {
+        "description": "<p>Свободная работа с компьютерами и сетями.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "Af0lv9Bh1Xz4234G",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!RqVlZgTWOhmbgIfB.Af0lv9Bh1Xz4234G"
+    },
+    {
+      "name": "Пилотирование (ремонтные дроны)",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/piloting.png",
+      "system": {
+        "description": "<p>Управление летательными аппаратами, кораблями и другим транспортом.</p>",
+        "rank": "Expert",
+        "bonus": 15,
+        "prerequisite_ids": []
+      },
+      "_id": "tsACCnK5JYZlLLSQ",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!RqVlZgTWOhmbgIfB.tsACCnK5JYZlLLSQ"
+    },
+    {
+      "name": "Скафандр (велик на размер)",
+      "type": "armor",
+      "img": "systems/mothership-fr/images/icons/armor/vaccsuit.png",
+      "system": {
+        "description": "<p>Скафандр: 12 часов кислорода, скорость [−]. Велик на размер. ПБ 3.</p>",
+        "armorPoints": 3,
+        "damageReduction": 0,
+        "speed": "[-]",
+        "oxygenMax": 12,
+        "oxygenCurrent": 12,
+        "weight": 0,
+        "cost": 10000,
+        "features": "",
+        "equipped": true
+      },
+      "_id": "hXh0CwGyM0fDF9l6",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 500000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!RqVlZgTWOhmbgIfB.hXh0CwGyM0fDF9l6"
+    },
+    {
+      "name": "Монтировка",
+      "type": "weapon",
+      "img": "systems/mothership-fr/images/icons/weapons/crowbar.png",
+      "system": {
+        "description": "<p>Даёт [+] к проверкам силы, чтобы вскрыть заклинивший шлюз или поднять тяжёлое. Вплотную.</p>",
+        "antiArmor": false,
+        "damage": "1d5",
+        "ammo": 0,
+        "shots": 0,
+        "curShots": 0,
+        "shotsPerFire": "0",
+        "useAmmo": false,
+        "ammoType": "",
+        "wound": "",
+        "critDmg": "",
+        "woundEffect": "Blunt Force [-]",
+        "bonus": 0,
+        "weight": 0,
+        "cost": 25,
+        "ranges": {
+          "short": 0,
+          "medium": 0,
+          "long": 0,
+          "value": "Adjacent"
+        },
+        "settings": {
+          "firstEdition": false
+        }
+      },
+      "_id": "PGxJqJLnlc2rC1GI",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 600000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!RqVlZgTWOhmbgIfB.PGxJqJLnlc2rC1GI"
+    },
+    {
+      "name": "Спасательный дрон",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/salvage_drone.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "UzVhwiGA5CPspJjq",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 700000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!RqVlZgTWOhmbgIfB.UzVhwiGA5CPspJjq"
+    },
+    {
+      "name": "Камера на плече",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/body_cam.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "1MF1XF6ncW5RtILo",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 800000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!RqVlZgTWOhmbgIfB.1MF1XF6ncW5RtILo"
+    },
+    {
+      "name": "Безделушка: поданная заявка на пассажирский лайнер",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Безделушка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "y7iFRPfFh6e9Vbgk",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 900000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!RqVlZgTWOhmbgIfB.y7iFRPfFh6e9Vbgk"
+    },
+    {
+      "name": "Нашивка: «Требуется помощь»",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Нашивка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "xuBVQWFEpKTMFWrS",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 1000000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!RqVlZgTWOhmbgIfB.xuBVQWFEpKTMFWrS"
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "mymothership": {
+      "pregen": true,
+      "recommended": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "mothership-fr",
+    "systemVersion": "1.8.21"
+  }
+}

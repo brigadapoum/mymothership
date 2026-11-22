@@ -1,0 +1,446 @@
+{
+  "_id": "7fJsLe0iDqPDdNiH",
+  "_key": "!actors!7fJsLe0iDqPDdNiH",
+  "name": "«Папа» Тео Хольм",
+  "type": "character",
+  "img": "modules/mymothership/assets/vp/portraits/holm.webp",
+  "folder": "YNiGIgtnA7hGSgot",
+  "sort": 1000000,
+  "system": {
+    "health": {
+      "value": 18,
+      "min": 0,
+      "max": 18,
+      "label": "Здоровье"
+    },
+    "hits": {
+      "value": 0,
+      "min": 0,
+      "max": 3,
+      "label": "Раны"
+    },
+    "netHP": {
+      "value": 72,
+      "min": 0,
+      "max": 72,
+      "label": "Здоровье всего"
+    },
+    "bleeding": {
+      "value": 0,
+      "min": 0,
+      "label": "Кровотечение"
+    },
+    "biography": "<p><em>Кок, 55 лет. Бывший морпех.</em></p><p><strong>Вид:</strong> огромный; на камбузе вместо колпака — старая каска морпеха с номером 81; фартук поверх армейской майки, шрам через бровь.</p><p><strong>Манера:</strong> всех кормит, всех зовёт «малыш».</p><p><strong>Чем думает:</strong> желудок и кухонные ножи.</p><p><strong>Желание:</strong> чтобы молодые дожили до порта.</p><p><strong>Польза:</strong> воевал; держит экипаж вместе; знает, где на борту всё, что режет и горит.</p><p><strong>Где в момент удара:</strong> камбуз.</p>",
+    "notes": "<h3>Тайна</h3><p>В отсеке улова у тебя тайник с контрабандой — поэтому знаешь трюм лучше всех и знаешь обходной путь туда. Сэм был тебе должен.</p><h3>Как держится</h3><p><strong>Голосует:</strong> убить тварь, даже ценой корабля.</p><p><strong>Где ломается:</strong> если тварь заберёт Карима.</p><h3>Связи</h3><p><strong>Карим</strong> и <strong>Сэм Варго</strong> — друг и должник: тварь говорит голосом, который вы знаете.</p><h3>Смотрителю</h3><p><strong>Если играет игрок:</strong> боец и душа экипажа.</p><p><strong>Если NPC:</strong> собутыльник по WOM — поможет, но сил мало.</p>",
+    "weight": {
+      "current": 0,
+      "capacity": 0
+    },
+    "class": {
+      "value": "Морпех"
+    },
+    "rank": {
+      "value": "Кок"
+    },
+    "pronouns": {
+      "value": "он"
+    },
+    "credits": {
+      "value": "130"
+    },
+    "stressdesc": {
+      "value": ""
+    },
+    "xp": {
+      "value": 0,
+      "html": 0,
+      "selectedSkill": ""
+    },
+    "attributes": {
+      "level": {
+        "value": 0
+      }
+    },
+    "stats": {
+      "strength": {
+        "value": 42,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Сила",
+        "rollLabel": "Проверка силы"
+      },
+      "speed": {
+        "value": 28,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Скорость",
+        "rollLabel": "Проверка скорости"
+      },
+      "intellect": {
+        "value": 31,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Интеллект",
+        "rollLabel": "Проверка интеллекта"
+      },
+      "combat": {
+        "value": 49,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Бой",
+        "rollLabel": "Проверка боя"
+      },
+      "sanity": {
+        "value": 24,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Рассудок",
+        "rollLabel": "Испытание рассудка"
+      },
+      "fear": {
+        "value": 47,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Страх",
+        "rollLabel": "Испытание страха"
+      },
+      "body": {
+        "value": 33,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Тело",
+        "rollLabel": "Испытание тела"
+      },
+      "armor": {
+        "value": 0,
+        "mod": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Броня",
+        "rollLabel": "Испытание брони",
+        "damageReduction": 0,
+        "cover": "none"
+      }
+    },
+    "other": {
+      "stress": {
+        "value": 2,
+        "min": 2,
+        "max": 20,
+        "label": "Стресс"
+      },
+      "resolve": {
+        "value": 0,
+        "min": 0,
+        "max": 15,
+        "label": "Решимость"
+      },
+      "stressdesc": {
+        "value": "Когда ты паникуешь, каждый игрок рядом с тобой проходит испытание страха."
+      }
+    }
+  },
+  "prototypeToken": {
+    "name": "Тео",
+    "displayName": 30,
+    "actorLink": true,
+    "disposition": 1,
+    "width": 1,
+    "height": 1,
+    "lockRotation": true,
+    "texture": {
+      "src": "modules/mymothership/assets/vp/tokens/holm.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "fit": "contain"
+    },
+    "ring": {
+      "enabled": false
+    },
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "other.stress"
+    },
+    "displayBars": 30,
+    "sight": {
+      "enabled": true
+    }
+  },
+  "items": [
+    {
+      "name": "Военная подготовка",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/military_training.png",
+      "system": {
+        "description": "<p>Базовая подготовка, которую проходят все военные.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "dVzH4FT4KGdVP9Fi",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!7fJsLe0iDqPDdNiH.dVzH4FT4KGdVP9Fi"
+    },
+    {
+      "name": "Атлетика",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/athletics.png",
+      "system": {
+        "description": "<p>Физическая форма, спорт и игры.</p>",
+        "rank": "Trained",
+        "bonus": 10,
+        "prerequisite_ids": []
+      },
+      "_id": "DKY8m3LdiubDmfT7",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!7fJsLe0iDqPDdNiH.DKY8m3LdiubDmfT7"
+    },
+    {
+      "name": "Рукопашный бой",
+      "type": "skill",
+      "img": "systems/mothership-fr/images/icons/skills/hand_to_hand_combat.png",
+      "system": {
+        "description": "<p>Ближний бой, драка, боевые искусства.</p>",
+        "rank": "Expert",
+        "bonus": 15,
+        "prerequisite_ids": []
+      },
+      "_id": "FmTNws4xL5vq6IJI",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!7fJsLe0iDqPDdNiH.FmTNws4xL5vq6IJI"
+    },
+    {
+      "name": "Майка и камуфляжные штаны",
+      "type": "armor",
+      "img": "systems/mothership-fr/images/icons/armor/tank_top_&_camo_pants.png",
+      "system": {
+        "description": "<p>ПБ 1.</p>",
+        "armorPoints": 1,
+        "damageReduction": 0,
+        "speed": "Normal",
+        "oxygenMax": 0,
+        "oxygenCurrent": 0,
+        "weight": 0,
+        "cost": 70,
+        "features": "",
+        "equipped": true
+      },
+      "_id": "yOFMsb6LJh5nBhes",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!7fJsLe0iDqPDdNiH.yOFMsb6LJh5nBhes"
+    },
+    {
+      "name": "Кухонный тесак",
+      "type": "weapon",
+      "img": "systems/mothership-fr/images/icons/weapons/combat_knife.png",
+      "system": {
+        "description": "<p>Боевой нож с камбуза. Вплотную. Рана: кровотечение [−].</p>",
+        "antiArmor": false,
+        "damage": "1d5 [+]",
+        "ammo": 0,
+        "shots": 0,
+        "curShots": 0,
+        "shotsPerFire": "0",
+        "useAmmo": false,
+        "ammoType": "",
+        "wound": "",
+        "critDmg": "",
+        "woundEffect": "Bleeding [-]",
+        "bonus": 0,
+        "weight": 0,
+        "cost": 80,
+        "ranges": {
+          "short": 0,
+          "medium": 0,
+          "long": 0,
+          "value": "Adjacent"
+        },
+        "settings": {
+          "firstEdition": false
+        }
+      },
+      "_id": "AW3aS18dobFDD4n6",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 500000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!7fJsLe0iDqPDdNiH.AW3aS18dobFDD4n6"
+    },
+    {
+      "name": "Фартук",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/satchel.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "rxdGnwUxuXCaynib",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 600000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!7fJsLe0iDqPDdNiH.rxdGnwUxuXCaynib"
+    },
+    {
+      "name": "Старая каска морпеха № 81",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/head_lamp.png",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "jPYnBoJfdacVUA1k",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 700000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!7fJsLe0iDqPDdNiH.jPYnBoJfdacVUA1k"
+    },
+    {
+      "name": "Безделушка: календарь «Знаменитые сражения»",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Безделушка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "8OeJ6geZWztGJSHs",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 800000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!7fJsLe0iDqPDdNiH.8OeJ6geZWztGJSHs"
+    },
+    {
+      "name": "Нашивка: «ЗАТКНИСЬ И ТЕРПИ!»",
+      "type": "item",
+      "img": "systems/mothership-fr/images/icons/equipment/challenge_coin.png",
+      "system": {
+        "description": "<p>Нашивка из таблицы к100 листа персонажа 1e.</p>",
+        "quantity": 1,
+        "weight": 0,
+        "cost": 0
+      },
+      "_id": "iYp5PqAImmBO6vzZ",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 900000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!7fJsLe0iDqPDdNiH.iYp5PqAImmBO6vzZ"
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "mymothership": {
+      "pregen": true,
+      "recommended": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "mothership-fr",
+    "systemVersion": "1.8.21"
+  }
+}
