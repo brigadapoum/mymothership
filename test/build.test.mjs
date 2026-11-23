@@ -27,8 +27,8 @@ test("module.json в архиве совпадает с репозиторием
   assert.deepEqual(JSON.parse(zipped), manifest);
 });
 
-test("ссылка на архив указывает на текущую версию", () => {
-  assert.ok(manifest.download.includes(`/v${manifest.version}/`), `download не про v${manifest.version}: ${manifest.download}`);
+test("ссылка на архив — dist/mymothership.zip в main (теги через прокси сессии не отправляются)", () => {
+  assert.equal(manifest.download, "https://raw.githubusercontent.com/brigadapoum/mymothership/main/dist/mymothership.zip");
 });
 
 test("в архиве есть все скрипты, которые импортирует main.js", () => {
