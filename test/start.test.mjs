@@ -3,11 +3,10 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
-import { fitStage, ageText, clampSlide, takenMap, sameMap } from "../scripts/start-logic.js";
+import { fitStage, ageText, takenMap, sameMap } from "../scripts/start-logic.js";
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const crewData = JSON.parse(fs.readFileSync(path.join(root, "assets", "vp", "crew.json"), "utf8"));
-const introData = JSON.parse(fs.readFileSync(path.join(root, "assets", "vp", "intro.json"), "utf8"));
 
 test("сцена вписывается по центру свободной области", () => {
   const l = fitStage({ left: 100, top: 0, right: 1060, bottom: 1080 });
@@ -22,14 +21,6 @@ test("возраст по-русски", () => {
   assert.equal(ageText(66), "66 лет");
   assert.equal(ageText(12), "12 лет");
   assert.equal(ageText(null), "");
-});
-
-test("номер слайда: вне диапазона — вступление не идёт", () => {
-  assert.equal(clampSlide(0, 3), 0);
-  assert.equal(clampSlide(2, 3), 2);
-  assert.equal(clampSlide(3, 3), -1);
-  assert.equal(clampSlide(-1, 3), -1);
-  assert.equal(clampSlide("x", 3), -1);
 });
 
 test("кто занят: владельцы и персонаж игрока, смотритель не в счёт", () => {
@@ -66,13 +57,8 @@ test("предпросмотр для игроков без тайн", () => {
   }
 });
 
-test("вступление: три слайда с текстом для чтения вслух", () => {
-  assert.equal(introData.slides.length, 3);
-  for (const s of introData.slides) assert.ok(s.read.length > 50);
-});
-
-function stubFoundry({ isGM, slide = -1, taken = {} }) {
-  const settings = { vpTaken: taken, vpIntroSlide: slide };
+function stubFoundry({ isGM, taken = {} }) {
+  const settings = { vpTaken: taken };
   globalThis.Hooks = { once() {}, on() {} };
   globalThis.window = { innerWidth: 1920, innerHeight: 1080, addEventListener() {} };
   globalThis.document = { querySelector: () => null };
@@ -87,7 +73,7 @@ function stubFoundry({ isGM, slide = -1, taken = {} }) {
 
 test("слой рисуется: у игрока без кнопок смотрителя, у смотрителя с ними", async () => {
   const { _test } = await import("../scripts/start-screen.js");
-  _test.setData(crewData.crew, introData);
+  _test.setData(crewData.crew);
 
   stubFoundry({ isGM: false, taken: { kovalchik: "Аня" } });
   const player = _test.stageHtml();
@@ -98,26 +84,14 @@ test("слой рисуется: у игрока без кнопок смотр�
   assert.ok(player.includes("Занят · Аня"));
   assert.equal((player.match(/is-company/g) ?? []).length, 4);
   assert.equal((player.match(/is-npc/g) ?? []).length, 2);
-  assert.ok(!player.includes("Начать вступление"));
+  assert.ok(!player.includes("data-start=\"give\""));
   assert.ok(!player.includes("Отдать игроку"));
   assert.ok(!player.includes("Минус восемь"));
 
   stubFoundry({ isGM: true, taken: { kovalchik: "Аня" } });
   const gm = _test.stageHtml();
-  assert.ok(gm.includes("Начать вступление"));
+  assert.ok(!gm.includes("вступлени"), "кнопки вступления больше нет");
   // отдать можно 9 свободных персонажей игроков: 12 − капитан − Сэм − занятая Лола
   assert.equal((gm.match(/data-start="give"/g) ?? []).length, 9);
 });
 
-test("во время вступления слайд у всех, текст вслух — только у смотрителя", async () => {
-  const { _test } = await import("../scripts/start-screen.js");
-  _test.setData(crewData.crew, introData);
-  stubFoundry({ isGM: false, slide: 1 });
-  const player = _test.stageHtml();
-  assert.ok(player.includes("assets/vp/intro/2.webp"));
-  assert.ok(!player.includes("Читать вслух"));
-  stubFoundry({ isGM: true, slide: 2 });
-  const gm = _test.stageHtml();
-  assert.ok(gm.includes("Читать вслух · слайд 3 из 3"));
-  assert.ok(gm.includes("Закончить"));
-});

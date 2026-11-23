@@ -22,13 +22,6 @@ export function ageText(n) {
   return `${n} ${word}`;
 }
 
-/** Номер слайда вступления: −1 — вступление не идёт. */
-export function clampSlide(i, count) {
-  const n = Number(i);
-  if (!Number.isInteger(n) || n < 0 || n >= count) return -1;
-  return n;
-}
-
 /**
  * Кто занят: для каждого члена экипажа — имена игроков-владельцев.
  * actors: [{ slug, ownerIds }], users: [{ id, name, isGM, characterSlug }]

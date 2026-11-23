@@ -46,7 +46,7 @@ test("все картинки и шрифты, на которые есть сс
   const files = [];
   const src = path.join(root, "src", "packs");
   for (const pack of fs.readdirSync(src)) for (const f of fs.readdirSync(path.join(src, pack))) files.push(path.join(src, pack, f));
-  files.push(path.join(root, "assets", "vp", "crew.json"), path.join(root, "assets", "vp", "intro.json"));
+  files.push(path.join(root, "assets", "vp", "crew.json"));
   for (const file of files) {
     const text = fs.readFileSync(file, "utf8");
     for (const [, p] of text.matchAll(/"modules\/mymothership\/([^"]+)"/g)) {

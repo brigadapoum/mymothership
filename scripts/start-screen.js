@@ -1,7 +1,8 @@
 // Экран начала «Восходящего потока»: сцена с отметкой модуля + HTML-слой 1920×1080 по макету
 // (холст «Восходящий поток — экран начала»), устроен как холл Надграда.
-// Галерея «Роль» — ссылки на листы экипажа; вступление (слайды и плейлист) ведёт смотритель.
-import { STAGE, fitStage, ageText, clampSlide, takenMap, sameMap } from "./start-logic.js";
+// Галерея «Роль» — ссылки на листы экипажа; смотритель включает плейлист «Вступление» из шапки.
+// Слайдов вступления нет: смотритель рассказывает голосом (решение автора 2026-11-23).
+import { STAGE, fitStage, ageText, takenMap, sameMap } from "./start-logic.js";
 import { SHIP_SVG } from "./start-ship.js";
 
 const MODULE_ID = "mymothership";
@@ -10,9 +11,9 @@ const BASE = `modules/${MODULE_ID}/assets/vp`;
 const PACK = `${MODULE_ID}.vp-crew`;
 const FOLDER = "Восходящий поток — экипаж";
 const SCENE_NAME = "Восходящий поток — начало";
+const PLAYLIST = "Вступление";
 
 let crew = [];
-let intro = { playlist: "Вступление", slides: [] };
 let root = null;
 let timer = null;
 
@@ -28,9 +29,7 @@ async function loadData() {
     try { return await foundry.utils.fetchJsonWithTimeout(foundry.utils.getRoute(`${BASE}/${f}`)); }
     catch (err) { console.warn(`MyMothership | не прочитан ${f}`, err); return null; }
   };
-  const [c, i] = await Promise.all([get("crew.json"), get("intro.json")]);
-  crew = c?.crew ?? [];
-  if (i) intro = i;
+  crew = (await get("crew.json"))?.crew ?? [];
 }
 
 // ---------- экипаж в мире ----------
@@ -130,10 +129,8 @@ async function giveCrew(slug) {
 
 // ---------- музыка: плейлист «Вступление» ----------
 
-const introPlaylist = () => {
-  const name = intro.playlist ?? "Вступление";
-  return game.playlists?.getName?.(name) ?? game.playlists?.find((p) => p.name.trim().toLowerCase() === name.toLowerCase()) ?? null;
-};
+const introPlaylist = () =>
+  game.playlists?.getName?.(PLAYLIST) ?? game.playlists?.find((p) => p.name.trim().toLowerCase() === PLAYLIST.toLowerCase()) ?? null;
 
 async function musicAction(kind) {
   const pl = introPlaylist();
@@ -146,23 +143,6 @@ async function musicAction(kind) {
   const dir = kind === "next" ? 1 : -1;
   const nextId = ordered[((i < 0 ? (dir > 0 ? -1 : 0) : i) + dir + ordered.length) % ordered.length];
   return pl.playSound(pl.sounds.get(nextId));
-}
-
-// ---------- вступление: слайды на слое, у всех одновременно (настройка мира) ----------
-
-const currentSlide = () => clampSlide(setting("vpIntroSlide", -1), intro.slides.length);
-
-async function setSlide(i) {
-  if (!game.user.isGM) return;
-  await game.settings.set(MODULE_ID, "vpIntroSlide", clampSlide(i, intro.slides.length));
-}
-
-async function startIntro() {
-  if (!game.user.isGM) return;
-  const pl = introPlaylist();
-  if (pl && !pl.playing && pl.sounds.size) await pl.playAll();
-  else if (!pl) ui.notifications.warn(`Плейлист «${intro.playlist}» не найден — вступление пойдёт без музыки.`);
-  await setSlide(0);
 }
 
 // ---------- слой ----------
@@ -216,7 +196,7 @@ function playerHtml(isGM) {
   const can = !!pl && (isGM || pl.isOwner);
   return `<div class="mm-s-player">
     <span class="mm-s-player-icon">${ICON.note}</span>
-    <span class="mm-s-player-name">${esc(intro.playlist)}</span>
+    <span class="mm-s-player-name">${esc(PLAYLIST)}</span>
     <span class="mm-s-player-track">${esc(track || (pl ? "тишина" : "нет плейлиста"))}</span>
     ${can ? `<span class="mm-s-player-btns mm-s-gm">
       <button type="button" data-start="music" data-kind="prev" aria-label="Предыдущий трек">${ICON.prev}</button>
@@ -252,32 +232,9 @@ function cardHtml(c, taken, isGM) {
   </div>`;
 }
 
-function slideHtml(i, isGM) {
-  const s = intro.slides[i];
-  const n = intro.slides.length;
-  return `<div class="mm-s-slide">
-    <img src="${esc(s.src)}" alt="${esc(s.alt)}">
-    ${isGM ? `<div class="mm-s-read mm-s-gm">
-      <div class="mm-s-read-head">
-        <span>Читать вслух · слайд ${i + 1} из ${n}</span>
-        <span class="mm-s-read-btns">
-          <button type="button" data-start="slide" data-to="${i - 1}" ${i === 0 ? "disabled" : ""} aria-label="Предыдущий слайд">${ICON.prev}</button>
-          ${i < n - 1
-            ? `<button type="button" class="is-main" data-start="slide" data-to="${i + 1}">Дальше</button>`
-            : `<button type="button" class="is-main" data-start="slide" data-to="-1">Закончить</button>`}
-          <button type="button" data-start="slide" data-to="-1" aria-label="Прервать вступление">✕</button>
-        </span>
-      </div>
-      <p>${esc(s.read)}</p>
-      ${s.after ? `<p class="mm-s-read-after">${esc(s.after)}</p>` : ""}
-    </div>` : ""}
-  </div>`;
-}
-
 function stageHtml() {
   const isGM = game.user.isGM;
   const taken = setting("vpTaken", {}) ?? {};
-  const slide = currentSlide();
   const l = fitStage(freeArea(), STAGE);
   return `<div class="mm-s-stage" style="transform: scale(${l.scale}); left: ${l.left}px; top: ${l.top}px">
     <img class="mm-s-bg" src="${BASE}/start/giant.webp" alt="Бирюзово-зеленый газовый гигант с кольцом и маленькой луной">
@@ -296,10 +253,6 @@ function stageHtml() {
       <p class="mm-s-kicker">Mothership 1e · ваншот</p>
       <h1>Восходящий<br>поток</h1>
       <p class="mm-s-hook">Двенадцать человек экипажа, облака газового гиганта и решения, за которые никто не захочет отвечать.</p>
-      ${isGM ? `<div class="mm-s-intro mm-s-gm">
-        <button type="button" data-start="intro">${ICON.play} Начать вступление</button>
-        <span>песня и три слайда — у всех игроков</span>
-      </div>` : ""}
     </section>
 
     <aside class="mm-s-passport">
@@ -327,12 +280,11 @@ function stageHtml() {
       <div class="mm-s-grid">${crew.map((c) => cardHtml(c, taken, isGM)).join("")}</div>
     </section>
 
-    ${slide >= 0 ? slideHtml(slide, isGM) : ""}
   </div>`;
 }
 
 /** Для тестов: подставить данные без загрузки и получить разметку слоя. */
-export const _test = { setData: (c, i) => { crew = c; intro = i ?? intro; }, stageHtml: () => stageHtml() };
+export const _test = { setData: (c) => { crew = c; }, stageHtml: () => stageHtml() };
 
 async function render() {
   if (game.system?.id !== SYSTEM_ID || !isStart(canvas?.scene)) return unmount();
@@ -363,8 +315,6 @@ async function onClick(event) {
     case "open": return openCrew(slug);
     case "give": return giveCrew(slug);
     case "music": return musicAction(btn.dataset.kind);
-    case "intro": return startIntro();
-    case "slide": return setSlide(Number(btn.dataset.to));
     case "admin": {
       const open = foundry.applications.instances?.get("mm-start-admin");
       return open ? open.render({ force: true }) : new (adminClass())().render({ force: true });
@@ -410,8 +360,7 @@ function adminClass() {
         create: async function () { await createStart(); this.render(); },
         view: function () { startScene()?.view(); },
         activate: async function () { await startScene()?.activate(); this.render(); },
-        crew: async function () { await importAll(); this.render(); },
-        stopIntro: async function () { await setSlide(-1); this.render(); }
+        crew: async function () { await importAll(); this.render(); }
       }
     };
     async _renderHTML() {
@@ -427,9 +376,8 @@ function adminClass() {
         <h3>Экипаж</h3>
         <p>В мире ${inWorld} из ${crew.length}. Остальных модуль добавит из компендиума, когда вы откроете их карточку или отдадите игроку.</p>
         <p class="mm-sa-row"><button type="button" data-action="crew" ${inWorld === crew.length ? "disabled" : ""}>Добавить весь экипаж в мир</button></p>
-        <h3>Вступление</h3>
-        <p>${pl ? `Плейлист «${esc(pl.name)}»: треков ${pl.sounds.size}.` : `Плейлиста «${esc(intro.playlist)}» нет — создайте его (можно загрузить целую папку) и вступление пойдёт с музыкой.`}</p>
-        ${currentSlide() >= 0 ? `<p class="mm-sa-row"><button type="button" data-action="stopIntro">Прервать вступление</button></p>` : ""}
+        <h3>Музыка</h3>
+        <p>${pl ? `Плейлист «${esc(pl.name)}»: треков ${pl.sounds.size}. Кнопки — в шапке экрана.` : `Плейлиста «${esc(PLAYLIST)}» нет — создайте его (можно загрузить целую папку), и в шапке экрана появятся кнопки музыки.`}</p>
       </section>`;
     }
     _replaceHTML(result, content) { content.innerHTML = result; }
@@ -440,12 +388,11 @@ function adminClass() {
 export function registerStartScreen() {
   Hooks.once("init", () => {
     game.settings.register(MODULE_ID, "vpTaken", { scope: "world", config: false, type: Object, default: {}, onChange: () => refresh() });
-    game.settings.register(MODULE_ID, "vpIntroSlide", { scope: "world", config: false, type: Number, default: -1, onChange: () => refresh() });
     game.settings.register(MODULE_ID, "vpStartOffered", { scope: "world", config: false, type: Boolean, default: false });
     game.settings.registerMenu(MODULE_ID, "vpStartMenu", {
       name: "Восходящий поток — экран начала",
       label: "Открыть",
-      hint: "Стартовая сцена ваншота: название, судовой паспорт, галерея экипажа со ссылками на листы, вступление со слайдами.",
+      hint: "Стартовая сцена ваншота: название, судовой паспорт, галерея экипажа со ссылками на листы, музыка «Вступление».",
       icon: "fa-solid fa-rocket",
       type: adminClass(),
       restricted: true
@@ -461,7 +408,7 @@ export function registerStartScreen() {
         await game.settings.set(MODULE_ID, "vpStartOffered", true);
         const ok = await foundry.applications.api.DialogV2.confirm({
           window: { title: "Восходящий поток: экран начала" },
-          content: "<p>Создать сцену-экран начала — название, судовой паспорт «Пеликана», галерея экипажа, вступление — и сделать её активной?</p><p>Потом это есть в настройках модуля: «Восходящий поток — экран начала».</p>"
+          content: "<p>Создать сцену-экран начала — название, судовой паспорт «Пеликана», галерея экипажа — и сделать её активной?</p><p>Потом это есть в настройках модуля: «Восходящий поток — экран начала».</p>"
         });
         if (ok) await createStart();
       }

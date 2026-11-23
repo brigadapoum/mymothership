@@ -48,11 +48,9 @@
 #mm-start .mm-s-player-name { font: 600 13px/1 var(--mm-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mm-muted); }
 #mm-start .mm-s-player-track { font: 400 14px/1 var(--mm-mono); color: var(--mm-fg); max-width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 #mm-start .mm-s-player-btns { display: flex; gap: 4px; margin-left: 4px; }
-#mm-start .mm-s-player-btns button, #mm-start .mm-s-read-btns button {
   width: 44px; height: 36px; display: flex; align-items: center; justify-content: center; padding: 0;
   background: transparent; border: 1px solid var(--mm-line2); border-radius: 0; color: var(--mm-fg);
 }
-#mm-start .mm-s-player-btns button.is-main, #mm-start .mm-s-read-btns button.is-main { background: var(--mm-hazard); border-color: var(--mm-hazard); color: var(--mm-ink); }
 #mm-start .mm-s-gear { width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; padding: 0; background: var(--mm-panel); border: 1px solid var(--mm-line); border-radius: 0; color: var(--mm-fg); font-size: 20px; }
 /* то, что видит только смотритель */
 #mm-start .mm-s-gm { outline: 1px dashed rgba(232,182,35,.7); outline-offset: 3px; }
@@ -62,9 +60,6 @@
 #mm-start .mm-s-kicker { font: 600 16px/1.2 var(--mm-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--mm-hazard); }
 #mm-start .mm-s-title h1 { font: 800 156px/.84 var(--mm-display); text-transform: uppercase; letter-spacing: .005em; color: var(--mm-bright); }
 #mm-start .mm-s-hook { margin-top: 6px; max-width: 620px; font: 400 25px/1.35 var(--mm-body); color: #d3d9d5; }
-#mm-start .mm-s-intro { display: flex; align-items: center; gap: 16px; margin-top: 10px; align-self: flex-start; outline-offset: 6px; }
-#mm-start .mm-s-intro button { display: flex; align-items: center; gap: 10px; height: 52px; padding: 0 22px; background: var(--mm-hazard); border: 0; border-radius: 0; color: var(--mm-ink); font: 800 22px/1 var(--mm-display); letter-spacing: .04em; text-transform: uppercase; }
-#mm-start .mm-s-intro span { font: 400 14px/1.4 var(--mm-mono); color: var(--mm-soft); }
 
 /* судовой паспорт */
 #mm-start .mm-s-passport { position: absolute; right: 64px; top: 104px; width: 470px; background: var(--mm-panel); border: 1px solid var(--mm-line); }
@@ -104,17 +99,6 @@
 #mm-start .mm-s-cls { align-self: flex-start; padding: 3px 6px; border: 1px solid var(--mm-line2); font: 600 10.5px/1.15 var(--mm-mono); letter-spacing: .05em; text-transform: uppercase; color: var(--mm-soft); }
 #mm-start .mm-s-give { margin: 0 9px 11px; padding: 6px 0; text-align: center; background: transparent; border: 1px dashed var(--mm-hazard); border-radius: 0; font: 600 10.5px/1 var(--mm-mono); letter-spacing: .04em; text-transform: uppercase; color: var(--mm-hazard); outline: 0; }
 
-/* слайды вступления — поверх всего экрана */
-#mm-start .mm-s-slide { position: absolute; inset: 0; background: #000; animation: mm-s-fade .8s ease; }
-#mm-start .mm-s-slide img { width: 1920px; height: 1080px; display: block; object-fit: cover; }
-#mm-start .mm-s-read { position: absolute; left: 64px; right: 64px; bottom: 40px; padding: 18px 22px; background: rgba(6,10,9,.92); border: 1px solid var(--mm-line); display: flex; flex-direction: column; gap: 10px; outline-offset: 4px; }
-#mm-start .mm-s-read-head { display: flex; justify-content: space-between; align-items: center; gap: 16px; font: 600 13px/1 var(--mm-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mm-hazard); }
-#mm-start .mm-s-read-btns { display: flex; gap: 6px; }
-#mm-start .mm-s-read-btns button.is-main { width: auto; padding: 0 18px; font: 800 18px/1 var(--mm-display); letter-spacing: .04em; text-transform: uppercase; }
-#mm-start .mm-s-read-btns button:disabled { opacity: .35; cursor: default; }
-#mm-start .mm-s-read p { font: 400 24px/1.4 var(--mm-body); color: var(--mm-fg); }
-#mm-start .mm-s-read p.mm-s-read-after { font: 400 16px/1.4 var(--mm-mono); color: var(--mm-muted); }
-@keyframes mm-s-fade { from { opacity: 0; } to { opacity: 1; } }
 
 /* карточка члена экипажа для игрока без доступа к листу */
 .mm-start-preview .mm-p { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 16px; align-items: start; }
