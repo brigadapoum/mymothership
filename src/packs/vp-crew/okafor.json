@@ -414,6 +414,7 @@
   },
   "flags": {
     "mymothership": {
+      "crew": "okafor",
       "pregen": true,
       "recommended": false
     }

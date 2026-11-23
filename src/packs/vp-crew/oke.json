@@ -439,6 +439,7 @@
   },
   "flags": {
     "mymothership": {
+      "crew": "oke",
       "pregen": true,
       "recommended": false
     }

@@ -484,6 +484,7 @@
   },
   "flags": {
     "mymothership": {
+      "crew": "otieno",
       "pregen": true,
       "recommended": false
     }

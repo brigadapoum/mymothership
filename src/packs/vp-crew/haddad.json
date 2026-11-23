@@ -459,6 +459,7 @@
   },
   "flags": {
     "mymothership": {
+      "crew": "haddad",
       "pregen": true,
       "recommended": false
     }

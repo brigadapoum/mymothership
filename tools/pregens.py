@@ -415,7 +415,7 @@ CREW = [
 FOLDERS = {
     "four": ("Рекомендуемая четвёрка", 100000),
     "crew": ("Остальной экипаж", 200000),
-    "npc": ("Капитан (NPC)", 300000),
+    "npc": ("Персонажи смотрителя", 300000),
 }
 
 
@@ -504,9 +504,95 @@ def actor(c, folder_ids, sort):
         },
         "items": embedded, "effects": [],
         "ownership": {"default": 0},
-        "flags": {"mymothership": {"pregen": c["folder"] != "npc", "recommended": c["folder"] == "four"}},
+        "flags": {"mymothership": {"crew": c["slug"], "pregen": c["folder"] != "npc", "recommended": c["folder"] == "four"}},
         "_stats": STATS,
     }
+
+
+# --- Сэм Варго: марионетка (погибает в начале; статблок — «02 Идея.md») -----------------------
+SAM = dict(slug="vargo", name="Сэм Варго", age=29, job="Оператор забора")
+
+
+def sam_actor(folder_ids, sort):
+    aid = uid("actor", "vargo")
+    strike = {"name": "Удар", "type": "weapon", "img": f"{SYS}/weapons/unarmed.png",
+              "system": {"description": "<p>Удар марионетки. Хватка: испытание тела, иначе удержан.</p>",
+                         "antiArmor": False, "damage": "2d10", "ammo": 0, "shots": 0, "curShots": 0,
+                         "shotsPerFire": "0", "useAmmo": False, "ammoType": "", "wound": "", "critDmg": "",
+                         "woundEffect": "Blunt Force [-]", "bonus": 0, "weight": 0, "cost": 0,
+                         "ranges": {"short": 0, "medium": 0, "long": 0, "value": "Adjacent"},
+                         "settings": {"firstEdition": False}}}
+    iid = uid("item", "vargo", "Удар")
+    strike.update({"_id": iid, "effects": [], "flags": {}, "folder": None, "sort": 100000,
+                   "ownership": {"default": 0}, "_stats": STATS, "_key": f"!actors.items!{aid}.{iid}"})
+    off = lambda v, label, roll: {"value": v, "min": 0, "max": 99, "label": label, "rollLabel": roll, "enabled": False}
+    return {
+        "_id": aid, "_key": f"!actors!{aid}", "name": "Сэм Варго", "type": "creature",
+        "img": f"{ASSETS}/portraits/vargo.webp", "folder": folder_ids["npc"], "sort": sort,
+        "system": {
+            "health": {"value": 20, "min": 0, "max": 20, "label": "Здоровье"},
+            "hits": {"value": 0, "min": 0, "max": 2, "label": "Раны"},
+            "biography": "<p><em>Оператор забора, 29 лет. Лучший друг Карима; должен денег Тео.</em></p>"
+                         "<p>Стоял у пульта отсека улова, когда раструб зачерпнул тварь. Погибает в начале. "
+                         "Через его тело тварь говорит с экипажем.</p>",
+            "description": "<h3>Марионетка</h3>"
+                           "<p>[Бой 50 · Удар 2к10 · Инст 65 · Раны 2(20)]</p>"
+                           "<p>Не чувствует боли, не паникует. Парит: нити несут её к любому люку вентиляции. "
+                           "<strong>Хватка:</strong> испытание тела, иначе удержан. "
+                           "<strong>Поводок:</strong> перерезать (вплотную, инструмент с изолированной ручкой) — тело падает, тварь в этом отсеке слепнет. "
+                           "Первая встреча — проверка паники.</p>"
+                           "<p>Марионетка знает то, что знал её мёртвый.</p>",
+            "xp": {"value": 1, "html": ""},
+            "stats": {
+                "combat": {"value": 50, "min": 0, "max": 99, "label": "Бой", "rollLabel": "Проверка боя", "enabled": True},
+                "instinct": {"value": 65, "min": 0, "max": 99, "label": "Инстинкт", "rollLabel": "Проверка инстинкта", "enabled": True},
+                "speed": off(0, "Скорость", "Проверка скорости"),
+                "loyalty": off(0, "Лояльность", "Проверка лояльности"),
+                "armor": off(0, "Броня", "Испытание брони"),
+                "sanity": off(0, "Рассудок", "Испытание рассудка"),
+            },
+        },
+        "prototypeToken": {
+            "name": "Сэм", "displayName": 30, "actorLink": True, "disposition": -1,
+            "width": 1, "height": 1, "lockRotation": True,
+            "texture": {"src": f"{ASSETS}/tokens/vargo.webp", "scaleX": 1, "scaleY": 1, "fit": "contain"},
+            "ring": {"enabled": False}, "bar1": {"attribute": "health"}, "displayBars": 20,
+            "sight": {"enabled": True},
+        },
+        "items": [strike], "effects": [], "ownership": {"default": 0},
+        "flags": {"mymothership": {"crew": "vargo", "pregen": False, "recommended": False}},
+        "_stats": STATS,
+    }
+
+
+# --- Данные для экрана начала: галерея «Роль» -------------------------------------------------
+# Старшинство на борту — по судовой роли гражданского флота (решение автора 2026-11-22):
+# командный состав, рядовой, потом те, кто на борту, но не в экипаже.
+GALLERY = ["ferro", "okafor", "kovalchik", "oke", "lahti", "tanabe", "otieno",
+           "haddad", "vargo", "holm", "kruger", "ted"]
+COMPANY = {"okafor", "tanabe", "kruger", "ted"}          # подчиняются Компании напрямую
+SHORT = {"ferro": "Аугусто Ферро", "kovalchik": "Лола Ковальчик", "holm": "«Папа» Тео Хольм", "ted": "ТЕНДЕР-4 «Тед»"}
+
+
+def gallery_data():
+    by = {c["slug"]: c for c in CREW}
+    out = []
+    for slug in GALLERY:
+        if slug == "vargo":
+            out.append({"slug": "vargo", "actorId": uid("actor", "vargo"), "name": SAM["name"], "job": SAM["job"],
+                        "cls": "", "age": SAM["age"], "company": False, "npc": True,
+                        "portrait": f"{ASSETS}/portraits/vargo.webp",
+                        "preview": "<p><em>Оператор забора.</em> Лучший друг Карима.</p>"})
+            continue
+        c = by[slug]
+        npc = c["folder"] == "npc"
+        preview = f"<p><em>{c['tagline'].replace(' Всегда NPC.', '')}</em></p>" + html_section("", [
+            ("Вид", c["look"]), ("Манера", c["manner"]), ("Чем думает", c["thinks"]), ("Желание", c["wants"])])
+        out.append({"slug": slug, "actorId": uid("actor", slug), "name": SHORT.get(slug, c["name"]),
+                    "job": c["job"], "cls": "" if npc else c["cls"], "age": c["age"],
+                    "company": slug in COMPANY, "npc": npc,
+                    "portrait": f"{ASSETS}/portraits/{slug}.webp", "preview": preview})
+    return out
 
 
 def main():
@@ -523,7 +609,11 @@ def main():
     for k, c in enumerate(CREW):
         doc = actor(c, folder_ids, (k + 1) * 100000)
         (OUT / f"{c['slug']}.json").write_text(json.dumps(doc, ensure_ascii=False, indent=2), "utf8")
-    print(f"{len(CREW)} актёров, {len(FOLDERS)} папки → {OUT.relative_to(ROOT)}")
+    sam = sam_actor(folder_ids, (len(CREW) + 1) * 100000)
+    (OUT / "vargo.json").write_text(json.dumps(sam, ensure_ascii=False, indent=2), "utf8")
+    data = ROOT / "assets" / "vp" / "crew.json"
+    data.write_text(json.dumps({"pack": "mymothership.vp-crew", "crew": gallery_data()}, ensure_ascii=False, indent=2), "utf8")
+    print(f"{len(CREW) + 1} актёров, {len(FOLDERS)} папки → {OUT.relative_to(ROOT)}; галерея → assets/vp/crew.json")
 
 
 if __name__ == "__main__":

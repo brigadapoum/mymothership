@@ -459,6 +459,7 @@
   },
   "flags": {
     "mymothership": {
+      "crew": "ferro",
       "pregen": false,
       "recommended": false
     }

@@ -1,0 +1,132 @@
+@font-face { font-family: 'MM Fira Sans Extra Condensed'; font-style: normal; font-weight: 600; font-display: swap; src: url('../assets/fonts/fira-sans-extra-condensed-cyrillic-600-normal.woff2') format('woff2'); unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116; }
+@font-face { font-family: 'MM Fira Sans Extra Condensed'; font-style: normal; font-weight: 600; font-display: swap; src: url('../assets/fonts/fira-sans-extra-condensed-latin-600-normal.woff2') format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'MM Fira Sans Extra Condensed'; font-style: normal; font-weight: 800; font-display: swap; src: url('../assets/fonts/fira-sans-extra-condensed-cyrillic-800-normal.woff2') format('woff2'); unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116; }
+@font-face { font-family: 'MM Fira Sans Extra Condensed'; font-style: normal; font-weight: 800; font-display: swap; src: url('../assets/fonts/fira-sans-extra-condensed-latin-800-normal.woff2') format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'MM IBM Plex Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('../assets/fonts/ibm-plex-mono-cyrillic-400-normal.woff2') format('woff2'); unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116; }
+@font-face { font-family: 'MM IBM Plex Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('../assets/fonts/ibm-plex-mono-latin-400-normal.woff2') format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'MM IBM Plex Mono'; font-style: normal; font-weight: 600; font-display: swap; src: url('../assets/fonts/ibm-plex-mono-cyrillic-600-normal.woff2') format('woff2'); unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116; }
+@font-face { font-family: 'MM IBM Plex Mono'; font-style: normal; font-weight: 600; font-display: swap; src: url('../assets/fonts/ibm-plex-mono-latin-600-normal.woff2') format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'MM PT Sans'; font-style: normal; font-weight: 400; font-display: swap; src: url('../assets/fonts/pt-sans-cyrillic-400-normal.woff2') format('woff2'); unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116; }
+@font-face { font-family: 'MM PT Sans'; font-style: normal; font-weight: 400; font-display: swap; src: url('../assets/fonts/pt-sans-latin-400-normal.woff2') format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'MM PT Sans'; font-style: normal; font-weight: 700; font-display: swap; src: url('../assets/fonts/pt-sans-cyrillic-700-normal.woff2') format('woff2'); unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116; }
+@font-face { font-family: 'MM PT Sans'; font-style: normal; font-weight: 700; font-display: swap; src: url('../assets/fonts/pt-sans-latin-700-normal.woff2') format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+
+/* =========================================================
+   Экран начала «Восходящего потока» — слой поверх сцены, как холл Надграда.
+   Макет: холст «Восходящий поток — экран начала» (вариант Б, 2026-11-23).
+   ========================================================= */
+#mm-start {
+  --mm-bg: #040706; --mm-fg: #e4e7e4; --mm-bright: #f1f3f0; --mm-muted: #a9b2ad; --mm-soft: #c3cac5;
+  --mm-line: #3a4440; --mm-line2: #56605b; --mm-panel: rgba(6,10,9,.86); --mm-card: rgba(10,14,13,.92);
+  --mm-hazard: #e8b623; --mm-ink: #141514; --mm-npc: #e0806f; --mm-taken: #cfd8d3; --mm-quota: #8fdcae;
+  --mm-display: "MM Fira Sans Extra Condensed", "Arial Narrow", sans-serif;
+  --mm-mono: "MM IBM Plex Mono", Consolas, monospace;
+  --mm-body: "MM PT Sans", "Segoe UI", Arial, sans-serif;
+  position: fixed; inset: 0; pointer-events: none; overflow: hidden;
+}
+#mm-start .mm-s-stage {
+  position: absolute; width: 1920px; height: 1080px; transform-origin: 0 0; overflow: hidden;
+  background: var(--mm-bg); color: var(--mm-fg); font-family: var(--mm-body); font-size: 16px; line-height: 1.35;
+  pointer-events: auto; box-shadow: 0 0 0 1px var(--mm-line), 0 20px 60px rgba(0,0,0,.6);
+}
+#mm-start .mm-s-stage * { box-sizing: border-box; }
+#mm-start button { font-family: inherit; cursor: pointer; margin: 0; line-height: 1.2; min-height: 0; box-shadow: none; text-shadow: none; }
+#mm-start button:focus-visible { outline: 2px solid var(--mm-hazard); outline-offset: 2px; }
+#mm-start h1, #mm-start h2, #mm-start p, #mm-start dl { margin: 0; border: 0; }
+#mm-start img { border: 0; max-width: none; }
+
+#mm-start .mm-s-bg { position: absolute; inset: 0; width: 1920px; height: 1080px; object-fit: cover; display: block; }
+#mm-start .mm-s-dim-left { position: absolute; left: 0; top: 0; width: 1100px; height: 1080px; background: linear-gradient(90deg, rgba(4,7,6,.82) 0%, rgba(4,7,6,.55) 55%, rgba(4,7,6,0) 100%); }
+#mm-start .mm-s-dim-bottom { position: absolute; left: 0; right: 0; bottom: 0; height: 560px; background: linear-gradient(0deg, rgba(4,7,6,.96) 0%, rgba(4,7,6,.9) 300px, rgba(4,7,6,.6) 440px, rgba(4,7,6,0) 100%); }
+#mm-start .mm-s-hazard { position: absolute; left: 0; right: 0; top: 0; height: 10px; background: repeating-linear-gradient(-45deg, var(--mm-hazard) 0 14px, var(--mm-ink) 14px 28px); }
+
+/* шапка */
+#mm-start .mm-s-head { position: absolute; left: 64px; right: 64px; top: 10px; height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid rgba(195,200,196,.28); }
+#mm-start .mm-s-head-right { display: flex; align-items: center; gap: 16px; }
+#mm-start .mm-s-player { display: flex; align-items: center; gap: 12px; padding: 8px 14px; background: var(--mm-panel); border: 1px solid var(--mm-line); }
+#mm-start .mm-s-player-icon { color: var(--mm-hazard); display: flex; }
+#mm-start .mm-s-player-name { font: 600 13px/1 var(--mm-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mm-muted); }
+#mm-start .mm-s-player-track { font: 400 14px/1 var(--mm-mono); color: var(--mm-fg); max-width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#mm-start .mm-s-player-btns { display: flex; gap: 4px; margin-left: 4px; }
+#mm-start .mm-s-player-btns button, #mm-start .mm-s-read-btns button {
+  width: 44px; height: 36px; display: flex; align-items: center; justify-content: center; padding: 0;
+  background: transparent; border: 1px solid var(--mm-line2); border-radius: 0; color: var(--mm-fg);
+}
+#mm-start .mm-s-player-btns button.is-main, #mm-start .mm-s-read-btns button.is-main { background: var(--mm-hazard); border-color: var(--mm-hazard); color: var(--mm-ink); }
+#mm-start .mm-s-gear { width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; padding: 0; background: var(--mm-panel); border: 1px solid var(--mm-line); border-radius: 0; color: var(--mm-fg); font-size: 20px; }
+/* то, что видит только смотритель */
+#mm-start .mm-s-gm { outline: 1px dashed rgba(232,182,35,.7); outline-offset: 3px; }
+
+/* название */
+#mm-start .mm-s-title { position: absolute; left: 64px; top: 112px; width: 980px; display: flex; flex-direction: column; gap: 18px; }
+#mm-start .mm-s-kicker { font: 600 16px/1.2 var(--mm-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--mm-hazard); }
+#mm-start .mm-s-title h1 { font: 800 156px/.84 var(--mm-display); text-transform: uppercase; letter-spacing: .005em; color: var(--mm-bright); }
+#mm-start .mm-s-hook { margin-top: 6px; max-width: 620px; font: 400 25px/1.35 var(--mm-body); color: #d3d9d5; }
+#mm-start .mm-s-intro { display: flex; align-items: center; gap: 16px; margin-top: 10px; align-self: flex-start; outline-offset: 6px; }
+#mm-start .mm-s-intro button { display: flex; align-items: center; gap: 10px; height: 52px; padding: 0 22px; background: var(--mm-hazard); border: 0; border-radius: 0; color: var(--mm-ink); font: 800 22px/1 var(--mm-display); letter-spacing: .04em; text-transform: uppercase; }
+#mm-start .mm-s-intro span { font: 400 14px/1.4 var(--mm-mono); color: var(--mm-soft); }
+
+/* судовой паспорт */
+#mm-start .mm-s-passport { position: absolute; right: 64px; top: 104px; width: 470px; background: var(--mm-panel); border: 1px solid var(--mm-line); }
+#mm-start .mm-s-hazard-thin { height: 6px; background: repeating-linear-gradient(-45deg, var(--mm-hazard) 0 10px, var(--mm-ink) 10px 20px); }
+#mm-start .mm-s-passport-body { padding: 14px 22px 18px; display: flex; flex-direction: column; gap: 12px; }
+#mm-start .mm-s-passport h2 { font: 800 26px/1 var(--mm-display); text-transform: uppercase; letter-spacing: .02em; color: var(--mm-bright); border-bottom: 1px solid var(--mm-line); padding-bottom: 10px; }
+#mm-start .mm-s-ship { background: #0f1513; border: 1px solid var(--mm-line); padding: 4px 0; }
+#mm-start .mm-s-ship-svg { display: block; width: 426px; height: 150px; }
+#mm-start .mm-s-passport dl { display: grid; grid-template-columns: 128px minmax(0, 1fr); gap: 6px 14px; font: 400 16px/1.35 var(--mm-mono); }
+#mm-start .mm-s-passport dt { font-weight: 600; font-size: 12px; line-height: 22px; letter-spacing: .08em; text-transform: uppercase; color: var(--mm-muted); }
+#mm-start .mm-s-passport dd { margin: 0; color: var(--mm-fg); }
+#mm-start .mm-s-quota { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 8px; border-top: 1px solid var(--mm-line); padding-top: 14px; }
+#mm-start .mm-s-quota-label { font: 600 12px/1 var(--mm-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mm-muted); }
+#mm-start .mm-s-quota-num { font: 800 34px/1 var(--mm-display); color: var(--mm-quota); }
+#mm-start .mm-s-quota-bar { grid-column: 1 / -1; height: 14px; background: #1b211f; border: 1px solid var(--mm-line); }
+#mm-start .mm-s-quota-bar div { height: 100%; background: var(--mm-quota); }
+
+/* галерея «Роль» */
+#mm-start .mm-s-roll { position: absolute; left: 64px; right: 64px; bottom: 40px; display: flex; flex-direction: column; gap: 16px; }
+#mm-start .mm-s-roll h2 { padding-bottom: 10px; border-bottom: 2px solid var(--mm-fg); font: 800 42px/1 var(--mm-display); text-transform: uppercase; letter-spacing: .02em; color: var(--mm-bright); }
+#mm-start .mm-s-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 12px; align-items: stretch; }
+#mm-start .mm-s-card { display: flex; flex-direction: column; background: var(--mm-card); border: 1px solid var(--mm-line); border-top: 4px solid var(--mm-line2); }
+#mm-start .mm-s-open { flex: 1; display: flex; flex-direction: column; padding: 0; text-align: left; background: transparent; border: 0; border-radius: 0; color: var(--mm-fg); }
+#mm-start .mm-s-open:hover .mm-s-photo img { filter: brightness(1.12); }
+#mm-start .mm-s-open:hover .mm-s-name { color: var(--mm-hazard); }
+#mm-start .mm-s-photo { position: relative; display: block; height: 170px; }
+#mm-start .mm-s-photo img { width: 100%; height: 170px; object-fit: cover; object-position: center top; display: block; }
+#mm-start .mm-s-age { position: absolute; left: 6px; top: 6px; padding: 4px 6px; background: rgba(10,14,13,.88); border: 1px solid var(--mm-line2); font: 600 11px/1 var(--mm-mono); letter-spacing: .04em; color: var(--mm-fg); }
+#mm-start .mm-s-bands { position: absolute; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; }
+#mm-start .mm-s-band { height: 28px; display: flex; align-items: center; justify-content: center; padding: 0 4px; font: 600 10px/1 var(--mm-mono); letter-spacing: .02em; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--mm-ink); }
+#mm-start .mm-s-band.is-taken { background: var(--mm-taken); }
+#mm-start .mm-s-band.is-company { background: var(--mm-hazard); }
+#mm-start .mm-s-band.is-npc { background: var(--mm-npc); }
+#mm-start .mm-s-text { flex: 1; display: flex; flex-direction: column; gap: 6px; padding: 9px 9px 11px; }
+#mm-start .mm-s-name { min-height: 42px; font: 800 21px/1 var(--mm-display); text-transform: uppercase; color: var(--mm-bright); }
+#mm-start .mm-s-job { min-height: 32px; font: 400 12.5px/1.25 var(--mm-mono); color: #b4bcb7; }
+#mm-start .mm-s-cls { align-self: flex-start; padding: 3px 6px; border: 1px solid var(--mm-line2); font: 600 10.5px/1.15 var(--mm-mono); letter-spacing: .05em; text-transform: uppercase; color: var(--mm-soft); }
+#mm-start .mm-s-give { margin: 0 9px 11px; padding: 6px 0; text-align: center; background: transparent; border: 1px dashed var(--mm-hazard); border-radius: 0; font: 600 10.5px/1 var(--mm-mono); letter-spacing: .04em; text-transform: uppercase; color: var(--mm-hazard); outline: 0; }
+
+/* слайды вступления — поверх всего экрана */
+#mm-start .mm-s-slide { position: absolute; inset: 0; background: #000; animation: mm-s-fade .8s ease; }
+#mm-start .mm-s-slide img { width: 1920px; height: 1080px; display: block; object-fit: cover; }
+#mm-start .mm-s-read { position: absolute; left: 64px; right: 64px; bottom: 40px; padding: 18px 22px; background: rgba(6,10,9,.92); border: 1px solid var(--mm-line); display: flex; flex-direction: column; gap: 10px; outline-offset: 4px; }
+#mm-start .mm-s-read-head { display: flex; justify-content: space-between; align-items: center; gap: 16px; font: 600 13px/1 var(--mm-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mm-hazard); }
+#mm-start .mm-s-read-btns { display: flex; gap: 6px; }
+#mm-start .mm-s-read-btns button.is-main { width: auto; padding: 0 18px; font: 800 18px/1 var(--mm-display); letter-spacing: .04em; text-transform: uppercase; }
+#mm-start .mm-s-read-btns button:disabled { opacity: .35; cursor: default; }
+#mm-start .mm-s-read p { font: 400 24px/1.4 var(--mm-body); color: var(--mm-fg); }
+#mm-start .mm-s-read p.mm-s-read-after { font: 400 16px/1.4 var(--mm-mono); color: var(--mm-muted); }
+@keyframes mm-s-fade { from { opacity: 0; } to { opacity: 1; } }
+
+/* карточка члена экипажа для игрока без доступа к листу */
+.mm-start-preview .mm-p { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 16px; align-items: start; }
+.mm-start-preview .mm-p img { width: 170px; height: auto; border: 1px solid #56605b; }
+.mm-start-preview .mm-p-meta { margin: 0 0 6px; font-family: "MM IBM Plex Mono", Consolas, monospace; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; opacity: .8; }
+.mm-start-preview .mm-p-mark { display: inline-block; margin: 0 4px 6px 0; padding: 3px 6px; font: 600 10px/1 "MM IBM Plex Mono", Consolas, monospace; text-transform: uppercase; color: #141514; }
+.mm-start-preview .mm-p-mark.is-company { background: #e8b623; }
+.mm-start-preview .mm-p-mark.is-npc { background: #e0806f; }
+
+/* окно настроек */
+.mm-start-admin .mm-sa { padding: 4px 2px; }
+.mm-start-admin .mm-sa h3 { margin: 12px 0 6px; border-bottom: 1px solid currentColor; }
+.mm-start-admin .mm-sa h3:first-child { margin-top: 0; }
+.mm-start-admin .mm-sa-row { display: flex; gap: 8px; }
+.mm-start-admin .mm-sa-row button { flex: 1; }

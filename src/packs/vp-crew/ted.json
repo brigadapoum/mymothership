@@ -439,6 +439,7 @@
   },
   "flags": {
     "mymothership": {
+      "crew": "ted",
       "pregen": true,
       "recommended": true
     }

@@ -439,6 +439,7 @@
   },
   "flags": {
     "mymothership": {
+      "crew": "lahti",
       "pregen": true,
       "recommended": false
     }

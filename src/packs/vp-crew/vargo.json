@@ -1,0 +1,167 @@
+{
+  "_id": "fVHy5SeMkXDNKZfb",
+  "_key": "!actors!fVHy5SeMkXDNKZfb",
+  "name": "Сэм Варго",
+  "type": "creature",
+  "img": "modules/mymothership/assets/vp/portraits/vargo.webp",
+  "folder": "hCeS1ka2FKlJqQFb",
+  "sort": 1200000,
+  "system": {
+    "health": {
+      "value": 20,
+      "min": 0,
+      "max": 20,
+      "label": "Здоровье"
+    },
+    "hits": {
+      "value": 0,
+      "min": 0,
+      "max": 2,
+      "label": "Раны"
+    },
+    "biography": "<p><em>Оператор забора, 29 лет. Лучший друг Карима; должен денег Тео.</em></p><p>Стоял у пульта отсека улова, когда раструб зачерпнул тварь. Погибает в начале. Через его тело тварь говорит с экипажем.</p>",
+    "description": "<h3>Марионетка</h3><p>[Бой 50 · Удар 2к10 · Инст 65 · Раны 2(20)]</p><p>Не чувствует боли, не паникует. Парит: нити несут её к любому люку вентиляции. <strong>Хватка:</strong> испытание тела, иначе удержан. <strong>Поводок:</strong> перерезать (вплотную, инструмент с изолированной ручкой) — тело падает, тварь в этом отсеке слепнет. Первая встреча — проверка паники.</p><p>Марионетка знает то, что знал её мёртвый.</p>",
+    "xp": {
+      "value": 1,
+      "html": ""
+    },
+    "stats": {
+      "combat": {
+        "value": 50,
+        "min": 0,
+        "max": 99,
+        "label": "Бой",
+        "rollLabel": "Проверка боя",
+        "enabled": true
+      },
+      "instinct": {
+        "value": 65,
+        "min": 0,
+        "max": 99,
+        "label": "Инстинкт",
+        "rollLabel": "Проверка инстинкта",
+        "enabled": true
+      },
+      "speed": {
+        "value": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Скорость",
+        "rollLabel": "Проверка скорости",
+        "enabled": false
+      },
+      "loyalty": {
+        "value": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Лояльность",
+        "rollLabel": "Проверка лояльности",
+        "enabled": false
+      },
+      "armor": {
+        "value": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Броня",
+        "rollLabel": "Испытание брони",
+        "enabled": false
+      },
+      "sanity": {
+        "value": 0,
+        "min": 0,
+        "max": 99,
+        "label": "Рассудок",
+        "rollLabel": "Испытание рассудка",
+        "enabled": false
+      }
+    }
+  },
+  "prototypeToken": {
+    "name": "Сэм",
+    "displayName": 30,
+    "actorLink": true,
+    "disposition": -1,
+    "width": 1,
+    "height": 1,
+    "lockRotation": true,
+    "texture": {
+      "src": "modules/mymothership/assets/vp/tokens/vargo.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "fit": "contain"
+    },
+    "ring": {
+      "enabled": false
+    },
+    "bar1": {
+      "attribute": "health"
+    },
+    "displayBars": 20,
+    "sight": {
+      "enabled": true
+    }
+  },
+  "items": [
+    {
+      "name": "Удар",
+      "type": "weapon",
+      "img": "systems/mothership-fr/images/icons/weapons/unarmed.png",
+      "system": {
+        "description": "<p>Удар марионетки. Хватка: испытание тела, иначе удержан.</p>",
+        "antiArmor": false,
+        "damage": "2d10",
+        "ammo": 0,
+        "shots": 0,
+        "curShots": 0,
+        "shotsPerFire": "0",
+        "useAmmo": false,
+        "ammoType": "",
+        "wound": "",
+        "critDmg": "",
+        "woundEffect": "Blunt Force [-]",
+        "bonus": 0,
+        "weight": 0,
+        "cost": 0,
+        "ranges": {
+          "short": 0,
+          "medium": 0,
+          "long": 0,
+          "value": "Adjacent"
+        },
+        "settings": {
+          "firstEdition": false
+        }
+      },
+      "_id": "gO4SulnCqXu5zu3D",
+      "effects": [],
+      "flags": {},
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "mothership-fr",
+        "systemVersion": "1.8.21"
+      },
+      "_key": "!actors.items!fVHy5SeMkXDNKZfb.gO4SulnCqXu5zu3D"
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "mymothership": {
+      "crew": "vargo",
+      "pregen": false,
+      "recommended": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "mothership-fr",
+    "systemVersion": "1.8.21"
+  }
+}

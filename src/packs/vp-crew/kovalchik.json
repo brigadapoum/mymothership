@@ -484,6 +484,7 @@
   },
   "flags": {
     "mymothership": {
+      "crew": "kovalchik",
       "pregen": true,
       "recommended": true
     }

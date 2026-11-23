@@ -1,0 +1,149 @@
+{
+  "pack": "mymothership.vp-crew",
+  "crew": [
+    {
+      "slug": "ferro",
+      "actorId": "E0c7vdbmvtcQwaXQ",
+      "name": "Аугусто Ферро",
+      "job": "Капитан",
+      "cls": "",
+      "age": 52,
+      "company": false,
+      "npc": true,
+      "portrait": "modules/mymothership/assets/vp/portraits/ferro.webp",
+      "preview": "<p><em>Повёл корабль в колонну.</em></p><p><strong>Вид:</strong> седая щетина, очки, китель поверх комбинезона, планшет с графиком квоты всегда в руке.</p><p><strong>Манера:</strong> говорит цифрами («минус восемь процентов к плану»), никогда не повышает голос.</p><p><strong>Чем думает:</strong> планшет.</p><p><strong>Желание:</strong> премию за объём — последний взнос, чтобы выкупить свой контракт у Компании и уйти.</p>"
+    },
+    {
+      "slug": "okafor",
+      "actorId": "iBVjcw4L0CCU0qfD",
+      "name": "Рут Окафор",
+      "job": "Старпом",
+      "cls": "Специалист",
+      "age": 41,
+      "company": true,
+      "npc": false,
+      "portrait": "modules/mymothership/assets/vp/portraits/okafor.webp",
+      "preview": "<p><em>Холодный расчёт.</em></p><p><strong>Вид:</strong> чёрное каре, серьги, тяжёлый взгляд, термокружка.</p><p><strong>Манера:</strong> считает вслух, отвечает вопросом на вопрос.</p><p><strong>Чем думает:</strong> голова-калькулятор.</p><p><strong>Желание:</strong> капитанское кресло — Компания намекнула, что место освободится, если Ферро оступится.</p>"
+    },
+    {
+      "slug": "kovalchik",
+      "actorId": "fSsuMhYO00kQVZL2",
+      "name": "Лола Ковальчик",
+      "job": "Старший механик",
+      "cls": "Специалист",
+      "age": 32,
+      "company": false,
+      "npc": false,
+      "portrait": "modules/mymothership/assets/vp/portraits/kovalchik.webp",
+      "preview": "<p><em>Слышит корабль.</em></p><p><strong>Вид:</strong> каска с фонарём и камерой, пластырь на носу — вечно обо что-то бьётся, татуировки старых кораблей на предплечьях, пояс с инструментами.</p><p><strong>Манера:</strong> с кораблём говорит ласково, с людьми грубо — особенно со старшими: доказывает, что не зря на этом месте.</p><p><strong>Чем думает:</strong> уши — по звуку определяет, что сломалось; этому её научил прежний старший механик.</p><p><strong>Желание:</strong> удержаться в должности — она самый молодой старший механик во флоте, и после этого рейса кончается её испытательный срок.</p>"
+    },
+    {
+      "slug": "oke",
+      "actorId": "m66awdtv4P2HrzNa",
+      "name": "Бернард Оке",
+      "job": "Атмосферный штурман",
+      "cls": "Учёный",
+      "age": 66,
+      "company": false,
+      "npc": false,
+      "portrait": "modules/mymothership/assets/vp/portraits/oke.webp",
+      "preview": "<p><em>Читает облака.</em></p><p><strong>Вид:</strong> седые волосы зачёсаны назад, усы, тёплый воротник; бумажные карты в тубусе — электронике не доверяет; трубка без табака.</p><p><strong>Манера:</strong> рассказывает байки к месту и не к месту.</p><p><strong>Чем думает:</strong> старые карты с пометками.</p><p><strong>Желание:</strong> чтобы его наконец послушали.</p>"
+    },
+    {
+      "slug": "lahti",
+      "actorId": "uCJxbrRMmpKBSmyg",
+      "name": "Микко Лахти",
+      "job": "Пилот",
+      "cls": "Специалист",
+      "age": 34,
+      "company": false,
+      "npc": false,
+      "portrait": "modules/mymothership/assets/vp/portraits/lahti.webp",
+      "preview": "<p><em>Руки, которые держат корабль.</em></p><p><strong>Вид:</strong> лётные очки на лбу, вечно в перчатках без пальцев, на приборной панели фото дочери.</p><p><strong>Манера:</strong> барабанит пальцами по всему, шутит в стрессе.</p><p><strong>Чем думает:</strong> руки.</p><p><strong>Желание:</strong> быть дома через девять дней — у дочери день рождения, обещал.</p>"
+    },
+    {
+      "slug": "tanabe",
+      "actorId": "VGXLOl1Ue4AAl2YE",
+      "name": "Йоко Танабэ",
+      "job": "Химик-аналитик",
+      "cls": "Учёный",
+      "age": 37,
+      "company": true,
+      "npc": false,
+      "portrait": "modules/mymothership/assets/vp/portraits/tanabe.webp",
+      "preview": "<p><em>Меряет чистоту газа.</em></p><p><strong>Вид:</strong> очки, аккуратная коса, безупречно чистый лабораторный халат поверх скафандра, сменные перчатки, флаконы проб на поясе.</p><p><strong>Манера:</strong> точные формулировки, не терпит «примерно».</p><p><strong>Чем думает:</strong> приборы; верит только цифрам.</p><p><strong>Желание:</strong> идеальный анализ улова — от него зависит её премия.</p>"
+    },
+    {
+      "slug": "otieno",
+      "actorId": "hwckqpxPgiXrNa8M",
+      "name": "Ханна Отиено",
+      "job": "Врач",
+      "cls": "Учёный",
+      "age": 45,
+      "company": false,
+      "npc": false,
+      "portrait": "modules/mymothership/assets/vp/portraits/otieno.webp",
+      "preview": "<p><em>Режет и шьёт.</em></p><p><strong>Вид:</strong> кудри, шрамы на щеке, закатанные рукава, следы старых ожогов на руках, в кармане фляжка.</p><p><strong>Манера:</strong> чёрный юмор, ни во что не верит.</p><p><strong>Чем думает:</strong> скальпель.</p><p><strong>Желание:</strong> образец твари — частная биолаборатория заплатит больше, чем Компания платит за весь рейс.</p>"
+    },
+    {
+      "slug": "haddad",
+      "actorId": "RqVlZgTWOhmbgIfB",
+      "name": "Карим Хаддад",
+      "job": "Ремонтник",
+      "cls": "Специалист",
+      "age": 24,
+      "company": false,
+      "npc": false,
+      "portrait": "modules/mymothership/assets/vp/portraits/haddad.webp",
+      "preview": "<p><em>Младший.</em></p><p><strong>Вид:</strong> худой, в слишком большом скафандре, на плече камера.</p><p><strong>Манера:</strong> говорит быстро, всё принимает близко к сердцу.</p><p><strong>Чем думает:</strong> сердце.</p><p><strong>Желание:</strong> перевестись на пассажирский лайнер — заявка уже подана.</p>"
+    },
+    {
+      "slug": "vargo",
+      "actorId": "fVHy5SeMkXDNKZfb",
+      "name": "Сэм Варго",
+      "job": "Оператор забора",
+      "cls": "",
+      "age": 29,
+      "company": false,
+      "npc": true,
+      "portrait": "modules/mymothership/assets/vp/portraits/vargo.webp",
+      "preview": "<p><em>Оператор забора.</em> Лучший друг Карима.</p>"
+    },
+    {
+      "slug": "holm",
+      "actorId": "7fJsLe0iDqPDdNiH",
+      "name": "«Папа» Тео Хольм",
+      "job": "Кок",
+      "cls": "Морпех",
+      "age": 55,
+      "company": false,
+      "npc": false,
+      "portrait": "modules/mymothership/assets/vp/portraits/holm.webp",
+      "preview": "<p><em>Бывший морпех.</em></p><p><strong>Вид:</strong> огромный; на камбузе вместо колпака — старая каска морпеха с номером 81; фартук поверх армейской майки, шрам через бровь.</p><p><strong>Манера:</strong> всех кормит, всех зовёт «малыш».</p><p><strong>Чем думает:</strong> желудок и кухонные ножи.</p><p><strong>Желание:</strong> чтобы молодые дожили до порта.</p>"
+    },
+    {
+      "slug": "kruger",
+      "actorId": "FT7bi3B2Jcg7OgFd",
+      "name": "Дана Крюгер",
+      "job": "Охрана рейса",
+      "cls": "Морпех",
+      "age": 30,
+      "company": true,
+      "npc": false,
+      "portrait": "modules/mymothership/assets/vp/portraits/kruger.webp",
+      "preview": "<p><em>У неё пистолет.</em></p><p><strong>Вид:</strong> волосы зачёсаны назад, нарисованные звёзды на скулах, гарнитура, бронежилет поверх формы Компании, жвачка.</p><p><strong>Манера:</strong> односложно, смотрит на руки собеседника.</p><p><strong>Чем думает:</strong> пистолет в кобуре.</p><p><strong>Желание:</strong> получить деньги по контракту и не геройствовать.</p>"
+    },
+    {
+      "slug": "ted",
+      "actorId": "mSBAiwethhP3XBio",
+      "name": "ТЕНДЕР-4 «Тед»",
+      "job": "Грузовой андроид",
+      "cls": "Андроид",
+      "age": null,
+      "company": true,
+      "npc": false,
+      "portrait": "modules/mymothership/assets/vp/portraits/ted.webp",
+      "preview": "<p><em>Бортовой андроид. Голос Компании.</em></p><p><strong>Вид:</strong> старая модель с облупленной краской, логотип Компании и бейдж «Hi, I'm here to help» на груди, оптический сенсор во лбу мигает.</p><p><strong>Манера:</strong> вежливый, говорит канцеляритом из регламента; на всё у него есть номер формы.</p><p><strong>Чем думает:</strong> протокол.</p><p><strong>Желание:</strong> чтобы инцидента не было — ни в отчётах, ни на станции.</p>"
+    }
+  ]
+}

@@ -42,23 +42,40 @@ test("в архиве есть все скрипты, которые импор�
   }
 });
 
-test("картинки прегенов есть в архиве", () => {
+test("все картинки и шрифты, на которые есть ссылки, лежат в архиве", () => {
+  const files = [];
   const src = path.join(root, "src", "packs");
-  for (const pack of fs.readdirSync(src)) {
-    for (const file of fs.readdirSync(path.join(src, pack))) {
-      const text = fs.readFileSync(path.join(src, pack, file), "utf8");
-      for (const [, p] of text.matchAll(/"modules\/mymothership\/([^"]+)"/g)) {
-        assert.ok(zipFiles.includes(p), `${file}: нет картинки ${p}`);
-      }
+  for (const pack of fs.readdirSync(src)) for (const f of fs.readdirSync(path.join(src, pack))) files.push(path.join(src, pack, f));
+  files.push(path.join(root, "assets", "vp", "crew.json"), path.join(root, "assets", "vp", "intro.json"));
+  for (const file of files) {
+    const text = fs.readFileSync(file, "utf8");
+    for (const [, p] of text.matchAll(/"modules\/mymothership\/([^"]+)"/g)) {
+      assert.ok(zipFiles.includes(p), `${path.basename(file)}: нет файла ${p}`);
+    }
+  }
+  const js = fs.readFileSync(path.join(root, "scripts", "start-screen.js"), "utf8");
+  for (const [, p] of js.matchAll(/\$\{BASE\}\/([^`"' ]+\.(?:webp|json))/g)) {
+    assert.ok(zipFiles.includes(`assets/vp/${p}`), `start-screen.js: нет assets/vp/${p}`);
+  }
+  for (const css of manifest.styles) {
+    const text = fs.readFileSync(path.join(root, css), "utf8");
+    for (const [, u] of text.matchAll(/url\('([^']+)'\)/g)) {
+      const target = path.posix.normalize(path.posix.join(path.posix.dirname(css), u));
+      assert.ok(zipFiles.includes(target), `${css}: нет ${target}`);
     }
   }
 });
 
-test("прегены: 10 персонажей и капитан, цифры в пределах 1e", () => {
+test("прегены: 10 персонажей, капитан и Сэм-марионетка, цифры в пределах 1e", () => {
   const dir = path.join(root, "src", "packs", "vp-crew");
-  const actors = fs.readdirSync(dir).filter((f) => !f.startsWith("folder-"))
+  const all = fs.readdirSync(dir).filter((f) => !f.startsWith("folder-"))
     .map((f) => JSON.parse(fs.readFileSync(path.join(dir, f), "utf8")));
-  assert.equal(actors.length, 11);
+  assert.equal(all.length, 12);
+  const sam = all.find((a) => a.flags.mymothership.crew === "vargo");
+  assert.equal(sam.type, "creature");
+  assert.equal(sam.system.stats.combat.value, 50);
+  assert.equal(sam.system.stats.instinct.value, 65);
+  const actors = all.filter((a) => a !== sam);
   assert.equal(actors.filter((a) => a.flags.mymothership.pregen).length, 10);
   assert.equal(actors.filter((a) => a.flags.mymothership.recommended).length, 4);
   for (const a of actors) {

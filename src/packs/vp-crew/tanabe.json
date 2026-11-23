@@ -439,6 +439,7 @@
   },
   "flags": {
     "mymothership": {
+      "crew": "tanabe",
       "pregen": true,
       "recommended": true
     }

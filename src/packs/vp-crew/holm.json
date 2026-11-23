@@ -434,6 +434,7 @@
   },
   "flags": {
     "mymothership": {
+      "crew": "holm",
       "pregen": true,
       "recommended": false
     }

@@ -459,6 +459,7 @@
   },
   "flags": {
     "mymothership": {
+      "crew": "kruger",
       "pregen": true,
       "recommended": true
     }
