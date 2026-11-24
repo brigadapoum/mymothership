@@ -15,3 +15,16 @@
   position: static !important;
   margin-top: 6px !important;
 }
+
+/* «Пеликан»: кнопка «← Пеликан» на сценах отсеков (только смотрителю). */
+#mm-pelican-back {
+  position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index: 70;
+  display: flex; align-items: center; gap: 12px; padding: 5px 14px 5px 5px;
+  background: rgba(11, 12, 12, .92); border: 1px solid #4b4a44; border-top: 3px solid #e2b33c; border-radius: 4px;
+  font: 600 13px "MM IBM Plex Mono", Consolas, monospace; color: #d8d0b4; pointer-events: auto;
+}
+#mm-pelican-back button {
+  width: auto; margin: 0; padding: 6px 12px; border: 0; border-radius: 3px; cursor: pointer;
+  background: #e2b33c; color: #111; font: inherit; line-height: 1.2;
+}
+#mm-pelican-back button:hover { background: #f3d27a; }

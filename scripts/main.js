@@ -5,9 +5,12 @@ import RU from "../lang/ru-mothership-fr.js";
 import { translateElement, translateRollCard } from "./text-ru.js";
 import { registerPlaylistFolder } from "./playlist-folder.js";
 import { registerStartScreen } from "./start-screen.js";
+import { registerPelican } from "./pelican.js";
 
 // Экран начала «Восходящего потока» — свои хуки init/ready, поэтому регистрируется сразу при загрузке.
 registerStartScreen();
+// «Пеликан»: план палуб и сцены отсеков.
+registerPelican();
 
 const MODULE_ID = "mymothership";
 const SYSTEM_ID = "mothership-fr";
