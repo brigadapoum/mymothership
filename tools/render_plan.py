@@ -3,6 +3,7 @@
 Шрифты — из assets/fonts модуля, рисует Chrome через Playwright:
     python3 tools/render_plan.py                  # src/ship/pelican-plan.svg → assets/vp/ship/plan.webp
     python3 tools/render_plan.py neon             # src/ship/pelican-plan-neon.svg → assets/vp/ship/plan-neon.webp
+    python3 tools/render_plan.py tall             # src/ship/pelican-plan-neon-tall.svg → assets/vp/ship/plan-tall.webp (3200×2430)
 """
 import io
 import sys
@@ -35,18 +36,24 @@ def font_css():
 
 def main():
     global SVG, OUT
-    if len(sys.argv) > 1 and sys.argv[1] == "neon":
+    mode = sys.argv[1] if len(sys.argv) > 1 else ""
+    if mode == "neon":
         SVG = ROOT / "src" / "ship" / "pelican-plan-neon.svg"
         OUT = ROOT / "assets" / "vp" / "ship" / "plan-neon.webp"
+    if mode == "tall":
+        SVG = ROOT / "src" / "ship" / "pelican-plan-neon-tall.svg"
+        OUT = ROOT / "assets" / "vp" / "ship" / "plan-tall.webp"
     svg = SVG.read_text(encoding="utf-8")
+    import re as _re
+    h = int(_re.search(r'viewBox="0 0 1600 (\d+)"', svg).group(1))
     html = f"<!doctype html><html><head><meta charset='utf-8'><style>{font_css()}\nhtml,body{{margin:0;background:#060909}}svg{{display:block}}</style></head><body>{svg}</body></html>"
     with sync_playwright() as p:
         browser = p.chromium.launch(executable_path="/usr/bin/google-chrome")
-        page = browser.new_page(viewport={"width": 1600, "height": 900}, device_scale_factor=2)
+        page = browser.new_page(viewport={"width": 1600, "height": h}, device_scale_factor=2)
         page.set_content(html, wait_until="load")
         page.evaluate("document.fonts.ready")
         page.wait_for_timeout(300)
-        png = page.screenshot(clip={"x": 0, "y": 0, "width": 1600, "height": 900})
+        png = page.screenshot(clip={"x": 0, "y": 0, "width": 1600, "height": h})
         browser.close()
     img = Image.open(io.BytesIO(png)).convert("RGB")
     OUT.parent.mkdir(parents=True, exist_ok=True)
