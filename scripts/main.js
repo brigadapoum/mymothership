@@ -6,11 +6,13 @@ import { translateElement, translateRollCard } from "./text-ru.js";
 import { registerPlaylistFolder } from "./playlist-folder.js";
 import { registerStartScreen } from "./start-screen.js";
 import { registerPelican } from "./pelican.js";
+import { registerPuppets } from "./puppet.js";
 
 // Экран начала «Восходящего потока» — свои хуки init/ready, поэтому регистрируется сразу при загрузке.
 registerStartScreen();
-// «Пеликан»: план палуб и сцены отсеков.
+// «Пеликан»: план палуб; марионетки в HUD токена.
 registerPelican();
+registerPuppets();
 
 const MODULE_ID = "mymothership";
 const SYSTEM_ID = "mothership-fr";
