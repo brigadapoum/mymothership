@@ -61,3 +61,32 @@ export function viewFor(layout, tile, screen) {
 /** Тот же ли вид (чтобы не дёргать холст по пустякам). */
 export const sameView = (a, b) => !!a && !!b
   && Math.abs(a.scale - b.scale) < 1e-3 && Math.abs(a.x - b.x) < 1.5 && Math.abs(a.y - b.y) < 1.5;
+
+/** Где на экране вырез при данном положении слоя. */
+export function holeOnScreen(layout) {
+  const w = HOLE.w * layout.scale;
+  const h = HOLE.h * layout.scale;
+  const x = layout.left + HOLE.x * layout.scale;
+  const y = layout.top + HOLE.y * layout.scale;
+  return { x, y, w, h, cx: x + w / 2, cy: y + h / 2 };
+}
+
+/**
+ * Карта привязана к рамке: мельче «всего плана» не уменьшить, за край плитки не утащить.
+ * view — текущий вид холста, fit — вид «весь план». Возвращает исправленный вид или null, если всё в порядке.
+ */
+export function clampView(view, fit, layout, tile, screen) {
+  const hole = holeOnScreen(layout);
+  const scale = Math.max(view.scale, fit.scale);
+  const offX = (hole.cx - screen.w / 2) / scale;
+  const offY = (hole.cy - screen.h / 2) / scale;
+  let cx = view.x + (hole.cx - screen.w / 2) / view.scale;
+  let cy = view.y + (hole.cy - screen.h / 2) / view.scale;
+  const rx = hole.w / 2 / scale;
+  const ry = hole.h / 2 / scale;
+  const clamp = (v, lo, hi) => (lo > hi ? (lo + hi) / 2 : Math.min(Math.max(v, lo), hi));
+  cx = clamp(cx, tile.x + rx, tile.x + tile.w - rx);
+  cy = clamp(cy, tile.y + ry, tile.y + tile.h - ry);
+  const out = { x: cx - offX, y: cy - offY, scale };
+  return sameView(out, view) ? null : out;
+}

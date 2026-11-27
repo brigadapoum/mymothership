@@ -11,6 +11,7 @@
   --sh-body: "MM PT Sans", "Segoe UI", Arial, sans-serif;
   position: fixed; inset: 0; pointer-events: none; overflow: hidden;
 }
+#mm-ship .mm-sh-cover { position: fixed; inset: 0; background: #070808; pointer-events: none; }
 #mm-ship .mm-sh-stage {
   position: absolute; width: 1920px; height: 1080px; transform-origin: 0 0; pointer-events: none;
   color: var(--sh-fg); font-family: var(--sh-body); font-size: 16px; line-height: 1.3;

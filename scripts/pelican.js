@@ -3,10 +3,11 @@
 // Справа — два «канала» для арта, как фото на столе дела в Надграде: смотритель выводит картинку,
 // меняет, кадрирует, подписывает, убирает; пустой канал игрокам показывает «НЕТ СИГНАЛА».
 // Слой 1920×1080 (HTML) с вырезом под схему; при входе вид холста подгоняется так, чтобы план лёг ровно в вырез;
-// дальше схему можно приближать и двигать (2026-11-27, автор), «Весь план» возвращает исходный вид.
+// дальше схему можно приближать и двигать, но карта привязана к рамке: не мельче «всего плана», не за край
+// (2026-11-27, автор); вне рамки холст закрыт и за пределами слоя; «Весь план» возвращает исходный вид.
 // Оформление — неон по референсу автора: бирюза на чёрном, кабели по краям, красные точки тревоги.
 // Отдельных сцен отсеков нет (решение автора 2026-11-27); сцены от 0.5.x модуль предлагает удалить.
-import { SCENE, TILE, START, normSlots, nextFit, FIT_LABEL, viewFor } from "./ship-logic.js";
+import { SCENE, TILE, START, normSlots, nextFit, FIT_LABEL, viewFor, clampView, holeOnScreen } from "./ship-logic.js";
 import { STAGE, fitStage } from "./start-logic.js";
 import { freeArea, ensureAllCrew } from "./start-screen.js";
 import { puppetSrc } from "./puppet.js";
@@ -98,6 +99,7 @@ async function deleteOld() {
 let root = null;
 let layout = null;
 let target = null;
+let fixing = false;
 
 function mount() {
   if (root?.isConnected) return root;
@@ -167,7 +169,7 @@ function render() {
   const scene = canvas?.scene;
   if (!isShip(scene)) return unmount();
   mount();
-  root.innerHTML = stageHtml(slotsOf(scene), game.user.isGM);
+  root.innerHTML = `<div class="mm-sh-cover"></div>${stageHtml(slotsOf(scene), game.user.isGM)}`;
   relayout();
 }
 
@@ -178,11 +180,15 @@ function relayout() {
   stage.style.transform = `scale(${layout.scale})`;
   stage.style.left = `${layout.left}px`;
   stage.style.top = `${layout.top}px`;
+  // всё вне выреза закрыто — и за пределами слоя тоже: холст виден только в рамке
+  const W = window.innerWidth, H = window.innerHeight, h = holeOnScreen(layout);
+  const cover = root.querySelector(".mm-sh-cover");
+  if (cover) cover.style.clipPath = `polygon(evenodd, 0 0, ${W}px 0, ${W}px ${H}px, 0 ${H}px, 0 0, ${h.x}px ${h.y}px, ${h.x + h.w}px ${h.y}px, ${h.x + h.w}px ${h.y + h.h}px, ${h.x}px ${h.y + h.h}px, ${h.x}px ${h.y}px)`;
   align();
 }
 
 /** Подогнать вид холста: плитка плана целиком в вырез слоя. Дальше её можно приближать и двигать —
- *  холст виден только в вырезе рамки; «Весь план» в шапке схемы возвращает исходный вид. */
+ *  но не мельче «всего плана» и не за край плитки (карта привязана к рамке); «Весь план» возвращает исходный вид. */
 function align() {
   const scene = canvas?.scene;
   if (!isShip(scene) || !layout || !canvas?.ready) return;
@@ -318,6 +324,14 @@ export function registerPelican() {
   Hooks.on("canvasTearDown", () => unmount());
   Hooks.on("updateScene", (scene, change) => {
     if (scene.id === canvas?.scene?.id && foundry.utils.hasProperty(change, `flags.${MODULE_ID}`)) render();
+  });
+  // карта привязана к рамке: мельче «всего плана» не уменьшить, за край не утащить
+  Hooks.on("canvasPan", (c, view) => {
+    if (fixing || !target || !layout || !isShip(canvas?.scene)) return;
+    const fixed = clampView(view, target, layout, tileRect(canvas.scene), { w: window.innerWidth, h: window.innerHeight });
+    if (!fixed) return;
+    fixing = true;
+    requestAnimationFrame(() => { try { canvas.pan(fixed); } finally { fixing = false; } });
   });
   Hooks.on("collapseSidebar", () => setTimeout(relayout, 250));
   Hooks.on("renderSceneNavigation", () => setTimeout(relayout, 50));

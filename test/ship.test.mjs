@@ -3,7 +3,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
-import { HOLE, SCENE, TILE, START, normSlots, nextFit, FITS, viewFor, sameView } from "../scripts/ship-logic.js";
+import { HOLE, SCENE, TILE, START, normSlots, nextFit, FITS, viewFor, sameView, clampView } from "../scripts/ship-logic.js";
 import { stageHtml } from "../scripts/pelican.js";
 import { PUPPETS } from "../scripts/puppet.js";
 
@@ -63,5 +63,25 @@ test("слой: «нет сигнала» у пустого канала, кно
   assert.ok(gm.includes("МПАД-7/12"));
   assert.ok(pl.includes('data-ship="fitview"'), "«Весь план» — всем");
   const js = fs.readFileSync(path.join(root, "scripts", "pelican.js"), "utf8");
-  assert.ok(!js.includes('Hooks.on("canvasPan"'), "зум не должен отскакивать");
+  assert.ok(js.includes("clampView("), "карта привязана к рамке");
+});
+
+test("карта привязана к рамке: не мельче всего плана и не за край", () => {
+  const layout = { scale: 0.7, left: 60, top: 30 };
+  const tile = { x: 1800, y: 1300, w: TILE.w, h: TILE.h };
+  const screen = { w: 1440, h: 900 };
+  const fit = viewFor(layout, tile, screen);
+  assert.equal(clampView(fit, fit, layout, tile, screen), null, "весь план — без поправок");
+  const out = clampView({ ...fit, scale: fit.scale * 0.5 }, fit, layout, tile, screen);
+  assert.ok(out && Math.abs(out.scale - fit.scale) < 1e-9, "отдалить мельче нельзя");
+  const zoomed = { x: fit.x - 5000, y: fit.y + 5000, scale: fit.scale * 2 };
+  const fixed = clampView(zoomed, fit, layout, tile, screen);
+  assert.ok(fixed && fixed.scale === zoomed.scale, "приближение сохраняется");
+  const toScreen = (v, px, py) => ({ x: screen.w / 2 + (px - v.x) * v.scale, y: screen.h / 2 + (py - v.y) * v.scale });
+  const tl = toScreen(fixed, tile.x, tile.y), br = toScreen(fixed, tile.x + tile.w, tile.y + tile.h);
+  const hx = layout.left + HOLE.x * layout.scale, hy = layout.top + HOLE.y * layout.scale;
+  assert.ok(tl.x <= hx + 0.5 && tl.y <= hy + 0.5, "край плитки не заходит внутрь рамки");
+  assert.ok(br.x >= hx + HOLE.w * layout.scale - 0.5 && br.y >= hy + HOLE.h * layout.scale - 0.5);
+  const inside = { x: fit.x + 100, y: fit.y + 80, scale: fit.scale * 2 };
+  assert.equal(clampView(inside, fit, layout, tile, screen), null, "внутри — свободно");
 });
