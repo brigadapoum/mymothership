@@ -1,0 +1,98 @@
+/* =========================================================
+   Сцена корабля «Пеликан» — макет «Сцена корабля» (холст «Пеликан — сцены Foundry», 2026-11-27).
+   Слой 1920×1080 поверх холста, с вырезом под схему (76,134 — 1248×902). Неон по референсу автора.
+   ========================================================= */
+#mm-ship {
+  --sh-bg: #0b0c0b; --sh-fg: #d6efe9; --sh-bright: #dff7f2; --sh-muted: #5e8f86; --sh-dim: #3f6f67;
+  --sh-line: #11403a; --sh-line2: #1d5a52; --sh-neon: #10f0c8; --sh-neon2: #3fe0c8; --sh-soft: #a9d6cd;
+  --sh-alarm: #ff385c; --sh-panel: rgba(5, 10, 10, .8); --sh-bar: rgba(6, 14, 13, .94);
+  --sh-display: "MM Fira Sans Extra Condensed", "Arial Narrow", sans-serif;
+  --sh-mono: "MM IBM Plex Mono", Consolas, monospace;
+  --sh-body: "MM PT Sans", "Segoe UI", Arial, sans-serif;
+  position: fixed; inset: 0; pointer-events: none; overflow: hidden;
+}
+#mm-ship .mm-sh-stage {
+  position: absolute; width: 1920px; height: 1080px; transform-origin: 0 0; pointer-events: none;
+  color: var(--sh-fg); font-family: var(--sh-body); font-size: 16px; line-height: 1.3;
+}
+#mm-ship .mm-sh-stage * { box-sizing: border-box; }
+#mm-ship button { font-family: inherit; cursor: pointer; margin: 0; line-height: 1.2; min-height: 0; box-shadow: none; text-shadow: none; width: auto; }
+#mm-ship button:focus-visible { outline: 2px solid var(--sh-neon); outline-offset: 2px; }
+#mm-ship img { border: 0; max-width: none; }
+
+/* фон с вырезом под схему: холст Foundry виден только там */
+#mm-ship .mm-sh-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(900px 300px at 50% -60px, rgba(16, 240, 200, .16), transparent 70%),
+    radial-gradient(1100px 720px at 104% 112%, rgba(16, 120, 100, .12), transparent 62%),
+    radial-gradient(ellipse at 50% 45%, transparent 58%, rgba(0, 0, 0, .5) 100%),
+    var(--sh-bg);
+  clip-path: polygon(evenodd, 0 0, 1920px 0, 1920px 1080px, 0 1080px, 0 0, 76px 134px, 1324px 134px, 1324px 1036px, 76px 1036px, 76px 134px);
+}
+#mm-ship .mm-sh-cables { position: absolute; inset: 0; pointer-events: none; z-index: 3; }
+#mm-ship .mm-sh-tube {
+  position: absolute; height: 5px; border-radius: 3px; background: #c4fff3; z-index: 4;
+  box-shadow: 0 0 6px var(--sh-neon), 0 0 22px var(--sh-neon), 0 0 52px rgba(16, 240, 200, .55);
+}
+#mm-ship .mm-sh-scan-all { position: absolute; inset: 0; pointer-events: none; z-index: 6; background: repeating-linear-gradient(0deg, rgba(255, 255, 255, .018) 0 1px, transparent 1px 3px); }
+
+/* шапка */
+#mm-ship .mm-sh-head {
+  position: absolute; left: 72px; right: 72px; top: 22px; height: 60px; z-index: 5;
+  display: flex; align-items: center; gap: 20px; border-bottom: 1px solid var(--sh-line);
+}
+#mm-ship .mm-sh-title { font: 800 44px/1 var(--sh-display); letter-spacing: .03em; color: var(--sh-bright); white-space: nowrap; }
+#mm-ship .mm-sh-title span { color: var(--sh-neon2); margin-right: 16px; }
+#mm-ship .mm-sh-lbl { font: 600 12px var(--sh-mono); letter-spacing: .18em; color: var(--sh-muted); text-transform: uppercase; white-space: nowrap; }
+#mm-ship .mm-sh-lbl.hi { color: var(--sh-soft); }
+#mm-ship .mm-sh-lbl.dim { color: var(--sh-dim); }
+#mm-ship .mm-sh-lbl.alarm { color: var(--sh-alarm); }
+
+/* рамки */
+#mm-ship .mm-sh-frame { position: absolute; border: 1px solid var(--sh-line); z-index: 2; }
+#mm-ship .mm-sh-frame.chan { background: var(--sh-panel); }
+#mm-ship .mm-sh-frame .cn { position: absolute; width: 14px; height: 14px; border-color: var(--sh-neon); border-style: solid; opacity: .8; }
+#mm-ship .cn.tl { left: -1px; top: -1px; border-width: 2px 0 0 2px; }
+#mm-ship .cn.tr { right: -1px; top: -1px; border-width: 2px 2px 0 0; }
+#mm-ship .cn.bl { left: -1px; bottom: -1px; border-width: 0 0 2px 2px; }
+#mm-ship .cn.br { right: -1px; bottom: -1px; border-width: 0 2px 2px 0; }
+#mm-ship .mm-sh-bar {
+  position: absolute; left: 0; right: 0; top: 0; height: 30px; display: flex; align-items: center; gap: 10px; padding: 0 12px;
+  border-bottom: 1px solid var(--sh-line); background: var(--sh-bar);
+}
+#mm-ship .mm-sh-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--sh-alarm); box-shadow: 0 0 8px var(--sh-alarm); animation: mm-sh-blink 1.6s steps(2, start) infinite; }
+#mm-ship .mm-sh-dot.ok { background: var(--sh-neon); box-shadow: 0 0 8px var(--sh-neon); animation: none; }
+@keyframes mm-sh-blink { to { visibility: hidden; } }
+
+/* каналы */
+#mm-ship .mm-sh-win { position: absolute; left: 0; right: 0; top: 30px; bottom: 34px; overflow: hidden; background: #040807; }
+#mm-ship .mm-sh-win img.art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; filter: saturate(.85) contrast(1.08) brightness(.92); }
+#mm-ship .mm-sh-win img.fit-top { object-position: 50% 0; }
+#mm-ship .mm-sh-win img.fit-bottom { object-position: 50% 100%; }
+#mm-ship .mm-sh-win img.fit-contain { object-fit: contain; }
+#mm-ship .mm-sh-win .tint { position: absolute; inset: 0; pointer-events: none; background: rgba(16, 240, 200, .08); mix-blend-mode: screen; }
+#mm-ship .mm-sh-win .scan { position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(0deg, rgba(0, 0, 0, .28) 0 1px, transparent 1px 3px), radial-gradient(ellipse at 50% 50%, transparent 55%, rgba(0, 0, 0, .65) 100%); }
+#mm-ship .mm-sh-zoom { position: absolute; inset: 0; padding: 0; border: 0; background: transparent; cursor: zoom-in; pointer-events: auto; }
+#mm-ship .mm-sh-nosig {
+  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+  background: repeating-linear-gradient(97deg, rgba(16, 240, 200, .06) 0 2px, transparent 2px 7px), repeating-linear-gradient(3deg, rgba(255, 255, 255, .035) 0 1px, transparent 1px 4px), #050a09;
+  animation: mm-sh-flick 3.2s infinite;
+}
+#mm-ship .mm-sh-nosig .t { font: 400 22px var(--sh-mono); letter-spacing: .3em; color: var(--sh-neon); }
+@keyframes mm-sh-flick { 0%, 100% { opacity: 1; } 46% { opacity: 1; } 48% { opacity: .72; } 50% { opacity: 1; } 83% { opacity: .88; } }
+#mm-ship .mm-sh-cap {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 34px; display: flex; align-items: center; gap: 10px; padding: 0 12px;
+  border-top: 1px solid var(--sh-line); background: var(--sh-bar); font: 15px var(--sh-body); color: var(--sh-soft);
+}
+#mm-ship .mm-sh-cap-t { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: left; font: inherit; color: inherit; background: none; border: 0; padding: 0; pointer-events: auto; }
+#mm-ship button.mm-sh-cap-t:hover { color: var(--sh-neon); }
+#mm-ship .mm-sh-cap-t.add { color: var(--sh-dim); }
+#mm-ship .mm-sh-gm { display: flex; gap: 6px; flex: none; }
+#mm-ship .mm-sh-gb {
+  font: 600 12px var(--sh-mono); letter-spacing: .06em; color: var(--sh-fg); background: #08201d; border: 1px solid var(--sh-line2);
+  border-radius: 0; padding: 5px 9px; min-height: 26px; pointer-events: auto; display: inline-flex; align-items: center; justify-content: center;
+}
+#mm-ship .mm-sh-gb:hover { border-color: var(--sh-neon); color: var(--sh-neon); }
+#mm-ship .mm-sh-gb.big { font-size: 14px; padding: 10px 16px; background: var(--sh-neon); color: #041311; border-color: var(--sh-neon); }
+#mm-ship .mm-sh-gb.big:hover { background: #7ff8e2; color: #041311; }

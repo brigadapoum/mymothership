@@ -2,8 +2,9 @@
 
 Шрифты — из assets/fonts модуля, рисует Chrome через Playwright:
     python3 tools/render_plan.py                  # src/ship/pelican-plan.svg → assets/vp/ship/plan.webp
-    python3 tools/render_plan.py neon             # src/ship/pelican-plan-neon.svg → assets/vp/ship/plan-neon.webp
-    python3 tools/render_plan.py tall             # src/ship/pelican-plan-neon-tall.svg → assets/vp/ship/plan-tall.webp (3200×2430)
+    python3 tools/render_plan.py neon             # src/ship/pelican-plan-neon.svg → src/ship/plan-neon.webp
+    python3 tools/render_plan.py tall             # src/ship/pelican-plan-neon-tall.svg → src/ship/plan-tall.webp (3200×2430)
+                                                  #   и assets/vp/ship/plan-scene.webp 2880×2080 — плитка плана для сцены корабля
 """
 import io
 import sys
@@ -39,10 +40,10 @@ def main():
     mode = sys.argv[1] if len(sys.argv) > 1 else ""
     if mode == "neon":
         SVG = ROOT / "src" / "ship" / "pelican-plan-neon.svg"
-        OUT = ROOT / "assets" / "vp" / "ship" / "plan-neon.webp"
+        OUT = ROOT / "src" / "ship" / "plan-neon.webp"
     if mode == "tall":
         SVG = ROOT / "src" / "ship" / "pelican-plan-neon-tall.svg"
-        OUT = ROOT / "assets" / "vp" / "ship" / "plan-tall.webp"
+        OUT = ROOT / "src" / "ship" / "plan-tall.webp"
     svg = SVG.read_text(encoding="utf-8")
     import re as _re
     h = int(_re.search(r'viewBox="0 0 1600 (\d+)"', svg).group(1))
@@ -59,6 +60,12 @@ def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
     img.save(OUT, "WEBP", quality=90, method=6)
     print(f"{OUT.relative_to(ROOT)}: {img.size[0]}×{img.size[1]}, {OUT.stat().st_size // 1024} КБ")
+    if mode == "tall":
+        # плитка плана для сцены корабля: вырез x 60…1500, y 150…1190 в единицах плана (×2)
+        scene = ROOT / "assets" / "vp" / "ship" / "plan-scene.webp"
+        crop = img.crop((120, 300, 3000, 2380))
+        crop.save(scene, "WEBP", quality=90, method=6)
+        print(f"{scene.relative_to(ROOT)}: {crop.size[0]}×{crop.size[1]}, {scene.stat().st_size // 1024} КБ")
 
 
 if __name__ == "__main__":

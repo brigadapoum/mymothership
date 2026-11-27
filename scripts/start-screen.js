@@ -49,6 +49,17 @@ async function ensureActor(c) {
   return game.actors.importFromCompendium(pack, c.actorId, { folder: folder.id }, { keepId: true });
 }
 
+/** Весь экипаж в мире (без уведомлений): Map slug → актёр. Для сцены корабля. */
+export async function ensureAllCrew() {
+  if (!crew.length) await loadData();
+  const out = new Map();
+  for (const c of crew) {
+    const a = crewActor(c.slug) ?? await ensureActor(c);
+    if (a) out.set(c.slug, a);
+  }
+  return out;
+}
+
 async function importAll() {
   let n = 0;
   for (const c of crew) if (!crewActor(c.slug) && await ensureActor(c)) n += 1;
@@ -147,7 +158,7 @@ async function musicAction(kind) {
 
 // ---------- слой ----------
 
-function freeArea() {
+export function freeArea() {
   const W = window.innerWidth, H = window.innerHeight;
   const area = { left: 0, top: 0, right: W, bottom: H };
   const r = (sel) => { const el = document.querySelector(sel); if (!el) return null; const b = el.getBoundingClientRect(); return b.width && b.height ? b : null; };
