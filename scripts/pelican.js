@@ -2,10 +2,11 @@
 // Слева — схема: плитка плана на холсте Foundry, на ней фишки экипажа (расставлены при создании сцены).
 // Справа — два «канала» для арта, как фото на столе дела в Надграде: смотритель выводит картинку,
 // меняет, кадрирует, подписывает, убирает; пустой канал игрокам показывает «НЕТ СИГНАЛА».
-// Слой 1920×1080 (HTML) с вырезом под схему; вид холста подгоняется так, чтобы план лёг ровно в вырез.
+// Слой 1920×1080 (HTML) с вырезом под схему; при входе вид холста подгоняется так, чтобы план лёг ровно в вырез;
+// дальше схему можно приближать и двигать (2026-11-27, автор), «Весь план» возвращает исходный вид.
 // Оформление — неон по референсу автора: бирюза на чёрном, кабели по краям, красные точки тревоги.
 // Отдельных сцен отсеков нет (решение автора 2026-11-27); сцены от 0.5.x модуль предлагает удалить.
-import { SCENE, TILE, START, normSlots, nextFit, FIT_LABEL, viewFor, sameView } from "./ship-logic.js";
+import { SCENE, TILE, START, normSlots, nextFit, FIT_LABEL, viewFor } from "./ship-logic.js";
 import { STAGE, fitStage } from "./start-logic.js";
 import { freeArea, ensureAllCrew } from "./start-screen.js";
 import { puppetSrc } from "./puppet.js";
@@ -97,8 +98,6 @@ async function deleteOld() {
 let root = null;
 let layout = null;
 let target = null;
-let aligning = false;
-let alignTimer = null;
 
 function mount() {
   if (root?.isConnected) return root;
@@ -157,7 +156,7 @@ export function stageHtml(slots, isGM) {
       ${isGM ? `<button type="button" class="mm-sh-gb" data-ship="admin" aria-label="Настройки сцены корабля">${ICON_GEAR}</button>` : ""}
     </header>
     <section class="mm-sh-frame plan" style="left: 72px; top: 100px; width: 1256px; height: 940px">${CORNERS}
-      <div class="mm-sh-bar"><span class="mm-sh-dot ok"></span><span class="mm-sh-lbl hi">Схема отсеков</span><span class="mm-sh-lbl" style="margin-left: auto">верхняя палуба · нижняя палуба</span></div>
+      <div class="mm-sh-bar"><span class="mm-sh-dot ok"></span><span class="mm-sh-lbl hi">Схема отсеков</span><span class="mm-sh-lbl" style="margin-left: auto">верхняя палуба · нижняя палуба</span><button type="button" class="mm-sh-gb slim" data-ship="fitview" data-tooltip="Вернуть план целиком в рамку">Весь план</button></div>
     </section>
     ${slots.map((s, i) => chanHtml(s, i, isGM)).join("")}
     <div class="mm-sh-scan-all"></div>
@@ -182,13 +181,13 @@ function relayout() {
   align();
 }
 
-/** Подогнать вид холста: плитка плана ровно в вырез слоя. */
+/** Подогнать вид холста: плитка плана целиком в вырез слоя. Дальше её можно приближать и двигать —
+ *  холст виден только в вырезе рамки; «Весь план» в шапке схемы возвращает исходный вид. */
 function align() {
   const scene = canvas?.scene;
   if (!isShip(scene) || !layout || !canvas?.ready) return;
   target = viewFor(layout, tileRect(scene), { w: window.innerWidth, h: window.innerHeight });
-  aligning = true;
-  try { canvas.pan(target); } finally { aligning = false; }
+  canvas.pan(target);
 }
 
 // ---------- каналы ----------
@@ -238,6 +237,7 @@ async function onClick(event) {
     case "clear": return setSlot(i, { src: "", caption: "" });
     case "cap": return editCaption(i);
     case "zoom": return zoomArt(i);
+    case "fitview": return align();
     case "admin": {
       const open = foundry.applications.instances?.get("mm-pelican-admin");
       return open ? open.render({ force: true }) : new (adminClass())().render({ force: true });
@@ -318,12 +318,6 @@ export function registerPelican() {
   Hooks.on("canvasTearDown", () => unmount());
   Hooks.on("updateScene", (scene, change) => {
     if (scene.id === canvas?.scene?.id && foundry.utils.hasProperty(change, `flags.${MODULE_ID}`)) render();
-  });
-  Hooks.on("canvasPan", (c, view) => {
-    if (aligning || !target || !isShip(canvas?.scene)) return;
-    if (sameView(view, target)) return;
-    clearTimeout(alignTimer);
-    alignTimer = setTimeout(align, 150);
   });
   Hooks.on("collapseSidebar", () => setTimeout(relayout, 250));
   Hooks.on("renderSceneNavigation", () => setTimeout(relayout, 50));

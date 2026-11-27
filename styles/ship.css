@@ -94,5 +94,6 @@
   border-radius: 0; padding: 5px 9px; min-height: 26px; pointer-events: auto; display: inline-flex; align-items: center; justify-content: center;
 }
 #mm-ship .mm-sh-gb:hover { border-color: var(--sh-neon); color: var(--sh-neon); }
+#mm-ship .mm-sh-gb.slim { min-height: 22px; padding: 2px 8px; font-size: 11px; margin-left: 10px; }
 #mm-ship .mm-sh-gb.big { font-size: 14px; padding: 10px 16px; background: var(--sh-neon); color: #041311; border-color: var(--sh-neon); }
 #mm-ship .mm-sh-gb.big:hover { background: #7ff8e2; color: #041311; }

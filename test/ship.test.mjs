@@ -61,4 +61,7 @@ test("слой: «нет сигнала» у пустого канала, кно
   assert.ok(pl.includes('data-ship="zoom"'), "крупно — всем");
   assert.ok(pl.includes("&laquo;") || pl.includes("«Приемная-2»"));
   assert.ok(gm.includes("МПАД-7/12"));
+  assert.ok(pl.includes('data-ship="fitview"'), "«Весь план» — всем");
+  const js = fs.readFileSync(path.join(root, "scripts", "pelican.js"), "utf8");
+  assert.ok(!js.includes('Hooks.on("canvasPan"'), "зум не должен отскакивать");
 });
