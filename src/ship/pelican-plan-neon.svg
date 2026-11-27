@@ -1,0 +1,100 @@
+<svg viewBox="0 0 1600 900" width="1600" height="900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="План палуб «Пеликана»">
+<style>.mono{font-family:"IBM Plex Mono",monospace}.sans{font-family:"Fira Sans Extra Condensed",sans-serif}</style>
+<defs>
+<linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#060909"></stop><stop offset="0.55" stop-color="#070b0b"></stop><stop offset="1" stop-color="#0b1110"></stop></linearGradient>
+<pattern id="grid1" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#0d1d1b" stroke-width="1"></path></pattern>
+<pattern id="hazard1" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="24" fill="#e2b33c"></rect><rect x="12" width="12" height="24" fill="#111"></rect></pattern>
+<pattern id="gas1" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(-30)"><path d="M0 5H10" stroke="#103230" stroke-width="1"></path></pattern>
+<pattern id="frost1" width="46" height="46" patternUnits="userSpaceOnUse"><circle cx="8" cy="10" r="1.6" fill="#cfdedd" opacity="0.35"></circle><circle cx="30" cy="22" r="1.2" fill="#cfdedd" opacity="0.3"></circle><circle cx="18" cy="38" r="1.8" fill="#cfdedd" opacity="0.25"></circle></pattern>
+<pattern id="ballast1" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 7H14" stroke="#0c1b19" stroke-width="2"></path></pattern>
+<radialGradient id="glow1" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#10f0c8" stop-opacity="0.55"></stop><stop offset="1" stop-color="#10f0c8" stop-opacity="0"></stop></radialGradient>
+</defs>
+<rect width="1600" height="900" fill="url(#sky1)"></rect>
+<rect width="1600" height="900" fill="url(#grid1)" opacity="0.6"></rect>
+
+<!-- план палуб «Пеликана» [МПАД-7/12]; источник — холст «Пеликан — сцены Foundry», артборд «Вариант 1» -->
+<g display="inline">
+<rect x="64" y="60" width="1480" height="3" fill="#10f0c8" opacity="0.85"></rect>
+<text x="64" y="112" class="sans" font-size="44" font-weight="800" fill="#c6f8ee"><tspan fill="#5cc4b2">МПАД-7/12</tspan><tspan dx="18">«ПЕЛИКАН»</tspan></text>
+
+<text x="64" y="160" class="mono" font-size="13" font-weight="600" fill="#5cc4b2" letter-spacing="3">ВЕРХНЯЯ ПАЛУБА</text>
+<path d="M280 232 V 172 H 1300 V 214" fill="none" stroke="#5cc4b2" stroke-width="2" stroke-dasharray="14 6 3 6"></path>
+<text x="560" y="166" class="mono" font-size="12" fill="#5cc4b2" text-anchor="middle" letter-spacing="2">НАРУЖНЫЙ ТРАП · ПО КРЫШЕ</text>
+<path d="M120 330 C 140 240, 230 190, 340 186 L 1300 186 C 1350 188, 1380 200, 1384 222 L 1384 438 C 1380 460, 1350 472, 1300 474 L 340 474 C 230 470, 140 420, 120 330 Z" fill="#060c0b" stroke="#3fe0c8" stroke-width="3"></path>
+<g fill="#091211" stroke="#3fe0c8" stroke-width="3"><path d="M1384 214 L 1456 206 L 1456 268 L 1384 260 Z"></path><path d="M1384 400 L 1456 392 L 1456 454 L 1384 446 Z"></path></g>
+<ellipse cx="1476" cy="237" rx="20" ry="30" fill="url(#glow1)"></ellipse><ellipse cx="1476" cy="423" rx="20" ry="30" fill="url(#glow1)"></ellipse>
+<g fill="#0a1413" stroke="#3fe0c8" stroke-width="2.5">
+<path d="M156 330 C 170 262, 236 212, 320 204 L 320 456 C 236 448, 170 398, 156 330 Z"></path>
+<rect x="330" y="200" width="140" height="110"></rect>
+<rect x="480" y="200" width="280" height="110"></rect>
+<rect x="770" y="200" width="460" height="110"></rect>
+<rect x="330" y="350" width="190" height="110"></rect>
+<rect x="530" y="350" width="230" height="110"></rect>
+<rect x="770" y="350" width="460" height="110"></rect>
+<rect x="1240" y="200" width="136" height="260"></rect>
+</g>
+<path d="M140 300 C 152 254, 190 220, 236 206 L 240 222 C 200 234, 170 264, 160 302 L 160 358 C 170 396, 200 426, 240 438 L 236 454 C 190 440, 152 406, 140 360 Z" fill="#0f3a36" stroke="#3fe0c8" stroke-width="2"></path>
+<rect x="320" y="314" width="920" height="32" fill="#0f2f2b" stroke="#3fe0c8" stroke-width="2"></rect>
+<text x="560" y="335" class="mono" font-size="12" fill="#3fe0c8" letter-spacing="3">ГЛАВНЫЙ КОРИДОР</text>
+<g fill="#0f2f2b"><rect x="380" y="306" width="30" height="10"></rect><rect x="600" y="306" width="30" height="10"></rect><rect x="980" y="306" width="30" height="10"></rect><rect x="410" y="344" width="30" height="10"></rect><rect x="630" y="344" width="30" height="10"></rect><rect x="980" y="344" width="30" height="10"></rect><rect x="314" y="318" width="10" height="24"></rect><rect x="1236" y="318" width="10" height="24"></rect></g>
+<path d="M360 330 H 1220 M900 330 V 296 M440 330 V 364 M1060 330 V 364 M1220 330 H 1260" fill="none" stroke="#5cc4b2" stroke-width="2" stroke-dasharray="3 5" opacity="0.7"></path>
+<g stroke="#2c8579" stroke-width="1.6" fill="none">
+<rect x="244" y="316" width="44" height="26"></rect>
+<circle cx="400" cy="260" r="24"></circle><circle cx="400" cy="260" r="12"></circle>
+<rect x="520" y="244" width="160" height="30" rx="4"></rect><rect x="706" y="212" width="46" height="40"></rect>
+<rect x="790" y="228" width="56" height="32"></rect><rect x="860" y="228" width="56" height="32"></rect><rect x="930" y="228" width="56" height="32"></rect><rect x="1000" y="228" width="56" height="32"></rect><rect x="1070" y="228" width="56" height="32"></rect><rect x="1140" y="228" width="56" height="32"></rect>
+<rect x="790" y="270" width="56" height="32"></rect><rect x="860" y="270" width="56" height="32"></rect><rect x="930" y="270" width="56" height="32"></rect><rect x="1000" y="270" width="56" height="32"></rect><rect x="1070" y="270" width="56" height="32"></rect><rect x="1140" y="270" width="56" height="32"></rect>
+<rect x="380" y="396" width="80" height="26"></rect><path d="M550 380 H 650 M550 400 H 650 M550 420 H 650"></path>
+<circle cx="810" cy="385" r="15"></circle><circle cx="880" cy="385" r="15"></circle><circle cx="950" cy="385" r="15"></circle><circle cx="1020" cy="385" r="15"></circle><circle cx="1090" cy="385" r="15"></circle><circle cx="1160" cy="385" r="15"></circle>
+<circle cx="810" cy="425" r="15"></circle><circle cx="880" cy="425" r="15"></circle><circle cx="950" cy="425" r="15"></circle><circle cx="1020" cy="425" r="15"></circle><circle cx="1090" cy="425" r="15"></circle><circle cx="1160" cy="425" r="15"></circle>
+<circle cx="1306" cy="268" r="26"></circle><circle cx="1306" cy="420" r="26"></circle><rect x="1262" y="312" width="66" height="36"></rect>
+</g>
+<g class="sans" font-weight="800" fill="#c6f8ee" font-size="20">
+<text x="200" y="300">1</text><text x="338" y="222">2</text><text x="488" y="222">3</text><text x="778" y="222">4</text>
+<text x="338" y="452">5</text><text x="538" y="452">6</text><text x="778" y="452">9</text><text x="1246" y="222">10</text>
+</g>
+<g class="mono" font-size="10" font-weight="600" fill="#c6f8ee" letter-spacing="1">
+<text x="196" y="314">МОСТИК</text><text x="356" y="220">РАДАРНАЯ</text><text x="506" y="220">КАЮТ-КОМПАНИЯ</text><text x="796" y="220">КАЮТЫ</text>
+<text x="356" y="450">МЕДОТСЕК</text><text x="556" y="450">ЛАБОРАТОРИЯ</text><text x="796" y="450">КАПСУЛЫ</text>
+<text x="1272" y="213" letter-spacing="0.5">МАШИННОЕ</text><text x="1272" y="226" letter-spacing="0.5">ОТДЕЛЕНИЕ</text>
+</g>
+
+<text x="64" y="530" class="mono" font-size="13" font-weight="600" fill="#5cc4b2" letter-spacing="3">НИЖНЯЯ ПАЛУБА</text>
+<path d="M120 690 C 140 600, 230 550, 340 546 L 1300 546 C 1350 548, 1380 560, 1384 582 L 1384 798 C 1380 820, 1350 832, 1300 834 L 340 834 C 230 830, 140 780, 120 690 Z" fill="#060c0b" stroke="#3fe0c8" stroke-width="3"></path>
+<path d="M156 690 C 170 622, 236 572, 320 564 L 320 816 C 236 808, 170 758, 156 690 Z" fill="url(#ballast1)" stroke="#1f5c54" stroke-width="2"></path>
+<text x="238" y="694" class="mono" font-size="11" fill="#1f5c54" text-anchor="middle">балласт</text>
+<rect x="330" y="560" width="680" height="260" fill="#060c0b" stroke="#3fe0c8" stroke-width="2.5"></rect>
+<rect x="330" y="560" width="680" height="260" fill="url(#gas1)"></rect>
+<rect x="1020" y="560" width="210" height="260" fill="#0a1413" stroke="#3fe0c8" stroke-width="2.5"></rect>
+<rect x="1240" y="560" width="136" height="260" fill="#0a1413" stroke="#3fe0c8" stroke-width="2.5"></rect>
+<g stroke="#2c8579" stroke-width="1.6" fill="#0a1413">
+<rect x="410" y="592" width="560" height="28" rx="14"></rect><rect x="410" y="628" width="560" height="28" rx="14"></rect>
+</g>
+<rect x="760" y="664" width="200" height="28" rx="14" fill="#e2b33c" stroke="#111" stroke-width="1.5"></rect>
+<text x="860" y="683" class="mono" font-size="11" font-weight="700" fill="#111" text-anchor="middle">ГЕЛИЙ-3</text>
+<rect x="420" y="700" width="180" height="104" fill="#040908" stroke="#3fe0c8" stroke-width="2"></rect>
+<path d="M450 708 V 796 M480 708 V 796 M510 708 V 796 M540 708 V 796 M570 708 V 796" stroke="#1f5c54" stroke-width="1.5"></path>
+<rect x="1006" y="660" width="18" height="60" fill="#e2b33c" stroke="#111"></rect>
+<rect x="1225" y="672" width="20" height="34" fill="#0f2f2b"></rect>
+<rect x="1040" y="600" width="30" height="160" fill="none" stroke="#2c8579" stroke-width="1.6"></rect>
+<g fill="none" stroke="#2c8579" stroke-width="1.6"><circle cx="1290" cy="620" r="22"></circle><circle cx="1290" cy="620" r="9"></circle><circle cx="1290" cy="762" r="22"></circle><circle cx="1290" cy="762" r="9"></circle></g>
+<g class="sans" font-weight="800" fill="#c6f8ee" font-size="20"><text x="338" y="582">8</text><text x="1028" y="582">7</text><text x="1246" y="582">11</text></g>
+<g class="mono" font-size="10" font-weight="600" fill="#c6f8ee" letter-spacing="1"><text x="356" y="580">ТРЮМ</text><text x="1046" y="580">ПУЛЬТ УЛОВА</text><text x="1274" y="580" font-size="9" letter-spacing="0">КОМПРЕССОРНАЯ</text></g>
+
+<g fill="#111" stroke="#3fe0c8" stroke-width="2" stroke-dasharray="4 3">
+<circle cx="325" cy="330" r="14"></circle><circle cx="325" cy="690" r="14"></circle>
+<circle cx="690" cy="410" r="14"></circle><circle cx="690" cy="770" r="14"></circle>
+<circle cx="1355" cy="330" r="14"></circle><circle cx="1355" cy="690" r="14"></circle>
+</g>
+<g fill="none" stroke="#5cc4b2" stroke-width="2" stroke-dasharray="14 6 3 6">
+<path d="M780 186 V 152"></path><path d="M780 474 V 500"></path><path d="M120 330 H 80"></path>
+<path d="M780 546 V 520"></path><path d="M780 834 V 862"></path><path d="M120 690 H 80"></path>
+</g>
+<g transform="translate(64 866)">
+<circle cx="10" cy="0" r="10" fill="#111" stroke="#3fe0c8" stroke-width="2" stroke-dasharray="4 3"></circle>
+<text x="30" y="5" class="mono" font-size="12" fill="#2c8579">люк между палубами</text>
+<path d="M210 0 H 256" stroke="#5cc4b2" stroke-width="2" stroke-dasharray="14 6 3 6"></path>
+<text x="268" y="5" class="mono" font-size="12" fill="#2c8579">наружный трап и лестницы по корпусу</text>
+</g>
+</g>
+</svg>

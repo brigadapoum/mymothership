@@ -1,7 +1,8 @@
 """Токены-марионетки: assets/vp/tokens/<имя>.webp → assets/vp/tokens/puppet/<имя>.webp.
 
-Искажение лица (волна и сдвиги строк), сдвиг каналов, больной зеленоватый тон,
-нити от шеи вверх (железо из крови — по ним бежит ток), красное кольцо.
+Вайб — неоновая бирюза на чёрном (референс автора 2026-11-27): негатив — линии светятся, кожа
+в черноте; лицо поплыло волной и сорванными строками, сдвиг каналов, сверху свисают кабели-нити марионетки,
+впиваются в голову (на стыках — красные точки), неоновое кольцо.
 Тед — андроид, его не едят: марионетки нет.
     python3 tools/puppets.py
 """
@@ -20,7 +21,9 @@ SKIP = {"ted"}
 SIZE = 400
 C = SIZE / 2
 INNER = 184          # внутри кольца
-RING = (200, 52, 40)  # красное кольцо марионетки
+RING = (30, 240, 200)  # неоновое кольцо марионетки
+NEON = (16, 240, 200)
+JOINT = (255, 56, 92)
 
 
 def radial(size=SIZE):
@@ -44,42 +47,47 @@ def warp(gray, rng):
 
 
 def colorize(g):
-    """Серое → тени почти чёрные, середина болотно-серая, свет — бледный."""
-    g = np.clip((g.astype(float) - 28) * 1.18, 0, 255) / 255.0
-    lo = np.array([8, 13, 12], float)
-    mid = np.array([96, 116, 104], float)
-    hi = np.array([226, 234, 220], float)
-    t = g[..., None]
-    rgb = np.where(t < 0.5, lo + (mid - lo) * (t / 0.5), mid + (hi - mid) * ((t - 0.5) / 0.5))
-    return rgb
+    """Негатив: тушь линий светится неоновой бирюзой, светлая кожа уходит в черноту — как на референсе."""
+    t = 1.0 - np.clip((g.astype(float) - 18) * 1.12, 0, 255) / 255.0
+    t = np.clip(t, 0, 1) ** 1.25
+    lo = np.array([10, 13, 12], float)
+    mid = np.array([16, 66, 60], float)
+    hi = np.array([60, 244, 206], float)
+    t = t[..., None]
+    return np.where(t < 0.5, lo + (mid - lo) * (t / 0.5), mid + (hi - mid) * ((t - 0.5) / 0.5))
+
+
+def bezier(p0, p1, p2, n=40):
+    return [((1 - t) ** 2 * p0[0] + 2 * (1 - t) * t * p1[0] + t * t * p2[0],
+             (1 - t) ** 2 * p0[1] + 2 * (1 - t) * t * p1[1] + t * t * p2[1]) for t in (i / n for i in range(n + 1))]
 
 
 def threads(rng):
-    """Нити: от шеи и снизу вверх, с ветвлением; ядро и свечение."""
-    layer = Image.new("RGBA", (SIZE, SIZE), (0, 0, 0, 0))
+    """Кабели-нити сверху: тёмное тело, неоновая кромка, свечение; конец впивается в голову."""
+    body = Image.new("RGBA", (SIZE, SIZE), (0, 0, 0, 0))
     glow = Image.new("RGBA", (SIZE, SIZE), (0, 0, 0, 0))
-    d, dg = ImageDraw.Draw(layer), ImageDraw.Draw(glow)
-
-    def grow(x, y, ang, n, width):
-        for _ in range(n):
-            ang += rng.uniform(-0.4, 0.4)
-            step = rng.uniform(10, 18)
-            nx, ny = x + step * math.cos(ang), y + step * math.sin(ang)
-            if math.hypot(nx - C, ny - C) > INNER - 4:
-                return
-            k = 0.35 + 0.65 * min(1.0, max(0.0, ny / SIZE))  # к макушке нити тают
-            dg.line([(x, y), (nx, ny)], fill=(255, 40, 28, int(110 * k)), width=width + 4)
-            d.line([(x, y), (nx, ny)], fill=(196, 34, 26, int(225 * k)), width=width)
-            d.line([(x, y), (nx, ny)], fill=(255, 150, 128, int(130 * k)), width=1)
-            x, y = nx, ny
-            if rng.random() < 0.18 and width > 1:
-                grow(x, y, ang + rng.choice([-1, 1]) * rng.uniform(0.6, 1.1), rng.randint(3, 7), width - 1)
-
-    for _ in range(rng.randint(3, 4)):
-        x0 = C + rng.uniform(-55, 55)
-        grow(x0, SIZE - 28, -math.pi / 2 + rng.uniform(-0.45, 0.45), rng.randint(9, 15), 3)
-    glow = glow.filter(ImageFilter.GaussianBlur(3))
-    return Image.alpha_composite(glow, layer)
+    d, dg = ImageDraw.Draw(body), ImageDraw.Draw(glow)
+    n = rng.randint(5, 7)
+    for i in range(n):
+        ang = math.radians(-150 + 120 * (i + rng.uniform(0.15, 0.85)) / n)
+        p0 = (C + (INNER + 8) * math.cos(ang), C + (INNER + 8) * math.sin(ang))
+        loose = rng.random() < 0.2
+        end = (C + rng.uniform(-85, 85), rng.uniform(95, 215) if not loose else rng.uniform(230, 300))
+        mid = ((p0[0] + end[0]) / 2 + rng.uniform(-40, 40), (p0[1] + end[1]) / 2 + rng.uniform(10, 50))
+        pts = bezier(p0, mid, end)
+        w = rng.randint(5, 9)
+        dg.line(pts, fill=NEON + (110,), width=w + 8, joint="curve")
+        d.line(pts, fill=(6, 12, 12, 255), width=w, joint="curve")
+        rim = [(x + w * 0.32, y - w * 0.1) for x, y in pts]
+        d.line(rim, fill=NEON + (230,), width=2, joint="curve")
+        if not loose:
+            ex, ey = end
+            r = w * 0.75
+            d.ellipse([ex - r, ey - r, ex + r, ey + r], fill=(6, 12, 12, 255), outline=NEON + (255,), width=2)
+            d.ellipse([ex - 2.5, ey - 2.5, ex + 2.5, ey + 2.5], fill=JOINT + (255,))
+            dg.ellipse([ex - 7, ey - 7, ex + 7, ey + 7], fill=JOINT + (150,))
+    glow = glow.filter(ImageFilter.GaussianBlur(4))
+    return Image.alpha_composite(glow, body)
 
 
 def puppet(path, seed):
@@ -97,8 +105,8 @@ def puppet(path, seed):
     # сдвиг каналов: красный влево, зелёный и синий вправо
     shifted_r = np.roll(g2, -3, axis=1).astype(float)
     shifted_c = np.roll(g2, 3, axis=1).astype(float)
-    chroma = np.stack([shifted_r, shifted_c * 0.92, shifted_c], axis=-1)
-    rgb = base * 0.72 + chroma * 0.28
+    chroma = np.stack([shifted_r * 0.9, shifted_c * 0.95, shifted_c * 0.85], axis=-1)
+    rgb = base * 0.82 + chroma * 0.18
 
     # виньетка внутри круга и строки развёртки
     vig = np.clip(1.15 - (r / INNER) ** 2.4 * 0.75, 0.25, 1.0)

@@ -16,6 +16,14 @@ test("картинка плана на месте и в исходнике не�
   for (const word of ["МПАД-7/12", "ТРЮМ", "КОМПРЕССОРНАЯ", "МАШИННОЕ", "ОТДЕЛЕНИЕ", "люк между палубами"]) assert.ok(svg.includes(word), `на плане нет: ${word}`);
 });
 
+test("неоновый план: та же схема в бирюзе", () => {
+  const a = fs.readFileSync(path.join(root, "src", "ship", "pelican-plan.svg"), "utf8");
+  const b = fs.readFileSync(path.join(root, "src", "ship", "pelican-plan-neon.svg"), "utf8");
+  assert.equal(a.match(/<(rect|path|circle|text)\b/g).length, b.match(/<(rect|path|circle|text)\b/g).length);
+  assert.ok(b.includes("#10f0c8") && !b.includes("#d8d0b4"));
+  assert.ok(fs.statSync(path.join(root, "assets", "vp", "ship", "plan-neon.webp")).size > 50000);
+});
+
 test("ссылок на сцены отсеков больше нет", () => {
   const js = fs.readFileSync(path.join(root, "scripts", "pelican.js"), "utf8");
   for (const word of ["canvas.controls", "mm-pelican-back", "pointertap"]) assert.ok(!js.includes(word), `осталось: ${word}`);

@@ -1,9 +1,11 @@
-"""План палуб «Пеликана»: src/ship/pelican-plan.svg → assets/vp/ship/plan.webp (3200×1800).
+"""План палуб «Пеликана» → WebP 3200×1800.
 
 Шрифты — из assets/fonts модуля, рисует Chrome через Playwright:
-    python3 tools/render_plan.py
+    python3 tools/render_plan.py                  # src/ship/pelican-plan.svg → assets/vp/ship/plan.webp
+    python3 tools/render_plan.py neon             # src/ship/pelican-plan-neon.svg → assets/vp/ship/plan-neon.webp
 """
 import io
+import sys
 from pathlib import Path
 
 from PIL import Image
@@ -32,8 +34,12 @@ def font_css():
 
 
 def main():
+    global SVG, OUT
+    if len(sys.argv) > 1 and sys.argv[1] == "neon":
+        SVG = ROOT / "src" / "ship" / "pelican-plan-neon.svg"
+        OUT = ROOT / "assets" / "vp" / "ship" / "plan-neon.webp"
     svg = SVG.read_text(encoding="utf-8")
-    html = f"<!doctype html><html><head><meta charset='utf-8'><style>{font_css()}\nhtml,body{{margin:0;background:#16191a}}svg{{display:block}}</style></head><body>{svg}</body></html>"
+    html = f"<!doctype html><html><head><meta charset='utf-8'><style>{font_css()}\nhtml,body{{margin:0;background:#060909}}svg{{display:block}}</style></head><body>{svg}</body></html>"
     with sync_playwright() as p:
         browser = p.chromium.launch(executable_path="/usr/bin/google-chrome")
         page = browser.new_page(viewport={"width": 1600, "height": 900}, device_scale_factor=2)
