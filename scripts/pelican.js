@@ -224,11 +224,39 @@ async function editCaption(i) {
   if (value !== null && value !== undefined) await setSlot(i, { caption: value });
 }
 
+// ---------- арт крупно: своё окно поверх всего (клик по арту); смотритель может показать всем ----------
+
+let lb = null;
+function closeLightbox() { lb?.remove(); lb = null; document.removeEventListener("keydown", onLbKey, true); }
+function onLbKey(e) { if (e.key === "Escape") { e.preventDefault(); e.stopPropagation(); closeLightbox(); } }
+
+function openLightbox(i, src, caption) {
+  if (!src) return;
+  closeLightbox();
+  lb = document.createElement("div");
+  lb.id = "mm-lightbox";
+  lb.setAttribute("role", "dialog");
+  lb.setAttribute("aria-label", caption || `Канал ${i + 1}`);
+  lb.innerHTML = `<figure><img src="${esc(src)}" alt="${esc(caption || `Канал ${i + 1}`)}"><figcaption><span class="ch">Канал ${i + 1}</span><span class="t">${esc(caption)}</span>
+    ${game.user.isGM ? `<button type="button" data-lb="share">Показать всем</button>` : ""}<button type="button" data-lb="close" aria-label="Закрыть">×</button></figcaption></figure>`;
+  lb.addEventListener("click", async (e) => {
+    const b = e.target.closest("[data-lb]");
+    if (b?.dataset.lb === "share") {
+      e.stopPropagation();
+      await canvas.scene?.setFlag(MODULE_ID, "show", { i, src, caption, t: Date.now() });
+      b.textContent = "Показано";
+      b.disabled = true;
+      return;
+    }
+    if (b || e.target === lb || e.target.tagName === "IMG") closeLightbox();
+  });
+  document.addEventListener("keydown", onLbKey, true);
+  document.body.appendChild(lb);
+}
+
 function zoomArt(i) {
   const s = slotsOf(canvas.scene)[i];
-  if (!s.src) return;
-  const IP = foundry.applications.apps?.ImagePopout ?? globalThis.ImagePopout;
-  new IP({ src: s.src, caption: s.caption || "", window: { title: s.caption || `Канал ${i + 1}` } }).render({ force: true });
+  openLightbox(i, s.src, s.caption);
 }
 
 async function onClick(event) {
@@ -321,9 +349,12 @@ export function registerPelican() {
   });
 
   Hooks.on("canvasReady", () => render());
-  Hooks.on("canvasTearDown", () => unmount());
+  Hooks.on("canvasTearDown", () => { unmount(); closeLightbox(); });
   Hooks.on("updateScene", (scene, change) => {
-    if (scene.id === canvas?.scene?.id && foundry.utils.hasProperty(change, `flags.${MODULE_ID}`)) render();
+    if (scene.id !== canvas?.scene?.id) return;
+    const show = foundry.utils.getProperty(change, `flags.${MODULE_ID}.show`);
+    if (show?.src && !game.user.isGM) openLightbox(show.i ?? 0, show.src, show.caption ?? "");
+    if (foundry.utils.hasProperty(change, `flags.${MODULE_ID}.slots`)) render();
   });
   // карта привязана к рамке: мельче «всего плана» не уменьшить, за край не утащить
   Hooks.on("canvasPan", (c, view) => {

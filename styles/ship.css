@@ -98,3 +98,43 @@
 #mm-ship .mm-sh-gb.slim { min-height: 22px; padding: 2px 8px; font-size: 11px; margin-left: 10px; }
 #mm-ship .mm-sh-gb.big { font-size: 14px; padding: 10px 16px; background: var(--sh-neon); color: #041311; border-color: var(--sh-neon); }
 #mm-ship .mm-sh-gb.big:hover { background: #7ff8e2; color: #041311; }
+
+/* ---------- крупный портрет при наведении на токен (левый нижний угол) ---------- */
+#mm-hover {
+  position: fixed; z-index: 1000; pointer-events: none; padding: 6px; display: none;
+  background: #050a09; border: 1px solid #10f0c8;
+  box-shadow: 0 0 18px rgba(16, 240, 200, .35), 0 24px 60px rgba(0, 0, 0, .75);
+}
+#mm-hover.on { display: block; animation: mm-hover-in .12s ease-out; }
+@keyframes mm-hover-in { from { opacity: 0; } to { opacity: 1; } }
+#mm-hover img { display: block; height: 100%; width: auto; max-width: 40vw; object-fit: contain; border: 0; }
+#mm-hover span {
+  position: absolute; left: 6px; right: 6px; bottom: 6px; padding: 6px 10px; background: rgba(5, 12, 11, .88);
+  color: #d6efe9; font: 600 13px "MM IBM Plex Mono", Consolas, monospace; letter-spacing: .14em; text-transform: uppercase;
+  border-top: 1px solid #11403a;
+}
+#mm-hover span:empty { display: none; }
+
+/* ---------- арт крупно (клик по арту в канале) ---------- */
+#mm-lightbox {
+  position: fixed; inset: 0; z-index: 1001; display: flex; align-items: center; justify-content: center; cursor: zoom-out;
+  background: rgba(2, 4, 3, .9);
+}
+#mm-lightbox figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 0; cursor: default; }
+#mm-lightbox img {
+  display: block; max-width: 88vw; max-height: 82vh; object-fit: contain; border: 1px solid #11403a; cursor: zoom-out;
+  box-shadow: 0 0 24px rgba(16, 240, 200, .25), 0 30px 80px rgba(0, 0, 0, .8);
+}
+#mm-lightbox figcaption {
+  align-self: stretch; display: flex; align-items: center; gap: 12px; padding: 8px 10px; background: rgba(6, 14, 13, .95);
+  border: 1px solid #11403a; border-top: 0; color: #a9d6cd; font: 15px "MM PT Sans", sans-serif;
+}
+#mm-lightbox .ch { font: 600 12px "MM IBM Plex Mono", monospace; letter-spacing: .18em; color: #10f0c8; text-transform: uppercase; }
+#mm-lightbox .t { flex: 1 1 auto; }
+#mm-lightbox button {
+  width: auto; margin: 0; min-height: 28px; padding: 4px 12px; border-radius: 0; cursor: pointer;
+  font: 600 12px "MM IBM Plex Mono", monospace; letter-spacing: .06em; color: #d6efe9; background: #08201d; border: 1px solid #1d5a52;
+}
+#mm-lightbox button:hover { border-color: #10f0c8; color: #10f0c8; }
+#mm-lightbox button[data-lb="share"] { background: #10f0c8; color: #041311; border-color: #10f0c8; }
+#mm-lightbox button[data-lb="share"]:disabled { opacity: .6; cursor: default; }

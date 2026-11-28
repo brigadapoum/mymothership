@@ -85,3 +85,18 @@ test("карта привязана к рамке: не мельче всего 
   const inside = { x: fit.x + 100, y: fit.y + 80, scale: fit.scale * 2 };
   assert.equal(clampView(inside, fit, layout, tile, screen), null, "внутри — свободно");
 });
+
+test("портрет при наведении: марионетка, портрет актёра, иначе картинка токена", async () => {
+  const { portraitFor } = await import("../scripts/hover.js");
+  const B = "modules/mymothership/assets/vp";
+  assert.equal(portraitFor({ tokenSrc: `${B}/tokens/puppet/okafor.webp`, actorImg: `${B}/portraits/okafor.webp` }), `${B}/portraits/puppet/okafor.webp`);
+  assert.equal(portraitFor({ tokenSrc: `${B}/tokens/okafor.webp`, actorImg: `${B}/portraits/okafor.webp` }), `${B}/portraits/okafor.webp`);
+  assert.equal(portraitFor({ tokenSrc: "worlds/x/t.webp", actorImg: "icons/svg/mystery-man.svg" }), "worlds/x/t.webp");
+  for (const n of ["ferro", "okafor", "vargo"]) assert.ok(fs.existsSync(path.join(root, "assets", "vp", "portraits", "puppet", `${n}.webp`)), `нет портрета-марионетки ${n}`);
+  assert.ok(!fs.existsSync(path.join(root, "assets", "vp", "portraits", "puppet", "ted.webp")), "у Теда марионетки нет");
+});
+
+test("арт крупно — своё окно, смотритель может показать всем", () => {
+  const js = fs.readFileSync(path.join(root, "scripts", "pelican.js"), "utf8");
+  assert.ok(js.includes("openLightbox(") && js.includes('data-lb="share"') && js.includes('"show"'));
+});

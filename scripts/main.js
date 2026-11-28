@@ -7,12 +7,15 @@ import { registerPlaylistFolder } from "./playlist-folder.js";
 import { registerStartScreen } from "./start-screen.js";
 import { registerPelican } from "./pelican.js";
 import { registerPuppets } from "./puppet.js";
+import { registerHover } from "./hover.js";
 
 // Экран начала «Восходящего потока» — свои хуки init/ready, поэтому регистрируется сразу при загрузке.
 registerStartScreen();
 // «Пеликан»: план палуб; марионетки в HUD токена.
 registerPelican();
 registerPuppets();
+// Крупный портрет при наведении на токен.
+registerHover();
 
 const MODULE_ID = "mymothership";
 const SYSTEM_ID = "mothership-fr";

@@ -1,4 +1,5 @@
-"""Токены-марионетки: assets/vp/tokens/<имя>.webp → assets/vp/tokens/puppet/<имя>.webp.
+"""Токены и портреты-марионетки: assets/vp/tokens/<имя>.webp → assets/vp/tokens/puppet/<имя>.webp,
+assets/vp/portraits/<имя>.webp → assets/vp/portraits/puppet/<имя>.webp (портрет — для крупного арта при наведении).
 
 Вайб — неоновая бирюза на чёрном (референс автора 2026-11-27): негатив — линии светятся, кожа
 в черноте; лицо поплыло волной и сорванными строками, сдвиг каналов, сверху свисают кабели-нити марионетки,
@@ -124,6 +125,50 @@ def puppet(path, seed):
     return out
 
 
+def cables_rect(rng, w, h):
+    """Кабели сверху для прямоугольного портрета: свисают с верхнего края и впиваются в голову."""
+    body = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    glow = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    d, dg = ImageDraw.Draw(body), ImageDraw.Draw(glow)
+    n = rng.randint(5, 7)
+    for i in range(n):
+        p0 = (w * (i + rng.uniform(0.2, 0.8)) / n, -6)
+        loose = rng.random() < 0.2
+        end = (w * rng.uniform(0.28, 0.72), h * (rng.uniform(0.16, 0.42) if not loose else rng.uniform(0.5, 0.7)))
+        mid = ((p0[0] + end[0]) / 2 + rng.uniform(-50, 50), (p0[1] + end[1]) / 2 + rng.uniform(10, 60))
+        pts = bezier(p0, mid, end)
+        cw = rng.randint(6, 10)
+        dg.line(pts, fill=NEON + (110,), width=cw + 8, joint="curve")
+        d.line(pts, fill=(6, 12, 12, 255), width=cw, joint="curve")
+        d.line([(x + cw * 0.32, y - cw * 0.1) for x, y in pts], fill=NEON + (230,), width=2, joint="curve")
+        if not loose:
+            ex, ey = end
+            r = cw * 0.75
+            d.ellipse([ex - r, ey - r, ex + r, ey + r], fill=(6, 12, 12, 255), outline=NEON + (255,), width=2)
+            d.ellipse([ex - 3, ey - 3, ex + 3, ey + 3], fill=JOINT + (255,))
+            dg.ellipse([ex - 8, ey - 8, ex + 8, ey + 8], fill=JOINT + (150,))
+    glow = glow.filter(ImageFilter.GaussianBlur(4))
+    return Image.alpha_composite(glow, body)
+
+
+def portrait(path, seed):
+    rng = random.Random(seed)
+    src = Image.open(path).convert("L")
+    gray = np.array(src)
+    h, w = gray.shape
+    g2 = warp(gray, rng)
+    base = colorize(g2)
+    chroma = np.stack([np.roll(g2, -3, axis=1) * 0.9, np.roll(g2, 3, axis=1) * 0.95, np.roll(g2, 3, axis=1) * 0.85], axis=-1).astype(float)
+    rgb = base * 0.82 + chroma * 0.18
+    y, x = np.mgrid[0:h, 0:w]
+    e = np.hypot((x - w / 2) / (w / 2), (y - h / 2) / (h / 2))
+    rgb *= np.clip(1.12 - e ** 2.2 * 0.55, 0.3, 1.0)[..., None]
+    rgb[::3] *= 0.86
+    out = Image.fromarray(np.clip(rgb, 0, 255).astype(np.uint8), "RGB").convert("RGBA")
+    out = Image.alpha_composite(out, cables_rect(rng, w, h))
+    return out.convert("RGB")
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     done = []
@@ -135,6 +180,14 @@ def main():
         img.save(OUT / f"{name}.webp", "WEBP", quality=90, method=6)
         done.append(name)
     print("марионетки:", ", ".join(done))
+    psrc = ROOT / "assets" / "vp" / "portraits"
+    pout = psrc / "puppet"
+    pout.mkdir(parents=True, exist_ok=True)
+    for i, path in enumerate(sorted(psrc.glob("*.webp"))):
+        if path.stem in SKIP:
+            continue
+        portrait(path, seed=5000 + i * 41).save(pout / f"{path.stem}.webp", "WEBP", quality=90, method=6)
+    print("портреты-марионетки:", len(list(pout.glob("*.webp"))))
 
 
 if __name__ == "__main__":
